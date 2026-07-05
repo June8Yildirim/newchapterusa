@@ -1,3 +1,4 @@
+import { useState, type ComponentProps } from "react";
 import "./App.css";
 import {
   credentials,
@@ -6,39 +7,15 @@ import {
   pillars,
   publications,
 } from "./constants/text";
+import { Modal } from "./Modal";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Stars } from "./Stars";
-
-const CONTACT_EMAIL = "hello@newchapter.example";
-
-function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const data = new FormData(form);
-
-  const name = String(data.get("name") ?? "");
-  const email = String(data.get("email") ?? "");
-  const stage = String(data.get("stage") ?? "");
-  const barrier = String(data.get("barrier") ?? "");
-  const support = String(data.get("support") ?? "");
-  const consent = data.get("consent") ? "Yes" : "No";
-
-  const subject = `New Chapter application${name ? ` — ${name}` : ""}`;
-  const body = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    `Current Professional Transition Stage: ${stage}`,
-    `Top Career Barrier: ${barrier}`,
-    `Requested Support Type: ${support}`,
-    `Consent to be contacted: ${consent}`,
-  ].join("\n");
-
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-    subject,
-  )}&body=${encodeURIComponent(body)}`;
-}
+import { SubmitApplication } from "./submitApp";
 
 function App() {
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [openConfirm, setOpenConfirm] = useState(false);
+
   return (
     <div className="page">
       {/* Header */}
@@ -156,33 +133,38 @@ function App() {
       </section>
 
       {/* CTA form */}
-      <section className="section update">
-        <div className="container">
-          <h2 className="center">Get To Know Latest Update</h2>
-          <form className="update-form" onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <input
-              type="text"
-              name="stage"
-              placeholder="Current Professional Transition Stage"
-            />
-            <input type="text" name="barrier" placeholder="Top Career Barrier" />
-            <input
-              type="text"
-              name="support"
-              placeholder="Requested Support Type"
-            />
-            <label className="checkbox-row">
-              <input type="checkbox" name="consent" />
-              <span>{LOREM_SHORT}</span>
-            </label>
-            <button className="btn btn-gold btn-block" type="submit">
-              Submit Application
-            </button>
-          </form>
-        </div>
+      <section>
+        <button onClick={() => setConfirmOpen(!confirmOpen)}>
+          Send Application
+        </button>
       </section>
+      <Modal
+        open={confirmOpen}
+        onClose={() => setConfirmOpen(false)}
+        title="SubmitApplication"
+      >
+        <SubmitApplication
+          openConfirm={openConfirm}
+          setOpenConfirm={setOpenConfirm}
+        />
+      </Modal>
+      <Modal
+        open={openConfirm}
+        onClose={() => setOpenConfirm(false)}
+        title="Application received"
+      >
+        <p>
+          Thanks for applying. Your email client should have opened with your
+          details — just hit send and we'll be in touch soon.
+        </p>
+        <button
+          type="button"
+          className="btn btn-gold btn-block"
+          onClick={() => setConfirmOpen(false)}
+        >
+          Close
+        </button>
+      </Modal>
     </div>
   );
 }

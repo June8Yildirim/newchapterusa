@@ -40,7 +40,6 @@ export function SubmitApplication({
   return (
     <section className="section update">
       <div className="container">
-        <h2 className="center">Get To Know Latest Update</h2>
         <form className="update-form" onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />

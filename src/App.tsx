@@ -53,8 +53,8 @@ function App() {
       {/* Hero */}
       <section className="hero">
         <div className="container hero-inner">
-          <h1 className="hero-sub">Write Your Next Chapter</h1>
-          <div className="hero-actions"></div>
+          {/* <h1 className="hero-sub">Write Your Next Chapter</h1> */}
+          {/* <div className="hero-actions"></div> */}
         </div>
       </section>
 
@@ -138,6 +138,7 @@ function App() {
 
       {/* CTA form */}
       <section className="section flexing">
+        <h2 className="center">Get To Know Latest Update</h2>
         <button
           className="btn btn-gold"
           onClick={() => setConfirmOpen(!confirmOpen)}

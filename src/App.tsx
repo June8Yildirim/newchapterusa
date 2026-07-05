@@ -1,4 +1,4 @@
-import { useState, type ComponentProps } from "react";
+import { useRef, useState } from "react";
 import "./App.css";
 import {
   credentials,
@@ -11,13 +11,17 @@ import { Modal } from "./Modal";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Stars } from "./Stars";
 import { SubmitApplication } from "./submitApp";
+import { useSiteAnimations } from "./useSiteAnimations";
 
 function App() {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
 
+  const container = useRef<HTMLDivElement>(null);
+  useSiteAnimations(container);
+
   return (
-    <div className="page">
+    <div className="page" ref={container}>
       {/* Header */}
       <header className="site-header">
         <div className="container header-inner">
@@ -133,8 +137,11 @@ function App() {
       </section>
 
       {/* CTA form */}
-      <section>
-        <button onClick={() => setConfirmOpen(!confirmOpen)}>
+      <section className="section flexing">
+        <button
+          className="btn btn-gold"
+          onClick={() => setConfirmOpen(!confirmOpen)}
+        >
           Send Application
         </button>
       </section>

@@ -2,7 +2,6 @@ import { type ComponentProps } from "react";
 import { LOREM_SHORT } from "./constants/text";
 
 export function SubmitApplication({
-  openConfirm,
   setOpenConfirm,
 }: {
   openConfirm: boolean;

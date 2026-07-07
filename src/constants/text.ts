@@ -79,8 +79,8 @@ export const TRANSLATIONS = {
         body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
       },
       {
-        tag: "Notice",
-        title: "Duis aute irure dolor",
+        tag: "This Summer",
+        title: "Mock Interview Prep Guid",
         body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
       },
     ],
@@ -218,8 +218,8 @@ export const TRANSLATIONS = {
         body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
       },
       {
-        tag: "Bildiri",
-        title: "Duis aute irure dolor",
+        tag: "Bu Yaz",
+        title: "Mülakat Hazırlık Rehberi",
         body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
       },
     ],

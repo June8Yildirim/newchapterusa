@@ -64,9 +64,9 @@ export const TRANSLATIONS = {
       "5. Safe & Collaborative Space",
       "6. Motivation & Self-Esteem",
     ],
-    watchSampleWebinar: "Watch Sample Webinar",
+    watchSampleWebinar: "Checkout The Tool",
     supportingDescription: "Supporting description for this card.",
-    announcementsTitle: "Announcements",
+    announcementsTitle: "AnnWebinarouncements",
     announcements: [
       {
         tag: "New",
@@ -145,7 +145,7 @@ export const TRANSLATIONS = {
       "Thank you for requesting a discovery call. We will get in touch with you shortly to confirm the scheduled time.",
   },
   tr: {
-    brand: "NCWENhub",
+    brand: "NaWENhub",
     applyCohort: "6 Haftalık Ücretsiz Kohorta Başvurun",
     explorePillars: "6 Temel İlkeyi Keşfedin",
     meetCoach: "Koçunuzla Tanışın: Dr. Mehtap Akay",
@@ -201,7 +201,7 @@ export const TRANSLATIONS = {
       "5. Güvenli & İşbirlikçi Alan",
       "6. Motivasyon & Özgüven",
     ],
-    watchSampleWebinar: "Örnek Webinarı İzle",
+    watchSampleWebinar: "Daha Fazla Detay",
     supportingDescription: "Bu kart için destekleyici açıklama.",
     announcementsTitle: "Duyurular",
     announcements: [

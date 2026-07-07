@@ -69,6 +69,8 @@ export default function Publications({ lang }: { lang: Language }) {
               </div>
               <a
                 href={pub.linkUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="pub-link"
                 style={{
                   marginTop: "16px",

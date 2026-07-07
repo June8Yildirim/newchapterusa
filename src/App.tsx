@@ -54,12 +54,15 @@ function App() {
           <h2>{t.discoveryTitle}</h2>
           <p>{t.discoveryDesc}</p>
           <div className="cta-buttons">
-            <button
+            <a
+              target="_blank"
               className="btn btn-gold"
-              onClick={() => setOpenDiscovery(true)}
+              href={
+                "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ136Fnid8w6QWB6KxetgCQrMGoNfBYgeEg9yaaeATKMb3OG7GN50d-DwTgT65mFaugttMcDgOuR"
+              }
             >
               {t.discoveryBtn}
-            </button>
+            </a>
             <button
               className="btn btn-blue"
               onClick={() => setConfirmOpen(true)}

@@ -71,17 +71,17 @@ export const TRANSLATIONS = {
       {
         tag: "This summer ",
         title: "Designing Your U.S. Career Path Together",
-        body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+        body: "Date and Time Coming Soon",
       },
       {
         tag: "This Summer",
         title: "Discovering the Grant World 101",
-        body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+        body: "Date and Time Coming Soon",
       },
       {
         tag: "This Summer",
         title: "Mock Interview Prep Guid",
-        body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
+        body: "Date and Time Coming Soon",
       },
     ],
     happeningSoonTitle: "Happening Soon",
@@ -209,18 +209,18 @@ export const TRANSLATIONS = {
         tag: "Bu Yaz",
         title:
           "ABD'deki Kariyer Yolunuzu Birlikte Tasarlayalım date/time coming soon",
-        body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+        body: "Tarih ve Zaman Bildirilecek",
       },
       {
         tag: "Bu Yaz",
         title:
           "Amerika da Hibe Bulmak icin Temel BilgilerUt enim ad minim veniam",
-        body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+        body: "Tarih ve Zaman Bildirilecek",
       },
       {
         tag: "Bu Yaz",
         title: "Mülakat Hazırlık Rehberi",
-        body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
+        body: "Tarih ve Zaman Bildirilecek",
       },
     ],
     happeningSoonTitle: "Yakında Başlayacaklar",

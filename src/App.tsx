@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 import "./App.css";
 import {
+  announcements,
   credentials,
   LOREM,
   LOREM_SHORT,
   pillars,
   publications,
+  upcomingEvents,
 } from "./constants/text";
 import { Modal } from "./Modal";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
@@ -24,30 +26,25 @@ function App() {
     <div className="page" ref={container}>
       {/* Header */}
       <header className="site-header">
-        <div className="container header-inner">
-          <div>
-            <button
-              className="btn btn-blue"
-              type="button"
-              style={{ background: "transparent" }}
-            >
-              Logo
-            </button>
-            <span className="brand">New Chapter</span>
-          </div>
-
-          <nav className="header-nav">
-            <button className="btn btn-blue" type="button">
-              Apply for the 6-Week Free Cohort
-            </button>
-            <button className="btn btn-gold" type="button">
-              Explore the 6 Pillars
-            </button>
-            <button className="btn btn-blue " type="button">
-              EN
-            </button>
-          </nav>
+        <div className="header-nav">
+          <button
+            className="btn btn-blue"
+            type="button"
+            style={{ background: "transparent" }}
+          >
+            Logo
+          </button>
+          <span className="brand">NVWENhub</span>
         </div>
+
+        <nav className="header-nav">
+          <button className="btn btn-blue" type="button">
+            Apply for the 6-Week Free Cohort
+          </button>
+          <button className="btn btn-gold" type="button">
+            Explore the 6 Pillars
+          </button>
+        </nav>
       </header>
 
       {/* Hero */}
@@ -113,6 +110,47 @@ function App() {
         </div>
       </section>
 
+      {/* Announcements */}
+      <section className="section announcements">
+        <div className="container">
+          <h2>Announcements</h2>
+          <p className="muted small">{LOREM_SHORT}</p>
+          <div className="announcement-list">
+            {announcements.map((item) => (
+              <article key={item.title} className="announcement-card">
+                <span className="announcement-tag">{item.tag}</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Happening Soon */}
+      <section className="section happening">
+        <div className="container">
+          <h2>Happening Soon</h2>
+          <p className="muted small">{LOREM_SHORT}</p>
+          <div className="happening-grid">
+            {upcomingEvents.map((event) => (
+              <article key={event.title} className="happening-card">
+                <div className="happening-date">{event.date}</div>
+                <div className="happening-body">
+                  <h3>{event.title}</h3>
+                  <p>{event.body}</p>
+                  <button className="btn btn-gold" type="button">
+                    Reserve a Spot
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="section testimonials">
         <div className="container">
@@ -146,6 +184,7 @@ function App() {
           Send Application
         </button>
       </section>
+
       <Modal
         open={confirmOpen}
         onClose={() => setConfirmOpen(false)}

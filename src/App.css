@@ -178,7 +178,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5px;
+  padding: 0px;
   padding-inline: 24px;
 }
 .header-inner {
@@ -201,8 +201,13 @@ h3 {
   align-items: center;
   gap: 12px;
 }
-.lang-btn {
+.navybtn {
+  background: var(--blue);
+}
+.goldbtn {
   background: var(--gold);
+}
+.lang-btn {
   color: #fff;
   -webkit-appearance: none;
   appearance: none;

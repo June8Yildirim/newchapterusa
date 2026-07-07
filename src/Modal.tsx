@@ -1,13 +1,26 @@
-import { useEffect, type ReactNode } from "react";
+import { useEffect, type ReactNode, type CSSProperties } from "react";
 
 interface ModalProps {
   open: boolean;
   onClose: () => void;
   title?: string;
   children: ReactNode;
+  className?: string;
+  style?: CSSProperties;
+  overlayClassName?: string;
+  overlayStyle?: CSSProperties;
 }
 
-export function Modal({ open, onClose, title, children }: ModalProps) {
+export function Modal({
+  open,
+  onClose,
+  title,
+  children,
+  className,
+  style,
+  overlayClassName,
+  overlayStyle,
+}: ModalProps) {
   useEffect(() => {
     if (!open) return;
 
@@ -27,9 +40,15 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
   if (!open) return null;
 
   return (
-    <div className="modal-overlay" role="presentation" onClick={onClose}>
+    <div
+      className={`modal-overlay ${overlayClassName || ""}`}
+      style={overlayStyle}
+      role="presentation"
+      onClick={onClose}
+    >
       <div
-        className="modal"
+        className={`modal ${className || ""}`}
+        style={style}
         role="dialog"
         aria-modal="true"
         aria-labelledby={title ? "modal-title" : undefined}

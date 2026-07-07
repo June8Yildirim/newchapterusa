@@ -1,60 +1,243 @@
+export type Language = "en" | "tr";
+
 export const LOREM =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 export const LOREM_SHORT =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
-export const pillars = [
-  "1. US Business & Career Culture",
-  "2. Workplace ESL & Mock Interviews",
-  "3. Academic Pathways & Equivalency",
-  "4. Interest Analysis & Roadmaps",
-  "5. Safe & Collaborative Space",
-  "6. Motivation & Self-Esteem",
-];
-
-export const credentials = [
-  "Certified Leadership & Performance Coach",
-  "Academic Foundation - PhD",
-  "Systemic Expertise",
-];
-
-export const publications = [
-  "Article of the Year",
-  "Educational Equity Research",
-];
-
-export const announcements = [
-  {
-    tag: "New",
-    title: "Lorem ipsum dolor sit amet",
-    body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+export const TRANSLATIONS = {
+  en: {
+    brand: "NVWENhub",
+    applyCohort: "Apply for the 6-Week Free Cohort",
+    explorePillars: "Explore the 6 Pillars",
+    meetCoach: "Meet Your Coach: Dr. Mehtap Akay",
+    coachSubtitle: "Certified Leadership Coach & Education Consultant",
+    credentialsRich: {
+      coaching: {
+        title: "Certified Leadership & Performance Coach",
+        beforeKoc: "Vetted by ",
+        kocText: "Koç Akademi",
+        kocUrl: "https://www.kocakademi.com",
+        betweenKocIcf: " and accredited by the International Coaching Federation (",
+        icfText: "ICF",
+        icfUrl: "https://coachingfederation.org",
+        afterIcf: ").",
+      },
+      academic: {
+        title: "Academic Foundation",
+        detail: "PhD focusing on multilingual/multicultural immigrant youth, identity layers, and their imagined futures. Former faculty member training future educators at Montclair State University.",
+      },
+      systemic: {
+        title: "Systemic Expertise",
+        detail: "Managed immigrant education programs, quality assurance, and grant funding frameworks within the New Jersey State Mandatory Immigrant Office and served as Education Coordinator at the International Rescue Committee (IRC).",
+      },
+    },
+    publicationsTitle: "Selected Publications & Resources",
+    publicationsRich: [
+      {
+        title: "Article of the Year (Journal of Educational Leadership)",
+        paper: "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
+        description: "A deep dive into family narratives, hardships, and strategic support systems.",
+        linkText: "Read Publication Here",
+        linkUrl: "#",
+      },
+      {
+        title: "Research on Educational Equity",
+        paper: "Access to equity in accessing educational resources",
+        description: "Focused on empowering immigrant mothers to maximize resource allocation for their children.",
+        linkText: "Read Publication Here",
+        linkUrl: "#",
+      },
+    ],
+    pillarsTitle: "The 6 Pillars of Growth",
+    pillars: [
+      "1. US Business & Career Culture",
+      "2. Workplace ESL & Mock Interviews",
+      "3. Academic Pathways & Equivalency",
+      "4. Interest Analysis & Roadmaps",
+      "5. Safe & Collaborative Space",
+      "6. Motivation & Self-Esteem",
+    ],
+    watchSampleWebinar: "Watch Sample Webinar",
+    supportingDescription: "Supporting description for this card.",
+    announcementsTitle: "Announcements",
+    announcements: [
+      {
+        tag: "New",
+        title: "Lorem ipsum dolor sit amet",
+        body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      },
+      {
+        tag: "Update",
+        title: "Ut enim ad minim veniam",
+        body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      },
+      {
+        tag: "Notice",
+        title: "Duis aute irure dolor",
+        body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
+      },
+    ],
+    happeningSoonTitle: "Happening Soon",
+    reserveSpot: "Reserve a Spot",
+    upcomingEvents: [
+      {
+        date: "Sep 12",
+        title: "Lorem ipsum workshop",
+        body: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        date: "Sep 24",
+        title: "Consectetur webinar",
+        body: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      },
+      {
+        date: "Oct 03",
+        title: "Adipiscing group session",
+        body: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      },
+    ],
+    testimonialsTitle: "The Pilot Blueprint: 6-Week Group Coaching",
+    janeDoe: "Jane Doe",
+    productManager: "Product Manager",
+    latestUpdate: "Get To Know Latest Update",
+    sendApplication: "Send Application",
+    submitApplicationTitle: "SubmitApplication",
+    placeholderName: "Name",
+    placeholderEmail: "Email",
+    placeholderStage: "Current Professional Transition Stage",
+    placeholderBarrier: "Top Career Barrier",
+    placeholderSupport: "Requested Support Type",
+    consentText: LOREM_SHORT,
+    submitApplicationBtn: "Submit Application",
+    appReceived: "Application received",
+    thanksApplying: "Thanks for applying. Your email client should have opened with your details — just hit send and we'll be in touch soon.",
+    close: "Close",
+    
+    // Email subjects
+    mailSubject: "New Chapter application",
+    mailLabelName: "Name",
+    mailLabelEmail: "Email",
+    mailLabelStage: "Current Professional Transition Stage",
+    mailLabelBarrier: "Top Career Barrier",
+    mailLabelSupport: "Requested Support Type",
+    mailLabelConsent: "Consent to be contacted",
   },
-  {
-    tag: "Update",
-    title: "Ut enim ad minim veniam",
-    body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+  tr: {
+    brand: "NVWENhub",
+    applyCohort: "6 Haftalık Ücretsiz Kohorta Başvurun",
+    explorePillars: "6 Temel İlkeyi Keşfedin",
+    meetCoach: "Koçunuzla Tanışın: Dr. Mehtap Akay",
+    coachSubtitle: "Sertifikalı Liderlik Koçu & Eğitim Danışmanı",
+    credentialsRich: {
+      coaching: {
+        title: "Sertifikalı Liderlik ve Performans Koçu",
+        beforeKoc: "",
+        kocText: "Koç Akademi",
+        kocUrl: "https://www.kocakademi.com",
+        betweenKocIcf: " onaylı ve Uluslararası Koçluk Federasyonu (",
+        icfText: "ICF",
+        icfUrl: "https://coachingfederation.org",
+        afterIcf: ") akreditelidir.",
+      },
+      academic: {
+        title: "Akademik Temel",
+        detail: "Çok dilli/çok kültürlü göçmen gençliği, kimlik katmanları ve hayal edilen gelecekleri üzerine odaklanan doktora (PhD). Montclair State University'de geleceğin eğitimcilerini yetiştiren eski öğretim üyesi.",
+      },
+      systemic: {
+        title: "Sistemik Uzmanlık",
+        detail: "New Jersey Eyaleti Zorunlu Göçmen Ofisi bünyesinde göçmen eğitim programları, kalite güvencesi ve hibe finansman çerçevelerini yönetti ve Uluslararası Kurtarma Komitesi'nde (IRC) Eğitim Koordinatörü olarak görev yaptı.",
+      },
+    },
+    publicationsTitle: "Seçilmiş Yayınlar ve Kaynaklar",
+    publicationsRich: [
+      {
+        title: "Yılın Makalesi (Eğitimsel Liderlik Dergisi)",
+        paper: "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
+        description: "Aile anlatıları, zorluklar ve stratejik destek sistemlerine derin bir bakış.",
+        linkText: "Yayını Buradan Okuyun",
+        linkUrl: "#",
+      },
+      {
+        title: "Eğitimde Eşitlik Araştırması",
+        paper: "Access to equity in accessing educational resources",
+        description: "Göçmen annelerin çocukları için kaynak tahsisini en üst düzeye çıkarmasını sağlamaya odaklanmıştır.",
+        linkText: "Yayını Buradan Okuyun",
+        linkUrl: "#",
+      },
+    ],
+    pillarsTitle: "Büyümenin 6 Temel İlkesi",
+    pillars: [
+      "1. ABD İş ve Kariyer Kültürü",
+      "2. İş Yeri İngilizcesi & Mülakat Simülasyonları",
+      "3. Akademik Yollar & Denklik",
+      "4. İlgi Analizi & Yol Haritaları",
+      "5. Güvenli & İşbirlikçi Alan",
+      "6. Motivasyon & Özgüven",
+    ],
+    watchSampleWebinar: "Örnek Webinarı İzle",
+    supportingDescription: "Bu kart için destekleyici açıklama.",
+    announcementsTitle: "Duyurular",
+    announcements: [
+      {
+        tag: "Yeni",
+        title: "Lorem ipsum dolor sit amet",
+        body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      },
+      {
+        tag: "Güncelleme",
+        title: "Ut enim ad minim veniam",
+        body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      },
+      {
+        tag: "Bildiri",
+        title: "Duis aute irure dolor",
+        body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
+      },
+    ],
+    happeningSoonTitle: "Yakında Başlayacaklar",
+    reserveSpot: "Yer Ayırtın",
+    upcomingEvents: [
+      {
+        date: "12 Eyl",
+        title: "Lorem ipsum atölyesi",
+        body: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
+        date: "24 Eyl",
+        title: "Consectetur webinarı",
+        body: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      },
+      {
+        date: "03 Eki",
+        title: "Adipiscing grup seansı",
+        body: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+      },
+    ],
+    testimonialsTitle: "Pilot Taslak: 6 Haftalık Grup Koçluğu",
+    janeDoe: "Jane Doe",
+    productManager: "Ürün Yöneticisi",
+    latestUpdate: "En Son Güncellemeleri Alın",
+    sendApplication: "Başvuru Gönder",
+    submitApplicationTitle: "Başvuru Formu",
+    placeholderName: "İsim",
+    placeholderEmail: "E-posta",
+    placeholderStage: "Mevcut Profesyonel Geçiş Aşaması",
+    placeholderBarrier: "En Büyük Kariyer Engeli",
+    placeholderSupport: "Talep Edilen Destek Türü",
+    consentText: LOREM_SHORT,
+    submitApplicationBtn: "Başvuruyu Gönder",
+    appReceived: "Başvuru alındı",
+    thanksApplying: "Başvurduğunuz için teşekkürler. E-posta istemciniz bilgilerinizle birlikte açılmış olmalıdır — göndere basmanız yeterlidir, yakında sizinle iletişime geçeceğiz.",
+    close: "Kapat",
+    
+    // Email subjects
+    mailSubject: "Yeni Bölüm başvurusu",
+    mailLabelName: "İsim",
+    mailLabelEmail: "E-posta",
+    mailLabelStage: "Mevcut Profesyonel Geçiş Aşaması",
+    mailLabelBarrier: "En Büyük Kariyer Engeli",
+    mailLabelSupport: "Talep Edilen Destek Türü",
+    mailLabelConsent: "İletişime geçilmesine izin veriyorum",
   },
-  {
-    tag: "Notice",
-    title: "Duis aute irure dolor",
-    body: "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
-  },
-];
-
-export const upcomingEvents = [
-  {
-    date: "Sep 12",
-    title: "Lorem ipsum workshop",
-    body: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    date: "Sep 24",
-    title: "Consectetur webinar",
-    body: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-  },
-  {
-    date: "Oct 03",
-    title: "Adipiscing group session",
-    body: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-  },
-];
+};

@@ -1,13 +1,17 @@
 import { type ComponentProps } from "react";
-import { LOREM_SHORT } from "./constants/text";
+import { TRANSLATIONS, type Language } from "./constants/text";
 
 export function SubmitApplication({
+  lang,
   setOpenConfirm,
 }: {
+  lang: Language;
   openConfirm: boolean;
   setOpenConfirm: (tst: boolean) => void;
 }) {
+  const t = TRANSLATIONS[lang];
   const CONTACT_EMAIL = "hello@newchapter.example";
+  
   function buildMailtoHref(data: FormData) {
     const name = String(data.get("name") ?? "");
     const email = String(data.get("email") ?? "");
@@ -16,20 +20,21 @@ export function SubmitApplication({
     const support = String(data.get("support") ?? "");
     const consent = data.get("consent") ? "Yes" : "No";
 
-    const subject = `New Chapter application${name ? ` — ${name}` : ""}`;
+    const subject = `${t.mailSubject}${name ? ` — ${name}` : ""}`;
     const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Current Professional Transition Stage: ${stage}`,
-      `Top Career Barrier: ${barrier}`,
-      `Requested Support Type: ${support}`,
-      `Consent to be contacted: ${consent}`,
+      `${t.mailLabelName}: ${name}`,
+      `${t.mailLabelEmail}: ${email}`,
+      `${t.mailLabelStage}: ${stage}`,
+      `${t.mailLabelBarrier}: ${barrier}`,
+      `${t.mailLabelSupport}: ${support}`,
+      `${t.mailLabelConsent}: ${consent}`,
     ].join("\n");
 
     return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`;
   }
+
   const handleSubmit: ComponentProps<"form">["onSubmit"] = (e) => {
     e.preventDefault();
     const href = buildMailtoHref(new FormData(e.currentTarget));
@@ -41,25 +46,25 @@ export function SubmitApplication({
     <section className="section update">
       <div className="container">
         <form className="update-form" onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="name" placeholder={t.placeholderName} required />
+          <input type="email" name="email" placeholder={t.placeholderEmail} required />
           <input
             type="text"
             name="stage"
-            placeholder="Current Professional Transition Stage"
+            placeholder={t.placeholderStage}
           />
-          <input type="text" name="barrier" placeholder="Top Career Barrier" />
+          <input type="text" name="barrier" placeholder={t.placeholderBarrier} />
           <input
             type="text"
             name="support"
-            placeholder="Requested Support Type"
+            placeholder={t.placeholderSupport}
           />
           <label className="checkbox-row">
             <input type="checkbox" name="consent" />
-            <span>{LOREM_SHORT}</span>
+            <span>{t.consentText}</span>
           </label>
           <button className="btn btn-gold btn-block" type="submit">
-            Submit Application
+            {t.submitApplicationBtn}
           </button>
         </form>
       </div>

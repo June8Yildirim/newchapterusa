@@ -1,11 +1,6 @@
 import { useRef, useState } from "react";
 import "./App.css";
-import {
-  TRANSLATIONS,
-  LOREM,
-  LOREM_SHORT,
-  type Language,
-} from "./constants/text";
+import { TRANSLATIONS, type Language } from "./constants/text";
 import { Modal } from "./Modal";
 import { SubmitApplication } from "./submitApp";
 import { useSiteAnimations } from "./useSiteAnimations";

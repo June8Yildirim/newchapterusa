@@ -180,6 +180,7 @@ h3 {
   margin: 0 auto;
   padding: 0px;
   padding-inline: 24px;
+  height: 100px;
 }
 .header-inner {
   display: flex;
@@ -772,4 +773,3 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
 }
-

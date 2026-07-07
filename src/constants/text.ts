@@ -64,9 +64,11 @@ export const TRANSLATIONS = {
       "5. Safe & Collaborative Space",
       "6. Motivation & Self-Esteem",
     ],
-    watchSampleWebinar: "Checkout The Tool",
+    watchSampleWebinar: "Check out the Tool",
     supportingDescription: "Supporting description for this card.",
     announcementsTitle: "Webinar Announcements",
+    announcementsSubTitle:
+      "We have exciting news! Check out our tools and webinars below, and make sure to subscribe to our newsletter to be the first to hear when they are officially announced.",
     announcements: [
       {
         tag: "This summer ",
@@ -204,6 +206,8 @@ export const TRANSLATIONS = {
     watchSampleWebinar: "Daha Fazla Detay",
     supportingDescription: "Bu kart için destekleyici açıklama.",
     announcementsTitle: "Duyurular",
+    announcementsSubTitle:
+      "Harika haberlerimiz var! Aşağıdaki yeni rehber kitapciklarimiza ve webinarlarımıza göz atın. Resmi olarak duyurulduğunda ilk siz haberdar olmak için bültenimize abone olmayı da unutmayın.",
     announcements: [
       {
         tag: "Bu Yaz",

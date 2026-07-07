@@ -7,7 +7,7 @@ export const LOREM_SHORT =
 
 export const TRANSLATIONS = {
   en: {
-    brand: "NVWENhub",
+    brand: "NCWENhub",
     applyCohort: "Apply for the 6-Week Free Cohort",
     explorePillars: "Explore the 6 Pillars",
     meetCoach: "Meet Your Coach: Dr. Mehtap Akay",
@@ -18,33 +18,39 @@ export const TRANSLATIONS = {
         beforeKoc: "Vetted by ",
         kocText: "Koç Akademi",
         kocUrl: "https://www.kocakademi.com",
-        betweenKocIcf: " and accredited by the International Coaching Federation (",
+        betweenKocIcf:
+          " and accredited by the International Coaching Federation (",
         icfText: "ICF",
         icfUrl: "https://coachingfederation.org",
         afterIcf: ").",
       },
       academic: {
         title: "Academic Foundation",
-        detail: "PhD focusing on multilingual/multicultural immigrant youth, identity layers, and their imagined futures. Former faculty member training future educators at Montclair State University.",
+        detail:
+          "PhD focusing on multilingual/multicultural immigrant youth, identity layers, and their imagined futures. Former faculty member training future educators at Montclair State University.",
       },
       systemic: {
         title: "Systemic Expertise",
-        detail: "Managed immigrant education programs, quality assurance, and grant funding frameworks within the New Jersey State Mandatory Immigrant Office and served as Education Coordinator at the International Rescue Committee (IRC).",
+        detail:
+          "Managed immigrant education programs, quality assurance, and grant funding frameworks within the New Jersey State Mandatory Immigrant Office and served as Education Coordinator at the International Rescue Committee (IRC).",
       },
     },
     publicationsTitle: "Selected Publications & Resources",
     publicationsRich: [
       {
         title: "Article of the Year (Journal of Educational Leadership)",
-        paper: "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
-        description: "A deep dive into family narratives, hardships, and strategic support systems.",
+        paper:
+          "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
+        description:
+          "A deep dive into family narratives, hardships, and strategic support systems.",
         linkText: "Read Publication Here",
         linkUrl: "#",
       },
       {
         title: "Research on Educational Equity",
         paper: "Access to equity in accessing educational resources",
-        description: "Focused on empowering immigrant mothers to maximize resource allocation for their children.",
+        description:
+          "Focused on empowering immigrant mothers to maximize resource allocation for their children.",
         linkText: "Read Publication Here",
         linkUrl: "#",
       },
@@ -111,9 +117,10 @@ export const TRANSLATIONS = {
     consentText: LOREM_SHORT,
     submitApplicationBtn: "Submit Application",
     appReceived: "Application received",
-    thanksApplying: "Thanks for applying. Your email client should have opened with your details — just hit send and we'll be in touch soon.",
+    thanksApplying:
+      "Thanks for applying. Your email client should have opened with your details — just hit send and we'll be in touch soon.",
     close: "Close",
-    
+
     // Email subjects
     mailSubject: "New Chapter application",
     mailLabelName: "Name",
@@ -125,17 +132,20 @@ export const TRANSLATIONS = {
 
     // Discovery Call CTA
     discoveryTitle: "Ready to Write Your Next Chapter?",
-    discoveryDesc: "Schedule a free 30-minute discovery call with Dr. Mehtap Akay to discuss your goals, identify transition obstacles, and map out your professional success in the US.",
+    discoveryDesc:
+      "Schedule a free 30-minute discovery call with Dr. Mehtap Akay to discuss your goals, identify transition obstacles, and map out your professional success in the US.",
     discoveryBtn: "Book Free Discovery Call",
     discoveryModalTitle: "Schedule Your Free Discovery Call",
     discoveryPlaceholderDate: "Preferred Date & Time",
-    discoveryPlaceholderMessage: "Briefly describe your goals or current challenges",
+    discoveryPlaceholderMessage:
+      "Briefly describe your goals or current challenges",
     discoverySubmitBtn: "Request Discovery Call",
     discoverySuccessTitle: "Discovery Request Received",
-    discoverySuccessBody: "Thank you for requesting a discovery call. We will get in touch with you shortly to confirm the scheduled time.",
+    discoverySuccessBody:
+      "Thank you for requesting a discovery call. We will get in touch with you shortly to confirm the scheduled time.",
   },
   tr: {
-    brand: "NVWENhub",
+    brand: "NCWENhub",
     applyCohort: "6 Haftalık Ücretsiz Kohorta Başvurun",
     explorePillars: "6 Temel İlkeyi Keşfedin",
     meetCoach: "Koçunuzla Tanışın: Dr. Mehtap Akay",
@@ -153,26 +163,31 @@ export const TRANSLATIONS = {
       },
       academic: {
         title: "Akademik Temel",
-        detail: "Çok dilli/çok kültürlü göçmen gençliği, kimlik katmanları ve hayal edilen gelecekleri üzerine odaklanan doktora (PhD). Montclair State University'de geleceğin eğitimcilerini yetiştiren eski öğretim üyesi.",
+        detail:
+          "Çok dilli/çok kültürlü göçmen gençliği, kimlik katmanları ve hayal edilen gelecekleri üzerine odaklanan doktora (PhD). Montclair State University'de geleceğin eğitimcilerini yetiştiren eski öğretim üyesi.",
       },
       systemic: {
         title: "Sistemik Uzmanlık",
-        detail: "New Jersey Eyaleti Zorunlu Göçmen Ofisi bünyesinde göçmen eğitim programları, kalite güvencesi ve hibe finansman çerçevelerini yönetti ve Uluslararası Kurtarma Komitesi'nde (IRC) Eğitim Koordinatörü olarak görev yaptı.",
+        detail:
+          "New Jersey Eyaleti Zorunlu Göçmen Ofisi bünyesinde göçmen eğitim programları, kalite güvencesi ve hibe finansman çerçevelerini yönetti ve Uluslararası Kurtarma Komitesi'nde (IRC) Eğitim Koordinatörü olarak görev yaptı.",
       },
     },
     publicationsTitle: "Seçilmiş Yayınlar ve Kaynaklar",
     publicationsRich: [
       {
         title: "Yılın Makalesi (Eğitimsel Liderlik Dergisi)",
-        paper: "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
-        description: "Aile anlatıları, zorluklar ve stratejik destek sistemlerine derin bir bakış.",
+        paper:
+          "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
+        description:
+          "Aile anlatıları, zorluklar ve stratejik destek sistemlerine derin bir bakış.",
         linkText: "Yayını Buradan Okuyun",
         linkUrl: "#",
       },
       {
         title: "Eğitimde Eşitlik Araştırması",
         paper: "Access to equity in accessing educational resources",
-        description: "Göçmen annelerin çocukları için kaynak tahsisini en üst düzeye çıkarmasını sağlamaya odaklanmıştır.",
+        description:
+          "Göçmen annelerin çocukları için kaynak tahsisini en üst düzeye çıkarmasını sağlamaya odaklanmıştır.",
         linkText: "Yayını Buradan Okuyun",
         linkUrl: "#",
       },
@@ -239,9 +254,10 @@ export const TRANSLATIONS = {
     consentText: LOREM_SHORT,
     submitApplicationBtn: "Başvuruyu Gönder",
     appReceived: "Başvuru alındı",
-    thanksApplying: "Başvurduğunuz için teşekkürler. E-posta istemciniz bilgilerinizle birlikte açılmış olmalıdır — göndere basmanız yeterlidir, yakında sizinle iletişime geçeceğiz.",
+    thanksApplying:
+      "Başvurduğunuz için teşekkürler. E-posta istemciniz bilgilerinizle birlikte açılmış olmalıdır — göndere basmanız yeterlidir, yakında sizinle iletişime geçeceğiz.",
     close: "Kapat",
-    
+
     // Email subjects
     mailSubject: "Yeni Bölüm başvurusu",
     mailLabelName: "İsim",
@@ -253,13 +269,16 @@ export const TRANSLATIONS = {
 
     // Discovery Call CTA
     discoveryTitle: "Yeni Bir Bölüm Yazmaya Hazır mısınız?",
-    discoveryDesc: "Hedeflerinizi konuşmak, geçiş sürecindeki engellerinizi belirlemek ve ABD'deki profesyonel başarınızı planlamak için Dr. Mehtap Akay ile ücretsiz 30 dakikalık bir keşif görüşmesi planlayın.",
+    discoveryDesc:
+      "Hedeflerinizi konuşmak, geçiş sürecindeki engellerinizi belirlemek ve ABD'deki profesyonel başarınızı planlamak için Dr. Mehtap Akay ile ücretsiz 30 dakikalık bir keşif görüşmesi planlayın.",
     discoveryBtn: "Ücretsiz Keşif Görüşmesi Ayarlayın",
     discoveryModalTitle: "Ücretsiz Keşif Görüşmenizi Planlayın",
     discoveryPlaceholderDate: "Tercih Edilen Tarih ve Saat",
-    discoveryPlaceholderMessage: "Hedeflerinizi veya karşılaştığınız zorlukları kısaca açıklayın",
+    discoveryPlaceholderMessage:
+      "Hedeflerinizi veya karşılaştığınız zorlukları kısaca açıklayın",
     discoverySubmitBtn: "Keşif Görüşmesi Talep Et",
     discoverySuccessTitle: "Keşif Görüşmesi Talebi Alındı",
-    discoverySuccessBody: "Keşif görüşmesi talebiniz için teşekkür ederiz. Planlanan saati onaylamak için yakında sizinle iletişime geçeceğiz.",
+    discoverySuccessBody:
+      "Keşif görüşmesi talebiniz için teşekkür ederiz. Planlanan saati onaylamak için yakında sizinle iletişime geçeceğiz.",
   },
 };

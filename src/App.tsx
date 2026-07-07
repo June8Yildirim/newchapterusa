@@ -1,6 +1,11 @@
 import { useRef, useState } from "react";
 import "./App.css";
-import { TRANSLATIONS, type Language } from "./constants/text";
+import {
+  TRANSLATIONS,
+  LOREM,
+  LOREM_SHORT,
+  type Language,
+} from "./constants/text";
 import { Modal } from "./Modal";
 import { SubmitApplication } from "./submitApp";
 import { useSiteAnimations } from "./useSiteAnimations";
@@ -21,6 +26,8 @@ function App() {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
   const [lang, setLang] = useState<Language>("en");
+  const [openDiscovery, setOpenDiscovery] = useState(false);
+  const [openDiscoveryConfirm, setOpenDiscoveryConfirm] = useState(false);
 
   const container = useRef<HTMLDivElement>(null);
   useSiteAnimations(container);
@@ -47,15 +54,27 @@ function App() {
       <TestimonialsCarousel setOpenTestimonal={setOpenTestimonal} />
 
       {/* CTA form */}
-      <section className="section flexing">
-        <h2 className="center">{t.latestUpdate}</h2>
-        <button
-          className="btn btn-gold"
-          onClick={() => setConfirmOpen(!confirmOpen)}
-        >
-          {t.sendApplication}
-        </button>
+      <section className="container">
+        <div className="cta-banner">
+          <h2>{t.discoveryTitle}</h2>
+          <p>{t.discoveryDesc}</p>
+          <div className="cta-buttons">
+            <button
+              className="btn btn-gold"
+              onClick={() => setOpenDiscovery(true)}
+            >
+              {t.discoveryBtn}
+            </button>
+            <button
+              className="btn btn-blue"
+              onClick={() => setConfirmOpen(true)}
+            >
+              {t.submitApplicationBtn}
+            </button>
+          </div>
+        </div>
       </section>
+
       <Modal
         open={!!openTestimonal}
         onClose={() => setOpenTestimonal(null)}
@@ -67,6 +86,7 @@ function App() {
             name={openTestimonal.name}
             job={openTestimonal.job}
             post={openTestimonal.post}
+            significant={openTestimonal.significant}
           />
         )}
       </Modal>
@@ -82,6 +102,7 @@ function App() {
           setOpenConfirm={setOpenConfirm}
         />
       </Modal>
+
       <Modal
         open={openConfirm}
         onClose={() => setOpenConfirm(false)}
@@ -92,6 +113,88 @@ function App() {
           type="button"
           className="btn btn-gold btn-block"
           onClick={() => setConfirmOpen(false)}
+        >
+          {t.close}
+        </button>
+      </Modal>
+
+      <Modal
+        open={openDiscovery}
+        onClose={() => setOpenDiscovery(false)}
+        title={t.discoveryModalTitle}
+      >
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            const data = new FormData(e.currentTarget);
+            const name = String(data.get("name") ?? "");
+            const email = String(data.get("email") ?? "");
+            const datetime = String(data.get("datetime") ?? "");
+            const notes = String(data.get("notes") ?? "");
+
+            const subject = `Discovery Call Request - ${name}`;
+            const body = `Name: ${name}\nEmail: ${email}\nPreferred Date/Time: ${datetime}\nNotes: ${notes}`;
+
+            window.location.href = `mailto:hello@newchapter.example?subject=${encodeURIComponent(
+              subject,
+            )}&body=${encodeURIComponent(body)}`;
+
+            setOpenDiscovery(false);
+            setOpenDiscoveryConfirm(true);
+          }}
+          className="update-form"
+          style={{ display: "flex", flexDirection: "column", gap: "12px" }}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder={t.placeholderName}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder={t.placeholderEmail}
+            required
+          />
+          <input
+            type="text"
+            name="datetime"
+            placeholder={t.discoveryPlaceholderDate}
+            required
+          />
+          <textarea
+            name="notes"
+            placeholder={t.discoveryPlaceholderMessage}
+            rows={4}
+            style={{
+              width: "100%",
+              padding: "12px",
+              borderRadius: "6px",
+              border: "1px solid var(--border)",
+              background: "#fff",
+              color: "var(--ink)",
+              fontFamily: "inherit",
+              fontSize: "14px",
+              resize: "vertical",
+            }}
+          />
+          <button className="btn btn-gold btn-block" type="submit">
+            {t.discoverySubmitBtn}
+          </button>
+        </form>
+      </Modal>
+
+      <Modal
+        open={openDiscoveryConfirm}
+        onClose={() => setOpenDiscoveryConfirm(false)}
+        title={t.discoverySuccessTitle}
+      >
+        <p>{t.discoverySuccessBody}</p>
+        <button
+          type="button"
+          className="btn btn-gold btn-block"
+          onClick={() => setOpenDiscoveryConfirm(false)}
         >
           {t.close}
         </button>

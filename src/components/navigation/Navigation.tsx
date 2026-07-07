@@ -21,12 +21,7 @@ export default function Navigation({
             padding: 0,
           }}
         >
-          <img
-            width={60}
-            height={40}
-            src="/images/newchapterusab2b.png"
-            alt="logo"
-          />
+          <img width={60} height={40} src="/images/NCWENLogo.png" alt="logo" />
         </button>
         <span className="brand">{t.brand}</span>
       </div>

@@ -122,6 +122,17 @@ export const TRANSLATIONS = {
     mailLabelBarrier: "Top Career Barrier",
     mailLabelSupport: "Requested Support Type",
     mailLabelConsent: "Consent to be contacted",
+
+    // Discovery Call CTA
+    discoveryTitle: "Ready to Write Your Next Chapter?",
+    discoveryDesc: "Schedule a free 30-minute discovery call with Dr. Mehtap Akay to discuss your goals, identify transition obstacles, and map out your professional success in the US.",
+    discoveryBtn: "Book Free Discovery Call",
+    discoveryModalTitle: "Schedule Your Free Discovery Call",
+    discoveryPlaceholderDate: "Preferred Date & Time",
+    discoveryPlaceholderMessage: "Briefly describe your goals or current challenges",
+    discoverySubmitBtn: "Request Discovery Call",
+    discoverySuccessTitle: "Discovery Request Received",
+    discoverySuccessBody: "Thank you for requesting a discovery call. We will get in touch with you shortly to confirm the scheduled time.",
   },
   tr: {
     brand: "NVWENhub",
@@ -239,5 +250,16 @@ export const TRANSLATIONS = {
     mailLabelBarrier: "En Büyük Kariyer Engeli",
     mailLabelSupport: "Talep Edilen Destek Türü",
     mailLabelConsent: "İletişime geçilmesine izin veriyorum",
+
+    // Discovery Call CTA
+    discoveryTitle: "Yeni Bir Bölüm Yazmaya Hazır mısınız?",
+    discoveryDesc: "Hedeflerinizi konuşmak, geçiş sürecindeki engellerinizi belirlemek ve ABD'deki profesyonel başarınızı planlamak için Dr. Mehtap Akay ile ücretsiz 30 dakikalık bir keşif görüşmesi planlayın.",
+    discoveryBtn: "Ücretsiz Keşif Görüşmesi Ayarlayın",
+    discoveryModalTitle: "Ücretsiz Keşif Görüşmenizi Planlayın",
+    discoveryPlaceholderDate: "Tercih Edilen Tarih ve Saat",
+    discoveryPlaceholderMessage: "Hedeflerinizi veya karşılaştığınız zorlukları kısaca açıklayın",
+    discoverySubmitBtn: "Keşif Görüşmesi Talep Et",
+    discoverySuccessTitle: "Keşif Görüşmesi Talebi Alındı",
+    discoverySuccessBody: "Keşif görüşmesi talebiniz için teşekkür ederiz. Planlanan saati onaylamak için yakında sizinle iletişime geçeceğiz.",
   },
 };

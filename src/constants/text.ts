@@ -66,16 +66,16 @@ export const TRANSLATIONS = {
     ],
     watchSampleWebinar: "Checkout The Tool",
     supportingDescription: "Supporting description for this card.",
-    announcementsTitle: "AnnWebinarouncements",
+    announcementsTitle: "Webinar Announcements",
     announcements: [
       {
-        tag: "New",
-        title: "Lorem ipsum dolor sit amet",
+        tag: "This summer ",
+        title: "Designing Your U.S. Career Path Together",
         body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
       },
       {
-        tag: "Update",
-        title: "Ut enim ad minim veniam",
+        tag: "This Summer",
+        title: "Discovering the Grant World 101",
         body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
       },
       {
@@ -206,13 +206,15 @@ export const TRANSLATIONS = {
     announcementsTitle: "Duyurular",
     announcements: [
       {
-        tag: "Yeni",
-        title: "Lorem ipsum dolor sit amet",
+        tag: "Bu Yaz",
+        title:
+          "ABD'deki Kariyer Yolunuzu Birlikte Tasarlayalım date/time coming soon",
         body: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
       },
       {
-        tag: "Güncelleme",
-        title: "Ut enim ad minim veniam",
+        tag: "Bu Yaz",
+        title:
+          "Amerika da Hibe Bulmak icin Temel BilgilerUt enim ad minim veniam",
         body: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
       },
       {

@@ -48,9 +48,7 @@ function App() {
         </div>
       </section>
 
-      <MeetingCoaching
-        lang={lang}
-      />
+      <MeetingCoaching lang={lang} />
       <Publications
         lang={lang}
         openComingSoonModal={openComingSoonModal}
@@ -80,7 +78,7 @@ function App() {
                 color: "rgba(255, 255, 255, 0.9)",
               }}
             >
-              Dr. Mehtap Akay, PhD — {t.coachSubtitle}
+              Dr. Mehtap Akay, PhD — {t.brand}
             </span>
             <p className="footer-desc" style={{ marginTop: "4px" }}>
               {t.footerDesc}
@@ -121,12 +119,7 @@ function App() {
         title={"Under Construction"}
         style={{ maxWidth: "1080px", height: "800px" }}
       >
-        {openComingSoonModal && (
-          <ComingSoon
-            lang={lang}
-            setLang={setLang}
-          />
-        )}
+        {openComingSoonModal && <ComingSoon lang={lang} setLang={setLang} />}
       </Modal>
       <Modal
         open={!!openTestimonal}

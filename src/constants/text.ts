@@ -7,7 +7,7 @@ export const LOREM_SHORT =
 
 export const TRANSLATIONS = {
   en: {
-    brand: "NCWENhub",
+    brand: "NCWEN",
     applyCohort: "Apply for the 6-Week Free Cohort",
     explorePillars: "Explore the 6 Pillars",
     meetCoach: "Meet Your Coach: Dr. Mehtap Akay",
@@ -149,22 +149,25 @@ export const TRANSLATIONS = {
     discoverySuccessTitle: "Discovery Request Received",
     discoverySuccessBody:
       "Thank you for requesting a discovery call. We will get in touch with you shortly to confirm the scheduled time.",
-    footerDesc: "Empowering immigrant professionals to successfully transition and thrive in the US workforce.",
+    footerDesc:
+      "Empowering immigrant professionals to successfully transition and thrive in the US workforce.",
     footerConnect: "Connect on LinkedIn",
-    footerCopyright: "© 2026 NVWENhub. All rights reserved.",
+    footerCopyright: "© 2026 NCWEN. All rights reserved.",
     developedBy: "Developed by Cüneyt Yıldırım",
     comingSoonTitle: "COMING SOON",
     comingSoonSubtitle: "I am currently working on my new website",
-    comingSoonDesc: "I will be here soon, click on \"Notify Me!\" to be ready for the Grand Day!",
+    comingSoonDesc:
+      'I will be here soon, click on "Notify Me!" to be ready for the Grand Day!',
     comingSoonBtn: "Notify Me",
     notifyModalTitle: "Get Notified",
     notifyPlaceholderEmail: "Enter your email address",
     notifySubmitBtn: "Notify Me",
     notifySuccessTitle: "You're on the list!",
-    notifySuccessBody: "Thank you! We will notify you as soon as our new website goes live.",
+    notifySuccessBody:
+      "Thank you! We will notify you as soon as our new website goes live.",
   },
   tr: {
-    brand: "NCWENhub",
+    brand: "NCWEN",
     applyCohort: "6 Haftalık Ücretsiz Egitime Başvurun",
     explorePillars: "6 Temel İlkeyi Keşfedin",
     meetCoach: "Koçunuzla Tanışın: Dr. Mehtap Akay",
@@ -309,18 +312,21 @@ export const TRANSLATIONS = {
     discoverySuccessTitle: "Keşif Görüşmesi Talebi Alındı",
     discoverySuccessBody:
       "Keşif görüşmesi talebiniz için teşekkür ederiz. Planlanan saati onaylamak için yakında sizinle iletişime geçeceğiz.",
-    footerDesc: "Göçmen profesyonellerin ABD iş gücüne başarılı bir şekilde geçiş yapmalarını ve gelişmelerini destekliyoruz.",
+    footerDesc:
+      "Göçmen profesyonellerin ABD iş gücüne başarılı bir şekilde geçiş yapmalarını ve gelişmelerini destekliyoruz.",
     footerConnect: "LinkedIn'de Bağlantı Kurun",
-    footerCopyright: "© 2026 NVWENhub. Tüm hakları saklıdır.",
+    footerCopyright: "© 2026 NCWEN. Tüm hakları saklıdır.",
     developedBy: "Cüneyt Yıldırım tarafından geliştirilmiştir",
     comingSoonTitle: "YAKINDA",
     comingSoonSubtitle: "Yeni web sitem üzerinde çalışıyorum",
-    comingSoonDesc: "Yakında burada olacağım, Büyük Gün'e hazır olmak için \"Beni Bilgilendir!\" butonuna tıklayın!",
+    comingSoonDesc:
+      'Yakında burada olacağım, Büyük Gün\'e hazır olmak için "Beni Bilgilendir!" butonuna tıklayın!',
     comingSoonBtn: "Beni Bilgilendir",
     notifyModalTitle: "Haberdar Olun",
     notifyPlaceholderEmail: "E-posta adresinizi girin",
     notifySubmitBtn: "Beni Bilgilendir",
     notifySuccessTitle: "Listedesiniz!",
-    notifySuccessBody: "Teşekkürler! Yeni sitemiz yayına girdiğinde sizi bilgilendireceğiz.",
+    notifySuccessBody:
+      "Teşekkürler! Yeni sitemiz yayına girdiğinde sizi bilgilendireceğiz.",
   },
 };

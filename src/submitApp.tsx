@@ -84,23 +84,33 @@ export function SubmitApplication({
     <section className="section update">
       <div className="container">
         <form className="update-form" onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder={t.placeholderName} required />
-          <input type="email" name="email" placeholder={t.placeholderEmail} required />
           <input
             type="text"
-            name="stage"
-            placeholder={t.placeholderStage}
+            name="name"
+            placeholder={t.placeholderName}
+            required
           />
-          <input type="text" name="barrier" placeholder={t.placeholderBarrier} />
+          <input
+            type="email"
+            name="email"
+            placeholder={t.placeholderEmail}
+            required
+          />
+          <input type="text" name="stage" placeholder={t.placeholderStage} />
+          <input
+            type="text"
+            name="barrier"
+            placeholder={t.placeholderBarrier}
+          />
           <input
             type="text"
             name="support"
             placeholder={t.placeholderSupport}
           />
-          <label className="checkbox-row">
-            <input type="checkbox" name="consent" />
-            <span>{t.consentText}</span>
-          </label>
+          {/* <label className="checkbox-row"> */}
+          {/*   <input type="checkbox" name="consent" /> */}
+          {/*   <span>{t.consentText}</span> */}
+          {/* </label> */}
           {error && (
             <p role="alert" style={{ color: "#c0392b", margin: 0 }}>
               {error}

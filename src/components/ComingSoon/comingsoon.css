@@ -1,0 +1,142 @@
+.coming-soon-page {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 70vh;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background:
+    linear-gradient(rgba(15, 23, 32, 0.45), rgba(15, 23, 32, 0.55)),
+    url("/images/underconstruction.jpg") no-repeat center center / cover;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+}
+
+.coming-soon-container {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.coming-soon-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: cs-fade-in 1.2s ease;
+}
+
+.coming-soon-subtitle {
+  font-size: 1.35rem;
+  font-weight: 400;
+  opacity: 0.95;
+  margin: 0 0 8px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon-desc {
+  font-size: 1.05rem;
+  opacity: 0.75;
+  max-width: 580px;
+  line-height: 1.6;
+  margin: 0 0 36px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.notify-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 14px 44px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notify-btn:hover {
+  background: #fff;
+  color: #1f2430;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.notify-btn:active {
+  transform: translateY(0);
+}
+
+.coming-soon-lang {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.coming-soon-lang-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.coming-soon-lang-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.coming-soon-lang-btn.active {
+  background: #fff;
+  color: #1f2430;
+  border-color: #fff;
+}
+
+@keyframes cs-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .coming-soon-title {
+    font-size: 2.5rem;
+    letter-spacing: 0.12em;
+  }
+  .coming-soon-subtitle {
+    font-size: 1.15rem;
+  }
+  .coming-soon-desc {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+  .notify-btn {
+    padding: 12px 36px;
+    font-size: 0.85rem;
+  }
+}

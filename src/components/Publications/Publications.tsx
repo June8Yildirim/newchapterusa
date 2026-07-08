@@ -1,6 +1,15 @@
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
-export default function Publications({ lang }: { lang: Language }) {
+export default function Publications({
+  lang,
+  openComingSoonModal,
+  setOpenComingSoonModal,
+}: {
+  lang: Language;
+  openComingSoonModal: boolean;
+
+  setOpenComingSoonModal: (str: boolean) => void;
+}) {
   const t = TRANSLATIONS[lang];
 
   return (
@@ -67,14 +76,14 @@ export default function Publications({ lang }: { lang: Language }) {
                   {pub.description}
                 </p>
               </div>
-              <a
-                href={pub.linkUrl}
-                target="_blank"
+              <button
+                onClick={() => setOpenComingSoonModal(!openComingSoonModal)}
                 rel="noopener noreferrer"
-                className="pub-link"
+                className="btn"
                 style={{
+                  backgroundColor: "transparent",
                   marginTop: "16px",
-                  color: "var(--turquoise-dark)",
+                  color: "mediumturquoise",
                   fontWeight: "600",
                   fontSize: "0.9rem",
                   textDecoration: "underline",
@@ -82,7 +91,7 @@ export default function Publications({ lang }: { lang: Language }) {
                 }}
               >
                 {pub.linkText}
-              </a>
+              </button>
             </article>
           ))}
         </div>

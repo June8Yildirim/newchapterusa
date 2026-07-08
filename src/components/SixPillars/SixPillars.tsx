@@ -1,6 +1,14 @@
 import { TRANSLATIONS, LOREM_SHORT, type Language } from "../../constants/text";
 
-export default function SixPillars({ lang }: { lang: Language }) {
+export default function SixPillars({
+  lang,
+  openComingSoonModal,
+  setOpenComingSoonModal,
+}: {
+  lang: Language;
+  openComingSoonModal: boolean;
+  setOpenComingSoonModal: (str: boolean) => void;
+}) {
   const t = TRANSLATIONS[lang];
 
   return (
@@ -14,7 +22,11 @@ export default function SixPillars({ lang }: { lang: Language }) {
             <article key={title} className="pillar-card">
               <h3>{title}</h3>
               <p>{t.supportingDescription}</p>
-              <button className="btn btn-gold btn-block" type="button">
+              <button
+                onClick={() => setOpenComingSoonModal(!openComingSoonModal)}
+                className="btn btn-gold btn-block"
+                type="button"
+              >
                 {t.watchSampleWebinar}
               </button>
             </article>

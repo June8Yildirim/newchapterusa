@@ -1,4 +1,4 @@
-import { TRANSLATIONS, LOREM_SHORT, type Language } from "../../constants/text";
+import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function Announcments({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];

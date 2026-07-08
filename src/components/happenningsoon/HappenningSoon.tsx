@@ -1,4 +1,4 @@
-import { TRANSLATIONS, LOREM_SHORT, type Language } from "../../constants/text";
+import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function HappenningSoon({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
@@ -8,7 +8,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
       {/* Happening Soon */}
       <div className="container">
         <h2>{t.happeningSoonTitle}</h2>
-        <p className="muted small">{LOREM_SHORT}</p>
+        <p className="muted small">{t.announcementsSubTitle}</p>
         <div className="happening-grid">
           {t.upcomingEvents.map((event) => (
             <article key={event.title} className="happening-card">

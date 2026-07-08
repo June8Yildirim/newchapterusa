@@ -1,9 +1,9 @@
 export type Language = "en" | "tr";
 
-export const LOREM =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-export const LOREM_SHORT =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+// export const LOREM =
+//   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+// export const LOREM_SHORT =
+//   "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 export const TRANSLATIONS = {
   en: {
@@ -117,7 +117,6 @@ export const TRANSLATIONS = {
     placeholderStage: "Current Professional Transition Stage",
     placeholderBarrier: "Top Career Barrier",
     placeholderSupport: "Requested Support Type",
-    consentText: LOREM_SHORT,
     submitApplicationBtn: "Subscribe the Newsletter",
     appReceived: "Application received",
     thanksApplying:
@@ -280,7 +279,6 @@ export const TRANSLATIONS = {
     placeholderStage: "Mevcut Profesyonel Geçiş Aşaması",
     placeholderBarrier: "En Büyük Kariyer Engeli",
     placeholderSupport: "Talep Edilen Destek Türü",
-    consentText: LOREM_SHORT,
     submitApplicationBtn: "Başvuruyu Gönder",
     appReceived: "Başvuru alındı",
     thanksApplying:

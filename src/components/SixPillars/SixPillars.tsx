@@ -1,4 +1,4 @@
-import { TRANSLATIONS, LOREM_SHORT, type Language } from "../../constants/text";
+import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function SixPillars({
   lang,
@@ -16,7 +16,6 @@ export default function SixPillars({
       {/* 6 Pillars */}
       <div className="container">
         <h2>{t.pillarsTitle}</h2>
-        <p className="muted small">{LOREM_SHORT}</p>
         <div className="pillar-grid">
           {t.pillars.map((title) => (
             <article key={title} className="pillar-card">

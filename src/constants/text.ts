@@ -121,7 +121,10 @@ export const TRANSLATIONS = {
     submitApplicationBtn: "Subscribe the Newsletter",
     appReceived: "Application received",
     thanksApplying:
-      "Thanks for applying. Your email client should have opened with your details — just hit send and we'll be in touch soon.",
+      "Thanks for applying. We've received your details and we'll be in touch soon.",
+    sending: "Sending…",
+    sendError:
+      "Something went wrong while sending your application. Please try again in a moment.",
     close: "Close",
 
     // Email subjects
@@ -278,7 +281,10 @@ export const TRANSLATIONS = {
     submitApplicationBtn: "Başvuruyu Gönder",
     appReceived: "Başvuru alındı",
     thanksApplying:
-      "Başvurduğunuz için teşekkürler. E-posta istemciniz bilgilerinizle birlikte açılmış olmalıdır — göndere basmanız yeterlidir, yakında sizinle iletişime geçeceğiz.",
+      "Başvurduğunuz için teşekkürler. Bilgilerinizi aldık, yakında sizinle iletişime geçeceğiz.",
+    sending: "Gönderiliyor…",
+    sendError:
+      "Başvurunuz gönderilirken bir sorun oluştu. Lütfen birazdan tekrar deneyin.",
     close: "Kapat",
 
     // Email subjects

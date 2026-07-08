@@ -8,11 +8,9 @@ import "./comingsoon.css";
 export default function ComingSoon({
   lang,
   setLang,
-  setOpenComingSoonModal,
 }: {
   lang: Language;
   setLang: (l: Language) => void;
-  setOpenComingSoonModal?: (val: boolean) => void;
 }) {
   const [openNotify, setOpenNotify] = useState(false);
   const [confirmOpen, setConfirmOpen] = useState(false);

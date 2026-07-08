@@ -50,8 +50,6 @@ function App() {
 
       <MeetingCoaching
         lang={lang}
-        openComingSoonModal={openComingSoonModal}
-        setOpenComingSoonModal={setOpenComingSoonModal}
       />
       <Publications
         lang={lang}
@@ -127,7 +125,6 @@ function App() {
           <ComingSoon
             lang={lang}
             setLang={setLang}
-            setOpenComingSoonModal={setOpenComingSoonModal}
           />
         )}
       </Modal>

@@ -242,7 +242,7 @@ h3 {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: url("/images/HeroImage.jpeg") center / contain no-repeat;
+  background: url("/images/NewHeroImage.jpeg") center / contain no-repeat;
   aspect-ratio: 1024 / 572;
   padding: 0;
 }
@@ -823,7 +823,9 @@ h3 {
   background: rgba(255, 255, 255, 0.15);
   padding: 8px 18px;
   border-radius: 6px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 .linkedin-link:hover {
   background: rgba(255, 255, 255, 0.25);
@@ -844,4 +846,3 @@ h3 {
     align-items: center;
   }
 }
-

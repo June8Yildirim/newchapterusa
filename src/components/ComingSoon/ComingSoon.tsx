@@ -3,6 +3,7 @@ import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Modal } from "../../Modal";
 import { CtaForm } from "../CTAForm/CtaForm";
 import { SubmitApplication } from "../../submitApp";
+import { Button } from "../Button/Button";
 import "./comingsoon.css";
 
 export default function ComingSoon({
@@ -85,13 +86,9 @@ export default function ComingSoon({
         title={t.appReceived}
       >
         <p>{t.thanksApplying}</p>
-        <button
-          type="button"
-          className="btn btn-gold btn-block"
-          onClick={() => setOpenConfirm(false)}
-        >
+        <Button variant="gold" block onClick={() => setOpenConfirm(false)}>
           {t.close}
-        </button>
+        </Button>
       </Modal>
     </div>
   );

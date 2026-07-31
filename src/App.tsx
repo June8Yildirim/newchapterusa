@@ -14,6 +14,12 @@ import MeetingCoaching from "./components/MeetingCoaching/MeetingCoaching";
 import Navigation from "./components/navigation/Navigation";
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 import { CtaForm } from "./components/CTAForm/CtaForm";
+import { Footer } from "./components/Footer/Footer";
+import { Hero } from "./components/Hero/Hero";
+import { Button } from "./components/Button/Button";
+import Network from "./components/Network/Network";
+import HowWeWork from "./components/HowWeWork/HowWeWork";
+import NextSteps from "./components/NextSteps/NextSteps";
 
 function App() {
   const [openTestimonal, setOpenTestimonal] = useState<
@@ -40,78 +46,54 @@ function App() {
   return (
     <div className="page" ref={container}>
       <Navigation lang={lang} setLang={setLang} />
-      {/* Hero */}
-      <section className="hero">
-        <div className="container hero-inner">
-          {/* <h1 className="hero-sub">Write Your Next Chapter</h1> */}
-          {/* <div className="hero-actions"></div> */}
-        </div>
-      </section>
 
-      <MeetingCoaching lang={lang} />
-      <Publications
-        lang={lang}
-        openComingSoonModal={openComingSoonModal}
-        setOpenComingSoonModal={setOpenComingSoonModal}
-      />
-      <SixPillars
-        lang={lang}
-        openComingSoonModal={openComingSoonModal}
-        setOpenComingSoonModal={setOpenComingSoonModal}
-      />
+      {/* Hero */}
+      <Hero lang={lang} />
+
+      <div id="coach" className="nav-anchor">
+        <MeetingCoaching lang={lang} />
+      </div>
+
+      <div id="publications" className="nav-anchor">
+        <Publications
+          lang={lang}
+          openComingSoonModal={openComingSoonModal}
+          setOpenComingSoonModal={setOpenComingSoonModal}
+        />
+      </div>
+      <div id="pillars" className="nav-anchor">
+        <SixPillars
+          lang={lang}
+          openComingSoonModal={openComingSoonModal}
+          setOpenComingSoonModal={setOpenComingSoonModal}
+        />
+      </div>
+      <div id="community" className="nav-anchor">
+        <Network
+          lang={lang}
+          onNewsletter={() => setConfirmOpen(true)}
+          onWaitlist={() => setConfirmOpen(true)}
+        />
+      </div>
+      <div id="services" className="nav-anchor">
+        <HowWeWork lang={lang} />
+      </div>
+      <div id="next-steps" className="nav-anchor">
+        <NextSteps lang={lang} onDiscovery={() => setOpenDiscovery(true)} />
+      </div>
       {/* <Announcments lang={lang} /> */}
-      <HappenningSoon lang={lang} />
+      <div id="events" className="nav-anchor">
+        <HappenningSoon lang={lang} />
+      </div>
 
       <TestimonialsCarousel setOpenTestimonal={setOpenTestimonal} />
-      <CtaForm lang={lang} setConfirmOpen={setConfirmOpen} />
+
+      <div id="cta" className="nav-anchor">
+        <CtaForm lang={lang} setConfirmOpen={setConfirmOpen} />
+      </div>
 
       {/* Footer */}
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <div className="footer-brand-section">
-            <span className="footer-brand">{t.brand}</span>
-            <span
-              className="footer-coach-credentials"
-              style={{
-                fontSize: "0.95rem",
-                fontWeight: "600",
-                color: "rgba(255, 255, 255, 0.9)",
-              }}
-            >
-              Dr. Mehtap Akay, PhD — {t.brand}
-            </span>
-            <p className="footer-desc" style={{ marginTop: "4px" }}>
-              {t.footerDesc}
-            </p>
-          </div>
-          <div className="footer-links">
-            <a
-              href="https://www.linkedin.com/in/mehtap-akay-phd-4395a122"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="linkedin-link"
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                style={{ verticalAlign: "middle" }}
-              >
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-              <span>{t.footerConnect}</span>
-            </a>
-            <span className="footer-copyright">{t.footerCopyright}</span>
-            <span
-              className="footer-copyright"
-              style={{ marginTop: "4px", fontSize: "0.75rem", opacity: 0.6 }}
-            >
-              {t.developedBy}
-            </span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <Modal
         open={openComingSoonModal}
@@ -155,13 +137,9 @@ function App() {
         title={t.appReceived}
       >
         <p>{t.thanksApplying}</p>
-        <button
-          type="button"
-          className="btn btn-gold btn-block"
-          onClick={() => setConfirmOpen(false)}
-        >
+        <Button variant="gold" block onClick={() => setConfirmOpen(false)}>
           {t.close}
-        </button>
+        </Button>
       </Modal>
 
       <Modal
@@ -225,9 +203,9 @@ function App() {
               resize: "vertical",
             }}
           />
-          <button className="btn btn-gold btn-block" type="submit">
+          <Button variant="gold" block type="submit">
             {t.discoverySubmitBtn}
-          </button>
+          </Button>
         </form>
       </Modal>
 
@@ -237,13 +215,13 @@ function App() {
         title={t.discoverySuccessTitle}
       >
         <p>{t.discoverySuccessBody}</p>
-        <button
-          type="button"
-          className="btn btn-gold btn-block"
+        <Button
+          variant="gold"
+          block
           onClick={() => setOpenDiscoveryConfirm(false)}
         >
           {t.close}
-        </button>
+        </Button>
       </Modal>
     </div>
   );

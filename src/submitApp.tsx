@@ -1,5 +1,6 @@
 import { useState, type ComponentProps } from "react";
 import { TRANSLATIONS, type Language } from "./constants/text";
+import { Button } from "./components/Button/Button";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as
@@ -116,13 +117,9 @@ export function SubmitApplication({
               {error}
             </p>
           )}
-          <button
-            className="btn btn-gold btn-block"
-            type="submit"
-            disabled={submitting}
-          >
+          <Button variant="gold" block type="submit" disabled={submitting}>
             {submitting ? t.sending : t.submitApplicationBtn}
-          </button>
+          </Button>
         </form>
       </div>
     </section>

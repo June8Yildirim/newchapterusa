@@ -10,8 +10,104 @@ export const TRANSLATIONS = {
     brand: "NCWEN",
     applyCohort: "Apply for the 6-Week Free Cohort",
     explorePillars: "Explore the 6 Pillars",
-    meetCoach: "Meet Your Coach: Dr. Mehtap Akay",
-    coachSubtitle: "Certified Leadership Coach & Education Consultant",
+    nav: {
+      coach: "Coach",
+      pillars: "Pillars",
+      publications: "Publications",
+      events: "Events",
+      apply: "Apply Now",
+    },
+    network: {
+      title: "More Than Coaching: A Growing Sisterhood & Network",
+      p1: "Achieving your goals doesn't have to be a lonely journey. When you join NCWEN, you are helping plant the seeds for a supportive community of skilled immigrant, newcomer, refugee, and multilingual women.",
+      p2: "Together, we are building a safe network where women uplift one another, share social capital, exchange guidance, and create lasting bonds rooted in safety, empathy, and collective success.",
+      p3: "Join our community by subscribing to our free newsletter or joining our 6-week cohort waitlist.",
+      newsletterBtn: "Subscribe to Free Newsletter",
+      waitlistBtn: "Join 6-Week Cohort Waitlist",
+    },
+    howWeWork: {
+      title: "How We Work Together",
+      serviceHeading: "Core Service Areas",
+      services: [
+        {
+          title: "Graduate School Admissions Coaching (M.A. & Ph.D.)",
+          detail:
+            "Strategic support through navigating university applications, crafting compelling personal statements, defining research goals, and positioning your academic identity for maximum impact.",
+        },
+        {
+          title: "Strategic Career Advancement & Elevation",
+          detail:
+            "Step-by-step guidance to help you navigate professional spaces, articulate your value, secure meaningful roles, and achieve long-term career growth.",
+        },
+      ],
+      frameworkHeading: "Choose Your Coaching Framework",
+      frameworkIntro:
+        "We offer two distinct coaching approaches tailored to where you are on your journey:",
+      frameworks: [
+        {
+          title: "ICF-Informed Coaching",
+          detail:
+            "A reflective, client-led space focused on self-discovery, clarity, and building internal confidence and goal alignment.",
+        },
+        {
+          title: "Coaching & Mentorship",
+          detail:
+            "A collaborative space blending reflective coaching with direct advisory guidance, hands-on feedback, and practical skill-building.",
+        },
+      ],
+      quote:
+        "While ICF-Informed Coaching empowers you to unlock your own strategies through reflective self-discovery, Coaching & Mentorship combines that reflective space with direct advisory guidance, expert feedback, and practical skill-building.",
+    },
+    nextSteps: {
+      eyebrow: "Next Steps",
+      title: "Not Sure Which Coaching Approach You Need?",
+      subtitle: "Book Your Complimentary 15-Minute Discovery Call",
+      detail:
+        "You don't need to have every detail figured out before reaching out. In our 15-minute initial conversation, we will perform a quick needs analysis together to explore your goals, discuss whether graduate admissions or career advancement is your focus, and determine which coaching format will best serve your journey.",
+      ctaBtn: "Schedule Your Complimentary 15-Minute Needs Analysis Call",
+    },
+    meetCoach: "Meet Your Coach",
+    // meetCoach: "Meet Your Coach: Dr. Mehtap Akay",
+    summary: {
+      title: "Meet Your Coach: Dr. Mehtap Akay",
+      position:
+        "Certified Professional Coach (by ICF-Accredited Coach Academy) | Specialized in Personal & Professional Development | Education & Career Consultant for Multilingual Women | Partner in Your Journey",
+      quote:
+        "Your multilingual voice, cultural wisdom, and global journey are incredible assets. Coaching is about unlocking your full potential and turning your boldest dreams into reality through systems that work.",
+      bio1:
+        "Building a fulfilling life and career in a new country starts with honoring the immense wealth you already bring. I know this firsthand because it is my story too. As a multilingual, multicultural educator who has studied and worked across Türkiye, Senegal, and the United States, my trajectory is deeply rooted in both international and forced migration—navigating systems across borders, cultures, and languages (Turkish, French, and English).",
+      bio2:
+        "With over 17 years of experience across higher education, refugee resettlement, and state-level initiatives, I bridge academic research with real-world experience. Grounded in a trauma-informed, well-being-focused approach, I ensure that pursuing your highest aspirations never comes at the cost of your mental health, safety, or identity.",
+      buildTitle: "What We Build Together",
+      builds: [
+        {
+          title: "Amplifying Your Cultural Wealth",
+          detail:
+            "Centering your multilingualism and global insights as your greatest strengths.",
+        },
+        {
+          title: "Trauma-Informed Support",
+          detail:
+            "Navigating professional re-entry in a way that protects your peace and well-being.",
+        },
+        {
+          title: "Proven Systems & Practical Guidance",
+          detail:
+            "Clear frameworks built from 17+ years in higher education and refugee advocacy.",
+        },
+        {
+          title: "Collaborative Partnership",
+          detail:
+            "Breaking big dreams—like graduate school or career advancement—into manageable steps.",
+        },
+      ],
+      appointmentBtn: "Make an Appointment",
+      linkedinBtn:
+        "Connect on LinkedIn to Explore Full Bio & Academic Publications",
+      linkedinUrl: "https://www.linkedin.com/in/mehtapakay",
+    },
+    coachSubtitle:
+      "Certified Professional Coach (Vetted by Coach Academy & ICF-Accredited) | Educator | Partner in Your Journey",
     credentialsRich: {
       coaching: {
         title: "Certified Leadership & Performance Coach",
@@ -58,12 +154,37 @@ export const TRANSLATIONS = {
     ],
     pillarsTitle: "The 6 Pillars of Growth",
     pillars: [
-      "1. US Business & Career Culture",
-      "2. Workplace ESL & Mock Interviews",
-      "3. Academic Pathways & Equivalency",
-      "4. Interest Analysis & Roadmaps",
-      "5. Safe & Collaborative Space",
-      "6. Motivation & Self-Esteem",
+      {
+        pillar: "1. Navigating US Workplace & Career Culture",
+        pillarDesc:
+          "Demystifying workplace dynamics, institutional norms, and professional communication so you can navigate US systems authentically while staying rooted in who you are.",
+      },
+      {
+        pillar: "2. Strategic Communication & Mock Interviews",
+        pillarDesc:
+          "Articulating your professional story with confidence, mastering interviews, and communicating your unique value at any level of English proficiency.",
+      },
+      {
+        pillar: "3. Academic Pathways & Credential Strategy",
+        pillarDesc:
+          "Targeted, step-by-step guidance for M.A. and Ph.D. admissions, university applications, credential evaluation, and positioning your international education for top US programs.",
+      },
+      {
+        pillar: "4. Personal Roadmaps & Goal Alignment",
+        pillarDesc:
+          "Uncovering your core strengths and mapping out a personalized, step-by-step roadmap to achieve your personal, academic, and career aspirations.",
+      },
+
+      {
+        pillar: "5. Safe, Trauma-Informed & Collaborative Space",
+        pillarDesc:
+          "A welcoming, non-judgmental coaching space anchored in psychological safety, empathy, and emotional well-being—tailored for newcomer, refugee, and multilingual women.",
+      },
+      {
+        pillar: "6. Mindset, Self-Worth & Confidence Elevation",
+        pillarDesc:
+          "Nurturing unshakeable self-worth, trusting your capacity to navigate new environments, and fully owning the value of your dreams and contributions.",
+      },
     ],
     watchSampleWebinar: "Check out the Tool",
     supportingDescription: "Supporting description for this card.",
@@ -169,8 +290,102 @@ export const TRANSLATIONS = {
     brand: "NCWEN",
     applyCohort: "6 Haftalık Ücretsiz Egitime Başvurun",
     explorePillars: "6 Temel İlkeyi Keşfedin",
+    nav: {
+      coach: "Koç",
+      pillars: "İlkeler",
+      publications: "Yayınlar",
+      events: "Etkinlikler",
+      apply: "Başvur",
+    },
+    network: {
+      title: "Koçluktan Fazlası: Büyüyen Bir Kızkardeşlik ve Ağ",
+      p1: "Hedeflerinize ulaşmak yalnız bir yolculuk olmak zorunda değil. NCWEN'e katıldığınızda, yetenekli göçmen, yeni gelen, mülteci ve çok dilli kadınlardan oluşan destekleyici bir topluluğun tohumlarını ekmeye yardım ediyorsunuz.",
+      p2: "Birlikte, kadınların birbirini yücelttiği, sosyal sermayeyi paylaştığı, rehberlik alışverişinde bulunduğu ve güven, empati ve ortak başarıya dayanan kalıcı bağlar kurduğu güvenli bir ağ inşa ediyoruz.",
+      p3: "Ücretsiz bültenimize abone olarak veya 6 haftalık kohort bekleme listemize katılarak topluluğumuza katılın.",
+      newsletterBtn: "Ücretsiz Bültene Abone Ol",
+      waitlistBtn: "6 Haftalık Kohort Bekleme Listesine Katıl",
+    },
+    howWeWork: {
+      title: "Birlikte Nasıl Çalışıyoruz",
+      serviceHeading: "Temel Hizmet Alanları",
+      services: [
+        {
+          title: "Lisansüstü Başvuru Koçluğu (Yüksek Lisans & Doktora)",
+          detail:
+            "Üniversite başvurularında yol almanız, etkileyici niyet mektupları hazırlamanız, araştırma hedeflerinizi tanımlamanız ve akademik kimliğinizi en yüksek etki için konumlandırmanız için stratejik destek.",
+        },
+        {
+          title: "Stratejik Kariyer İlerlemesi ve Yükselişi",
+          detail:
+            "Profesyonel alanlarda yol almanıza, değerinizi ifade etmenize, anlamlı roller edinmenize ve uzun vadeli kariyer gelişimi sağlamanıza yardımcı olacak adım adım rehberlik.",
+        },
+      ],
+      frameworkHeading: "Koçluk Çerçevenizi Seçin",
+      frameworkIntro:
+        "Yolculuğunuzda bulunduğunuz yere göre uyarlanmış iki farklı koçluk yaklaşımı sunuyoruz:",
+      frameworks: [
+        {
+          title: "ICF Temelli Koçluk",
+          detail:
+            "Öz keşif, netlik ve içsel güven ile hedef uyumu oluşturmaya odaklanan, danışan liderliğinde, düşünsel bir alan.",
+        },
+        {
+          title: "Koçluk ve Mentorluk",
+          detail:
+            "Düşünsel koçluğu doğrudan danışmanlık rehberliği, uygulamalı geri bildirim ve pratik beceri geliştirmeyle birleştiren işbirlikçi bir alan.",
+        },
+      ],
+      quote:
+        "ICF Temelli Koçluk, düşünsel öz keşif yoluyla kendi stratejilerinizi açığa çıkarmanızı sağlarken, Koçluk ve Mentorluk bu düşünsel alanı doğrudan danışmanlık rehberliği, uzman geri bildirimi ve pratik beceri geliştirmeyle birleştirir.",
+    },
+    nextSteps: {
+      eyebrow: "Sonraki Adımlar",
+      title: "Hangi Koçluk Yaklaşımına İhtiyacınız Olduğundan Emin Değil misiniz?",
+      subtitle: "Ücretsiz 15 Dakikalık Keşif Görüşmenizi Ayırtın",
+      detail:
+        "Ulaşmadan önce her ayrıntıyı çözmüş olmanız gerekmez. 15 dakikalık ilk görüşmemizde, hedeflerinizi keşfetmek, odağınızın lisansüstü başvurular mı yoksa kariyer ilerlemesi mi olduğunu konuşmak ve hangi koçluk formatının yolculuğunuza en iyi hizmet edeceğini belirlemek için birlikte hızlı bir ihtiyaç analizi yapacağız.",
+      ctaBtn: "Ücretsiz 15 Dakikalık İhtiyaç Analizi Görüşmenizi Planlayın",
+    },
     meetCoach: "Koçunuzla Tanışın: Dr. Mehtap Akay",
     coachSubtitle: "Sertifikalı Liderlik Koçu & Eğitim Danışmanı",
+    summary: {
+      title: "Koçunuzla Tanışın: Dr. Mehtap Akay",
+      position:
+        "Sertifikalı Profesyonel Koç (ICF Akreditasyonlu Coach Academy tarafından) | Kişisel ve Profesyonel Gelişim Uzmanı | Çok Dilli Kadınlar için Eğitim ve Kariyer Danışmanı | Yolculuğunuzda Ortağınız",
+      quote:
+        "Çok dilli sesiniz, kültürel bilgeliğiniz ve küresel yolculuğunuz inanılmaz değerlerdir. Koçluk, tüm potansiyelinizi açığa çıkarmak ve en cesur hayallerinizi işe yarayan sistemlerle gerçeğe dönüştürmekle ilgilidir.",
+      bio1:
+        "Yeni bir ülkede tatmin edici bir hayat ve kariyer kurmak, halihazırda getirdiğiniz muazzam zenginliği onurlandırmakla başlar. Bunu ilk elden biliyorum, çünkü bu aynı zamanda benim de hikâyem. Türkiye, Senegal ve Amerika Birleşik Devletleri'nde eğitim almış ve çalışmış çok dilli, çok kültürlü bir eğitimci olarak yolculuğum, hem uluslararası hem de zorunlu göçe—sınırlar, kültürler ve diller (Türkçe, Fransızca ve İngilizce) arasında sistemlerde yol almaya—derinden dayanıyor.",
+      bio2:
+        "Yükseköğretim, mülteci yerleştirme ve eyalet düzeyindeki girişimlerde 17 yılı aşkın deneyimimle akademik araştırmayı gerçek dünya deneyimiyle birleştiriyorum. Travma-bilinçli, refah odaklı bir yaklaşıma dayanarak, en yüksek hedeflerinizin peşinden gitmenin asla ruh sağlığınız, güvenliğiniz veya kimliğiniz pahasına olmamasını sağlıyorum.",
+      buildTitle: "Birlikte Neler İnşa Ediyoruz",
+      builds: [
+        {
+          title: "Kültürel Zenginliğinizi Güçlendirmek",
+          detail:
+            "Çok dilliliğinizi ve küresel içgörülerinizi en büyük gücünüz olarak merkeze almak.",
+        },
+        {
+          title: "Travma-Bilinçli Destek",
+          detail:
+            "Mesleki yeniden başlangıcınızı huzurunuzu ve refahınızı koruyacak şekilde yönlendirmek.",
+        },
+        {
+          title: "Kanıtlanmış Sistemler ve Pratik Rehberlik",
+          detail:
+            "Yükseköğretim ve mülteci savunuculuğunda 17+ yıldan doğan net çerçeveler.",
+        },
+        {
+          title: "İşbirlikçi Ortaklık",
+          detail:
+            "Lisansüstü eğitim veya kariyer ilerlemesi gibi büyük hayalleri yönetilebilir adımlara bölmek.",
+        },
+      ],
+      appointmentBtn: "Randevu Alın",
+      linkedinBtn:
+        "Tam Biyografi ve Akademik Yayınlar için LinkedIn'de Bağlanın",
+      linkedinUrl: "https://www.linkedin.com/in/mehtapakay",
+    },
     credentialsRich: {
       coaching: {
         title: "Sertifikalı Liderlik ve Performans Koçu",
@@ -216,13 +431,45 @@ export const TRANSLATIONS = {
     ],
     pillarsTitle: "Büyümenin 6 Temel İlkesi",
     pillars: [
-      "1. ABD İş ve Kariyer Kültürü",
-      "2. İş Yeri İngilizcesi & Mülakat Simülasyonları",
-      "3. Akademik Yollar & Denklik",
-      "4. İlgi Analizi & Yol Haritaları",
-      "5. Güvenli & İşbirlikçi Alan",
-      "6. Motivasyon & Özgüven",
+      {
+        pillar: "1. ABD İş Yeri ve Kariyer Kültüründe Yol Alma",
+        pillarDesc:
+          "İş yeri dinamiklerini, kurumsal normları ve profesyonel iletişimi anlaşılır kılarak, kim olduğunuzdan ödün vermeden ABD sistemlerinde özgüvenle ilerlemenizi sağlamak.",
+      },
+      {
+        pillar: "2. Stratejik İletişim ve Mülakat Pratikleri",
+        pillarDesc:
+          "İngilizce seviyeniz ne olursa olsun, profesyonel hikayenizi güvenle ifade etmeniz, mülakatlarda ustalaşmanız ve özgün değerinizi aktarabilmeniz.",
+      },
+      {
+        pillar: "3. Akademik Yollar ve Denklik Stratejisi",
+        pillarDesc:
+          "Yüksek lisans ve doktora kabulleri, üniversite başvuruları, diploma denklikleri ve uluslararası eğitiminizi ABD'nin önde gelen programlarına göre konumlandırmak için adım adım rehberlik.",
+      },
+      {
+        pillar: "4. Kişisel Yol Haritaları ve Hedef Uyumlaması",
+        pillarDesc:
+          "Temel güçlü yönlerinizi keşfederek kişisel, akademik ve kariyer hedeflerinize ulaşmanız için size özel, adım adım bir yol haritası oluşturmak.",
+      },
+      {
+        pillar: "5. Güvenli, Travma Odaklı ve İş Birlikçi Alan",
+        pillarDesc:
+          "Yeni gelen, mülteci ve çok dilli kadınlar için özel olarak tasarlanmış; psikolojik güvenlik, empati ve duygusal iyi oluş üzerine kurulu, yargısız ve kapsayıcı bir koçluk alanı.",
+      },
+      {
+        pillar: "6. Zihniyet, Öz Değer ve Özgüven Gelişimi",
+        pillarDesc:
+          "Sarsılmaz bir öz değer inşa etmek, yeni ortamlara uyum sağlama kapasitenize güvenmek ve hayallerinizin ile katkılarınızın değerini tam anlamıyla sahiplenmek.",
+      },
     ],
+    // pillars: [
+    //   "1. ABD İş ve Kariyer Kültürü",
+    //   "2. İş Yeri İngilizcesi & Mülakat Simülasyonları",
+    //   "3. Akademik Yollar & Denklik",
+    //   "4. İlgi Analizi & Yol Haritaları",
+    //   "5. Güvenli & İşbirlikçi Alan",
+    //   "6. Motivasyon & Özgüven",
+    // ],
     watchSampleWebinar: "Daha Fazla Detay",
     supportingDescription: "Bu kart için destekleyici açıklama.",
     announcementsTitle: "Duyurular",

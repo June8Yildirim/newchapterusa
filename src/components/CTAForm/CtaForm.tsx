@@ -1,4 +1,5 @@
 import { TRANSLATIONS, type Language } from "../../constants/text";
+import { Button } from "../Button/Button";
 
 export const CtaForm = ({
   lang,
@@ -24,9 +25,9 @@ export const CtaForm = ({
           >
             {t.discoveryBtn}
           </a>
-          <button className="btn btn-blue" onClick={() => setConfirmOpen(true)}>
+          <Button variant="blue" onClick={() => setConfirmOpen(true)}>
             {t.submitApplicationBtn}
-          </button>
+          </Button>
         </div>
       </div>
     </section>

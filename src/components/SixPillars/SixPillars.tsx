@@ -1,4 +1,5 @@
 import { TRANSLATIONS, type Language } from "../../constants/text";
+import { Button } from "../Button/Button";
 
 export default function SixPillars({
   lang,
@@ -17,17 +18,17 @@ export default function SixPillars({
       <div className="container">
         <h2>{t.pillarsTitle}</h2>
         <div className="pillar-grid">
-          {t.pillars.map((title) => (
-            <article key={title} className="pillar-card">
-              <h3>{title}</h3>
-              <p>{t.supportingDescription}</p>
-              <button
+          {t.pillars.map((p) => (
+            <article key={p.pillar} className="pillar-card">
+              <h3>{p.pillar}</h3>
+              <p>{p.pillarDesc}</p>
+              <Button
+                variant="gold"
+                block
                 onClick={() => setOpenComingSoonModal(!openComingSoonModal)}
-                className="btn btn-gold btn-block"
-                type="button"
               >
                 {t.watchSampleWebinar}
-              </button>
+              </Button>
             </article>
           ))}
         </div>

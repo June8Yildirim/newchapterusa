@@ -1,4 +1,5 @@
 import { TRANSLATIONS, type Language } from "../../constants/text";
+import { Button } from "../Button/Button";
 
 export default function HappenningSoon({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
@@ -16,9 +17,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
               <div className="happening-body">
                 <h3>{event.title}</h3>
                 <p>{event.body}</p>
-                <button className="btn btn-gold" type="button">
-                  {t.reserveSpot}
-                </button>
+                <Button variant="gold">{t.reserveSpot}</Button>
               </div>
             </article>
           ))}

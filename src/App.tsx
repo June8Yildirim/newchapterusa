@@ -27,7 +27,10 @@ function App() {
   const [openTestimonal, setOpenTestimonal] = useState<
     (typeof testimonals)[number] | null
   >(null);
-  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [confirmSubmitApplicationOpen, setConfirmSubmitAppicationOpen] =
+    useState(false);
+  const [confirmSubmitNewsletterOpen, setConfirmSubmitNewsletterOpen] =
+    useState(false);
   const [openComingSoonModal, setOpenComingSoonModal] = useState(false);
   const [openConfirm, setOpenConfirm] = useState(false);
   const [lang, setLang] = useState<Language>("en");
@@ -57,9 +60,9 @@ function App() {
       {/* Hero */}
       <Hero lang={lang} />
 
-      <div id="coach" className="nav-anchor">
-        <MeetingCoaching lang={lang} />
-      </div>
+      {/* <div id="coach" className="nav-anchor"> */}
+      {/*   <MeetingCoaching lang={lang} /> */}
+      {/* </div> */}
       <LogosCarousel lang={lang} />
 
       <div id="publications" className="nav-anchor">
@@ -79,8 +82,8 @@ function App() {
       <div id="community" className="nav-anchor">
         <Network
           lang={lang}
-          onNewsletter={() => setConfirmOpen(true)}
-          onWaitlist={() => setConfirmOpen(true)}
+          onNewsletter={() => setConfirmSubmitAppicationOpen(true)}
+          onWaitlist={() => setConfirmSubmitNewsletterOpen(true)}
         />
       </div>
       <div id="services" className="nav-anchor">
@@ -97,7 +100,7 @@ function App() {
       <TestimonialsCarousel setOpenTestimonal={setOpenTestimonal} />
 
       <div id="cta" className="nav-anchor">
-        <CtaForm lang={lang} setConfirmOpen={setConfirmOpen} />
+        <CtaForm lang={lang} setConfirmOpen={setConfirmSubmitAppicationOpen} />
       </div>
 
       {/* Footer */}
@@ -137,8 +140,8 @@ function App() {
       </Modal>
 
       <Modal
-        open={confirmOpen}
-        onClose={() => setConfirmOpen(false)}
+        open={confirmSubmitApplicationOpen}
+        onClose={() => setConfirmSubmitAppicationOpen(false)}
         title={t.submitApplicationTitle}
       >
         <SubmitApplication
@@ -154,7 +157,11 @@ function App() {
         title={t.appReceived}
       >
         <p>{t.thanksApplying}</p>
-        <Button variant="gold" block onClick={() => setConfirmOpen(false)}>
+        <Button
+          variant="gold"
+          block
+          onClick={() => setConfirmSubmitAppicationOpen(false)}
+        >
           {t.close}
         </Button>
       </Modal>

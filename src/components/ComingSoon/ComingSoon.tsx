@@ -43,7 +43,11 @@ export default function ComingSoon({
         <h1 className="coming-soon-title">{t.comingSoonTitle}</h1>
         <p className="coming-soon-subtitle">{t.comingSoonSubtitle}</p>
         <p className="coming-soon-desc">{t.comingSoonDesc}</p>
-        <button className="notify-btn" onClick={() => setOpenNotify(true)} type="button">
+        <button
+          className="notify-btn"
+          onClick={() => setOpenNotify(true)}
+          type="button"
+        >
           {t.comingSoonBtn}
         </button>
       </div>
@@ -70,7 +74,7 @@ export default function ComingSoon({
       <Modal
         open={confirmOpen}
         onClose={() => setConfirmOpen(false)}
-        title={t.submitApplicationTitle}
+        title={t.submitNewsletterTitle}
       >
         <SubmitApplication
           lang={lang}

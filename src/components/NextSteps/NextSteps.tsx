@@ -14,8 +14,8 @@ export default function NextSteps({
   return (
     <section className="section next-steps">
       <div className="container next-steps-inner">
-        <span className="next-steps-eyebrow">{s.eyebrow}</span>
-        <h2>{s.title}</h2>
+        <h2 className="next-steps-eyebrow">{s.eyebrow}</h2>
+        <h3>{s.title}</h3>
         <p className="next-steps-subtitle">{s.subtitle}</p>
         <p className="next-steps-detail">{s.detail}</p>
         <Button variant="gold" onClick={onDiscovery}>

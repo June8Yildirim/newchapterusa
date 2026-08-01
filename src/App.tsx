@@ -21,6 +21,7 @@ import Network from "./components/Network/Network";
 import HowWeWork from "./components/HowWeWork/HowWeWork";
 import NextSteps from "./components/NextSteps/NextSteps";
 import LogosCarousel from "./components/LogosCarousel/LogosCarousel";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
   const [openTestimonal, setOpenTestimonal] = useState<
@@ -32,6 +33,7 @@ function App() {
   const [lang, setLang] = useState<Language>("en");
   const [openDiscovery, setOpenDiscovery] = useState(false);
   const [openDiscoveryConfirm, setOpenDiscoveryConfirm] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
 
   const container = useRef<HTMLDivElement>(null);
   useSiteAnimations(container);
@@ -46,7 +48,11 @@ function App() {
 
   return (
     <div className="page" ref={container}>
-      <Navigation lang={lang} setLang={setLang} />
+      <Navigation
+        lang={lang}
+        setLang={setLang}
+        onContact={() => setOpenContact(true)}
+      />
 
       {/* Hero */}
       <Hero lang={lang} />
@@ -119,6 +125,15 @@ function App() {
             significant={openTestimonal.significant}
           />
         )}
+      </Modal>
+
+      <Modal
+        open={openContact}
+        onClose={() => setOpenContact(false)}
+        title={t.contactTitle}
+        style={{ maxWidth: "560px" }}
+      >
+        <ContactUs lang={lang} />
       </Modal>
 
       <Modal

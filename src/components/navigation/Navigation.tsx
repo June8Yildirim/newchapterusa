@@ -12,9 +12,11 @@ const NAV_LINKS = [
 export default function Navigation({
   lang,
   setLang,
+  onContact,
 }: {
   setLang: (str: Language) => void;
   lang: Language;
+  onContact: () => void;
 }) {
   const t = TRANSLATIONS[lang];
   const [open, setOpen] = useState(false);
@@ -99,12 +101,23 @@ export default function Navigation({
               </button>
             </li>
           ))}
+          <li>
+            <Button
+              variant="gold"
+              onClick={() => {
+                setOpen(false);
+                onContact();
+              }}
+            >
+              {t.contactTitle}
+            </Button>
+          </li>
         </ul>
 
         <div className="nav-actions">
-          <Button variant="gold" onClick={() => goTo("cta")}>
-            {t.nav.apply}
-          </Button>
+          {/* <Button variant="gold" onClick={() => goTo("cta")}> */}
+          {/*   {t.nav.apply} */}
+          {/* </Button> */}
           <div className="lang-switch" role="group" aria-label="Language">
             <button
               type="button"

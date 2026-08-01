@@ -211,6 +211,16 @@ export const TRANSLATIONS = {
     affiliationsTitle: "Affiliations & Partners",
     affiliationsSubtitle:
       "Institutions and organizations that have shaped this work",
+    contactTitle: "Contact Us",
+    contactSubtitle:
+      "Subscribe to our newsletter or send us a message — we'd love to hear from you.",
+    contactMessagePlaceholder: "Your message (optional)",
+    contactSubmitBtn: "Subscribe & Send",
+    contactMailSubject: "New Chapter — Newsletter / Contact",
+    contactSuccessTitle: "Thank you for reaching out!",
+    contactSuccessBody:
+      "We've received your message and will get back to you within 2 business days.",
+    contactSendAnother: "Send another message",
     upcomingEvents: [
       {
         date: "August 17",
@@ -517,6 +527,16 @@ export const TRANSLATIONS = {
     reserveSpot: "Yer Ayırtın",
     affiliationsTitle: "İş Birlikleri ve Kurumlar",
     affiliationsSubtitle: "Bu çalışmayı şekillendiren kurum ve kuruluşlar",
+    contactTitle: "Bize Ulaşın",
+    contactSubtitle:
+      "Bültenimize abone olun ya da bize bir mesaj gönderin — sizden haber almaktan mutluluk duyarız.",
+    contactMessagePlaceholder: "Mesajınız (isteğe bağlı)",
+    contactSubmitBtn: "Abone Ol ve Gönder",
+    contactMailSubject: "New Chapter — Bülten / İletişim",
+    contactSuccessTitle: "Bize ulaştığınız için teşekkürler!",
+    contactSuccessBody:
+      "Mesajınızı aldık ve 2 iş günü içinde sizinle iletişime geçeceğiz.",
+    contactSendAnother: "Başka bir mesaj gönder",
     upcomingEvents: [
       {
         date: "Bu Yaz",

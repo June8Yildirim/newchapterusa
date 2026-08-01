@@ -131,6 +131,7 @@ export const TRANSLATIONS = {
       },
     },
     publicationsTitle: "Selected Publications & Resources",
+    publicationsLinkText: "More Detail",
     publicationsRich: [
       {
         title: "Article of the Year (Journal of Educational Leadership)",
@@ -138,7 +139,6 @@ export const TRANSLATIONS = {
           "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
         description:
           "A deep dive into family narratives, hardships, and strategic support systems.",
-        linkText: "Read Publication Here",
         linkUrl: "#",
       },
       {
@@ -146,7 +146,6 @@ export const TRANSLATIONS = {
         paper: "Access to equity in accessing educational resources",
         description:
           "Focused on empowering immigrant mothers to maximize resource allocation for their children.",
-        linkText: "Read Publication Here",
         linkUrl: "#",
       },
     ],
@@ -247,13 +246,20 @@ export const TRANSLATIONS = {
       //   thumbstone: "",
       // },
     ],
-    testimonialsTitle: "The Pilot Blueprint: 6-Week Group Coaching",
+    testimonialsTitle: "What It’s Like to Work With Us",
     janeDoe: "Jane Doe",
     productManager: "Product Manager",
     latestUpdate: "Get To Know Latest Update",
     sendApplication: "Send Application",
     submitApplicationTitle: "Submit Application",
-    submitNewsletterTitle: "Register Newsletter",
+    submitNewsletterTitle: "Subscribe to Our Newsletter",
+    newsletterIntro:
+      "Get coaching tips, event invites, and resources for multilingual women — straight to your inbox.",
+    newsletterSubmitBtn: "Subscribe",
+    newsletterSuccessTitle: "You're subscribed!",
+    newsletterSuccessBody:
+      "Thank you for subscribing. Watch your inbox for updates, resources, and event invites.",
+    newsletterMailSubject: "New Chapter — Newsletter Subscription",
     placeholderName: "Name",
     placeholderEmail: "Email",
     placeholderStage: "Current Professional Transition Stage",
@@ -281,7 +287,7 @@ export const TRANSLATIONS = {
     // Discovery Call CTA
     discoveryTitle: "Ready to Write Your Next Chapter?",
     discoveryDesc:
-      "Schedule a free 30-minute discovery call with Dr. Mehtap Akay to discuss your goals, identify transition obstacles, and map out your professional success in the US.",
+      "Schedule a free 15-minute discovery call with Dr. Mehtap Akay to discuss your goals, identify transition obstacles, and map out your professional success in the US.",
     discoveryBtn: "Book Free Discovery Call",
     discoveryModalTitle: "Schedule Your Free Discovery Call",
     discoveryPlaceholderDate: "Preferred Date & Time",
@@ -431,6 +437,7 @@ export const TRANSLATIONS = {
       },
     },
     publicationsTitle: "Seçilmiş Yayınlar ve Kaynaklar",
+    publicationsLinkText: "Yayını Buradan Okuyun",
     publicationsRich: [
       {
         title: "Yılın Makalesi (Eğitimsel Liderlik Dergisi)",
@@ -438,7 +445,6 @@ export const TRANSLATIONS = {
           "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
         description:
           "Aile anlatıları, zorluklar ve stratejik destek sistemlerine derin bir bakış.",
-        linkText: "Yayını Buradan Okuyun",
         linkUrl: "#",
       },
       {
@@ -446,7 +452,6 @@ export const TRANSLATIONS = {
         paper: "Access to equity in accessing educational resources",
         description:
           "Göçmen annelerin çocukları için kaynak tahsisini en üst düzeye çıkarmasını sağlamaya odaklanmıştır.",
-        linkText: "Yayını Buradan Okuyun",
         linkUrl: "#",
       },
     ],
@@ -566,13 +571,20 @@ export const TRANSLATIONS = {
         thumbstone: "",
       },
     ],
-    testimonialsTitle: "Pilot Taslak: 6 Haftalık Grup Koçluğu",
+    testimonialsTitle: "Bizim ile calismak Ne demek",
     janeDoe: "Jane Doe",
     productManager: "Ürün Yöneticisi",
     latestUpdate: "En Son Güncellemeleri Alın",
     sendApplication: "Başvuru Gönder",
     submitApplicationTitle: "Başvuru Formu",
-    submitNewsletterTitle: "Başvuru Formu",
+    submitNewsletterTitle: "Bültenimize Abone Olun",
+    newsletterIntro:
+      "Çok dilli kadınlar için koçluk ipuçları, etkinlik davetleri ve kaynakları doğrudan gelen kutunuza alın.",
+    newsletterSubmitBtn: "Abone Ol",
+    newsletterSuccessTitle: "Abone oldunuz!",
+    newsletterSuccessBody:
+      "Abone olduğunuz için teşekkürler. Güncellemeler, kaynaklar ve etkinlik davetleri için gelen kutunuzu takip edin.",
+    newsletterMailSubject: "New Chapter — Bülten Aboneliği",
     registrationBtn: "Interview with Confidence Registration",
     placeholderName: "İsim",
     placeholderEmail: "E-posta",
@@ -600,7 +612,7 @@ export const TRANSLATIONS = {
     // Discovery Call CTA
     discoveryTitle: "Yeni Bir Bölüm Yazmaya Hazır mısınız?",
     discoveryDesc:
-      "Hedeflerinizi konuşmak, geçiş sürecindeki engellerinizi belirlemek ve ABD'deki profesyonel başarınızı planlamak için Dr. Mehtap Akay ile ücretsiz 30 dakikalık bir keşif görüşmesi planlayın.",
+      "Hedeflerinizi konuşmak, geçiş sürecindeki engellerinizi belirlemek ve ABD'deki profesyonel başarınızı planlamak için Dr. Mehtap Akay ile ücretsiz 15 dakikalık bir keşif görüşmesi planlayın.",
     discoveryBtn: "Ücretsiz Keşif Görüşmesi Ayarlayın",
     discoveryModalTitle: "Ücretsiz Keşif Görüşmenizi Planlayın",
     discoveryPlaceholderDate: "Tercih Edilen Tarih ve Saat",

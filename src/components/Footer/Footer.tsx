@@ -1,8 +1,13 @@
-import { useState } from "react";
 import "./Footer.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
-export const Footer = () => {
-  const [lang] = useState<Language>("en");
+import { Button } from "../Button/Button";
+export const Footer = ({
+  lang,
+  onContact,
+}: {
+  lang: Language;
+  onContact: () => void;
+}) => {
   const t = TRANSLATIONS[lang];
   return (
     <footer className="site-footer">
@@ -22,6 +27,9 @@ export const Footer = () => {
           <p className="footer-desc" style={{ marginTop: "4px" }}>
             {t.footerDesc}
           </p>
+          <Button variant="transparent" onClick={onContact}>
+            {t.contactTitle}
+          </Button>
         </div>
         <div className="footer-links">
           <a

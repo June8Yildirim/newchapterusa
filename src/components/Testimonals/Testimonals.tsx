@@ -1,14 +1,19 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { testimonals } from "../../constants/testimonals";
 import "./testimonal.css";
 import TestimonialItem from "./TestimonalItem";
+import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function TestimonialsCarousel({
+  lang,
   setOpenTestimonal,
 }: {
+  lang: Language;
   setOpenTestimonal: (test: (typeof testimonals)[number]) => void;
 }) {
+  const t = TRANSLATIONS[lang];
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const total = testimonals.length;
   const visibleCount = 2;
   const maxIndex = Math.max(0, total - visibleCount);
@@ -19,6 +24,15 @@ export default function TestimonialsCarousel({
 
   const next = () => goTo(index + 1);
   const prev = () => goTo(index - 1);
+
+  // Auto-advance every 5s, looping back to the start; paused on hover.
+  useEffect(() => {
+    if (paused || maxIndex === 0) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i >= maxIndex ? 0 : i + 1));
+    }, 5000);
+    return () => clearInterval(id);
+  }, [paused, maxIndex]);
 
   const touchStartX = useRef(0);
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -34,7 +48,12 @@ export default function TestimonialsCarousel({
     <section className="section testimonials">
       {/* Testimonials */}
       <div className="container">
-        <div className="testimonial-carousel">
+        <h2>{t.testimonialsTitle}</h2>
+        <div
+          className="testimonial-carousel"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           <button
             className="carousel-arrow prev"
             onClick={prev}

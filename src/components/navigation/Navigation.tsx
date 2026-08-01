@@ -5,8 +5,8 @@ import { Button } from "../Button/Button";
 
 const NAV_LINKS = [
   { id: "coach", key: "coach" },
-  { id: "pillars", key: "pillars" },
   { id: "publications", key: "publications" },
+  { id: "pillars", key: "pillars" },
   { id: "events", key: "events" },
 ] as const;
 

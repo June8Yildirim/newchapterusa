@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes } from "react";
 import "./Button.css";
 
-type ButtonVariant = "gold" | "blue";
+type ButtonVariant = "gold" | "blue" | "transparent";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -27,7 +27,7 @@ export const Button = ({
 
   return (
     <button className={classes} type={type} {...rest}>
-      {children}
+      <span className="btn-label">{children}</span>
     </button>
   );
 };

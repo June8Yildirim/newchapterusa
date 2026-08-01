@@ -1,11 +1,8 @@
 import "./SixPillars.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
-import { Button } from "../Button/Button";
 
 export default function SixPillars({
   lang,
-  openComingSoonModal,
-  setOpenComingSoonModal,
 }: {
   lang: Language;
   openComingSoonModal: boolean;
@@ -23,13 +20,6 @@ export default function SixPillars({
             <article key={p.pillar} className="pillar-card">
               <h3>{p.pillar}</h3>
               <p>{p.pillarDesc}</p>
-              {/* <Button */}
-              {/*   variant="gold" */}
-              {/*   block */}
-              {/*   onClick={() => setOpenComingSoonModal(!openComingSoonModal)} */}
-              {/* > */}
-              {/*   {t.watchSampleWebinar} */}
-              {/* </Button> */}
             </article>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import "./Publications.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
+import { Button } from "../Button/Button";
 
 export default function Publications({
   lang,
@@ -77,22 +78,14 @@ export default function Publications({
                   {pub.description}
                 </p>
               </div>
-              <button
+              <Button
+                variant="transparent"
+                block
+                style={{ marginTop: "16px" }}
                 onClick={() => setOpenComingSoonModal(!openComingSoonModal)}
-                rel="noopener noreferrer"
-                className="btn"
-                style={{
-                  backgroundColor: "transparent",
-                  marginTop: "16px",
-                  color: "mediumturquoise",
-                  fontWeight: "600",
-                  fontSize: "0.9rem",
-                  textDecoration: "underline",
-                  display: "inline-block",
-                }}
               >
-                {pub.linkText}
-              </button>
+                {t.publicationsLinkText}
+              </Button>
             </article>
           ))}
         </div>

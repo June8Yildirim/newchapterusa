@@ -17,15 +17,19 @@ export const CtaForm = ({
         <h2>{t.discoveryTitle}</h2>
         <p>{t.discoveryDesc}</p>
         <div className="cta-buttons">
-          <a
-            target="_blank"
-            className="btn btn-gold"
-            href={
-              "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ136Fnid8w6QWB6KxetgCQrMGoNfBYgeEg9yaaeATKMb3OG7GN50d-DwTgT65mFaugttMcDgOuR"
-            }
+          <Button
+            variant="gold"
+            className="hero-cta"
+            onClick={() => {
+              window.open(
+                "https://calendar.app.google/1r6MpUrGYqG3ViSR7",
+                "_blank",
+                "noopener,noreferrer",
+              );
+            }}
           >
             {t.discoveryBtn}
-          </a>
+          </Button>
           <Button variant="blue" onClick={() => setConfirmOpen(true)}>
             {t.submitApplicationBtn}
           </Button>

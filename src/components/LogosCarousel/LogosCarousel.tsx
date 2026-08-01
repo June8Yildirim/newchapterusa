@@ -13,6 +13,7 @@ const LOGOS = [
   },
   { src: "/images/upwardlyglobal.jpeg", name: "Upwardly Global" },
   { src: "/images/NJOR-NJ.png", name: "New Jersey Office of Refugees" },
+  { src: "/images/badge2026Lp.png", name: "Leadership Coach" },
 ];
 
 export default function LogosCarousel({ lang }: { lang: Language }) {

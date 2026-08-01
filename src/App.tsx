@@ -20,6 +20,7 @@ import { Button } from "./components/Button/Button";
 import Network from "./components/Network/Network";
 import HowWeWork from "./components/HowWeWork/HowWeWork";
 import NextSteps from "./components/NextSteps/NextSteps";
+import LogosCarousel from "./components/LogosCarousel/LogosCarousel";
 
 function App() {
   const [openTestimonal, setOpenTestimonal] = useState<
@@ -53,6 +54,7 @@ function App() {
       <div id="coach" className="nav-anchor">
         <MeetingCoaching lang={lang} />
       </div>
+      <LogosCarousel lang={lang} />
 
       <div id="publications" className="nav-anchor">
         <Publications

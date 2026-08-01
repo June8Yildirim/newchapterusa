@@ -1,28 +1,72 @@
+import { useState } from "react";
 import { TRANSLATIONS, type Language } from "../../constants/text";
-import { Button } from "../Button/Button";
 
 export default function HappenningSoon({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
+  const [zoomSrc, setZoomSrc] = useState<string | null>(null);
 
   return (
-    <section className="section happening">
+    <section className="section">
       {/* Happening Soon */}
       <div className="container">
-        <h2>{t.happeningSoonTitle}</h2>
-        <p className="muted small">{t.announcementsSubTitle}</p>
+        <div className="section-header">
+          <h2>{t.happeningSoonTitle}</h2>
+          <p>{t.announcementsSubTitle}</p>
+        </div>
         <div className="happening-grid">
           {t.upcomingEvents.map((event) => (
             <article key={event.title} className="happening-card">
-              <div className="happening-date">{event.date}</div>
+              {event.date && (
+                <div className="happening-date vertical-text">{event.date}</div>
+              )}
               <div className="happening-body">
-                <h3>{event.title}</h3>
-                <p>{event.body}</p>
-                <Button variant="gold">{t.reserveSpot}</Button>
+                {event.thumbstone && (
+                  <button
+                    type="button"
+                    className="happening-thumb-btn"
+                    onClick={() => setZoomSrc(event.thumbstone)}
+                    aria-label={event.title}
+                  >
+                    <img
+                      className="happening-thumb"
+                      src={event.thumbstone}
+                      alt={event.title}
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  </button>
+                )}
+                <div className="happening-text">
+                  <h3>{event.title}</h3>
+                  <p>{event.body}</p>
+                  {event.url && (
+                    <a
+                      className="btn btn-gold happening-btn"
+                      href={event.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.reserveSpot}
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}
         </div>
       </div>
+
+      {zoomSrc && (
+        <div
+          className="happening-lightbox"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setZoomSrc(null)}
+        >
+          <img className="happening-lightbox-img" src={zoomSrc} alt="" />
+        </div>
+      )}
     </section>
   );
 }

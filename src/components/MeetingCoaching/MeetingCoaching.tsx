@@ -1,11 +1,7 @@
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { PhotoPlaceholder } from "../../PhotoPlaceholder";
 
-export default function MeetingCoaching({
-  lang,
-}: {
-  lang: Language;
-}) {
+export default function MeetingCoaching({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
   const creds = t.credentialsRich;
 

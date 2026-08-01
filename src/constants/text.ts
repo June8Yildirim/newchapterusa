@@ -74,10 +74,8 @@ export const TRANSLATIONS = {
         "Certified Professional Coach (by ICF-Accredited Coach Academy) | Specialized in Personal & Professional Development | Education & Career Consultant for Multilingual Women | Partner in Your Journey",
       quote:
         "Your multilingual voice, cultural wisdom, and global journey are incredible assets. Coaching is about unlocking your full potential and turning your boldest dreams into reality through systems that work.",
-      bio1:
-        "Building a fulfilling life and career in a new country starts with honoring the immense wealth you already bring. I know this firsthand because it is my story too. As a multilingual, multicultural educator who has studied and worked across Türkiye, Senegal, and the United States, my trajectory is deeply rooted in both international and forced migration—navigating systems across borders, cultures, and languages (Turkish, French, and English).",
-      bio2:
-        "With over 17 years of experience across higher education, refugee resettlement, and state-level initiatives, I bridge academic research with real-world experience. Grounded in a trauma-informed, well-being-focused approach, I ensure that pursuing your highest aspirations never comes at the cost of your mental health, safety, or identity.",
+      bio1: "Building a fulfilling life and career in a new country starts with honoring the immense wealth you already bring. I know this firsthand because it is my story too. As a multilingual, multicultural educator who has studied and worked across Türkiye, Senegal, and the United States, my trajectory is deeply rooted in both international and forced migration—navigating systems across borders, cultures, and languages (Turkish, French, and English).",
+      bio2: "With over 17 years of experience across higher education, refugee resettlement, and state-level initiatives, I bridge academic research with real-world experience. Grounded in a trauma-informed, well-being-focused approach, I ensure that pursuing your highest aspirations never comes at the cost of your mental health, safety, or identity.",
       buildTitle: "What We Build Together",
       builds: [
         {
@@ -210,22 +208,34 @@ export const TRANSLATIONS = {
     ],
     happeningSoonTitle: "Happening Soon",
     reserveSpot: "Reserve a Spot",
+    affiliationsTitle: "Affiliations & Partners",
+    affiliationsSubtitle:
+      "Institutions and organizations that have shaped this work",
     upcomingEvents: [
       {
-        date: "This Summer ",
+        date: "August 17",
         title: "Designing Your U.S. Career Path Together",
-        body: "Date and Time Coming Soon",
+        body: "An interactive workshop on turning your international experience into successful interviews",
+        isHappened: false,
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSfgJ2baszqI0Zo7BdIk9jaXR_vnzHJJdkg82txvkYSz-KBefA/viewform",
+        thumbstone: "/images/webinar-interview-confidence-1.jpg",
       },
-      {
-        date: "This Summer",
-        title: "Discovering the Grant World 101",
-        body: "Date and Time Coming Soon",
-      },
-      {
-        date: "This Summer",
-        title: "Mock Interview Prep Guid",
-        body: "Date and Time Coming Soon",
-      },
+      // {
+      //   date: "",
+      //   title: "Discovering the Grant World 101",
+      //   body: "Date and Time Stay Tuned",
+      //   isApplied: false,
+      //   url: "",
+      //   thumbstone: "",
+      // },
+      // {
+      //   date: "This Summer",
+      //   title: "Mock Interview Prep Guid",
+      //   body: "Date and Time Stay Tuned",
+      //   isApplied: false,
+      //   url: "",
+      //   thumbstone: "",
+      // },
     ],
     testimonialsTitle: "The Pilot Blueprint: 6-Week Group Coaching",
     janeDoe: "Jane Doe",
@@ -238,6 +248,7 @@ export const TRANSLATIONS = {
     placeholderStage: "Current Professional Transition Stage",
     placeholderBarrier: "Top Career Barrier",
     placeholderSupport: "Requested Support Type",
+    registrationBtn: "Interview with Confidence Registration",
     submitApplicationBtn: "Subscribe the Newsletter",
     appReceived: "Application received",
     thanksApplying:
@@ -340,7 +351,8 @@ export const TRANSLATIONS = {
     },
     nextSteps: {
       eyebrow: "Sonraki Adımlar",
-      title: "Hangi Koçluk Yaklaşımına İhtiyacınız Olduğundan Emin Değil misiniz?",
+      title:
+        "Hangi Koçluk Yaklaşımına İhtiyacınız Olduğundan Emin Değil misiniz?",
       subtitle: "Ücretsiz 15 Dakikalık Keşif Görüşmenizi Ayırtın",
       detail:
         "Ulaşmadan önce her ayrıntıyı çözmüş olmanız gerekmez. 15 dakikalık ilk görüşmemizde, hedeflerinizi keşfetmek, odağınızın lisansüstü başvurular mı yoksa kariyer ilerlemesi mi olduğunu konuşmak ve hangi koçluk formatının yolculuğunuza en iyi hizmet edeceğini belirlemek için birlikte hızlı bir ihtiyaç analizi yapacağız.",
@@ -354,10 +366,8 @@ export const TRANSLATIONS = {
         "Sertifikalı Profesyonel Koç (ICF Akreditasyonlu Coach Academy tarafından) | Kişisel ve Profesyonel Gelişim Uzmanı | Çok Dilli Kadınlar için Eğitim ve Kariyer Danışmanı | Yolculuğunuzda Ortağınız",
       quote:
         "Çok dilli sesiniz, kültürel bilgeliğiniz ve küresel yolculuğunuz inanılmaz değerlerdir. Koçluk, tüm potansiyelinizi açığa çıkarmak ve en cesur hayallerinizi işe yarayan sistemlerle gerçeğe dönüştürmekle ilgilidir.",
-      bio1:
-        "Yeni bir ülkede tatmin edici bir hayat ve kariyer kurmak, halihazırda getirdiğiniz muazzam zenginliği onurlandırmakla başlar. Bunu ilk elden biliyorum, çünkü bu aynı zamanda benim de hikâyem. Türkiye, Senegal ve Amerika Birleşik Devletleri'nde eğitim almış ve çalışmış çok dilli, çok kültürlü bir eğitimci olarak yolculuğum, hem uluslararası hem de zorunlu göçe—sınırlar, kültürler ve diller (Türkçe, Fransızca ve İngilizce) arasında sistemlerde yol almaya—derinden dayanıyor.",
-      bio2:
-        "Yükseköğretim, mülteci yerleştirme ve eyalet düzeyindeki girişimlerde 17 yılı aşkın deneyimimle akademik araştırmayı gerçek dünya deneyimiyle birleştiriyorum. Travma-bilinçli, refah odaklı bir yaklaşıma dayanarak, en yüksek hedeflerinizin peşinden gitmenin asla ruh sağlığınız, güvenliğiniz veya kimliğiniz pahasına olmamasını sağlıyorum.",
+      bio1: "Yeni bir ülkede tatmin edici bir hayat ve kariyer kurmak, halihazırda getirdiğiniz muazzam zenginliği onurlandırmakla başlar. Bunu ilk elden biliyorum, çünkü bu aynı zamanda benim de hikâyem. Türkiye, Senegal ve Amerika Birleşik Devletleri'nde eğitim almış ve çalışmış çok dilli, çok kültürlü bir eğitimci olarak yolculuğum, hem uluslararası hem de zorunlu göçe—sınırlar, kültürler ve diller (Türkçe, Fransızca ve İngilizce) arasında sistemlerde yol almaya—derinden dayanıyor.",
+      bio2: "Yükseköğretim, mülteci yerleştirme ve eyalet düzeyindeki girişimlerde 17 yılı aşkın deneyimimle akademik araştırmayı gerçek dünya deneyimiyle birleştiriyorum. Travma-bilinçli, refah odaklı bir yaklaşıma dayanarak, en yüksek hedeflerinizin peşinden gitmenin asla ruh sağlığınız, güvenliğiniz veya kimliğiniz pahasına olmamasını sağlıyorum.",
       buildTitle: "Birlikte Neler İnşa Ediyoruz",
       builds: [
         {
@@ -481,38 +491,58 @@ export const TRANSLATIONS = {
         title:
           "ABD'deki Kariyer Yolunuzu Birlikte Tasarlayalım date/time coming soon",
         body: "Tarih ve Zaman Bildirilecek",
+        isApplied: false,
+        url: "",
+        thumbstone: "",
       },
       {
         tag: "Bu Yaz",
         title:
           "Amerika da Hibe Bulmak icin Temel BilgilerUt enim ad minim veniam",
         body: "Tarih ve Zaman Bildirilecek",
+        isApplied: false,
+        url: "",
+        thumbstone: "",
       },
       {
         tag: "Bu Yaz",
         title: "Mülakat Hazırlık Rehberi",
         body: "Tarih ve Zaman Bildirilecek",
+        isApplied: false,
+        url: "",
+        thumbstone: "",
       },
     ],
     happeningSoonTitle: "Yakında Başlayacaklar",
     reserveSpot: "Yer Ayırtın",
+    affiliationsTitle: "İş Birlikleri ve Kurumlar",
+    affiliationsSubtitle: "Bu çalışmayı şekillendiren kurum ve kuruluşlar",
     upcomingEvents: [
       {
         date: "Bu Yaz",
         title:
           "ABD'deki Kariyer Yolunuzu Birlikte Tasarlayalım date/time coming soon",
         body: "Tarih ve Zaman Bildirilecek",
+        isApplied: false,
+        url: "",
+        thumbstone: "",
       },
       {
         date: "Bu Yaz",
         title:
           "Amerika da Hibe Bulmak icin Temel BilgilerUt enim ad minim veniam",
         body: "Tarih ve Zaman Bildirilecek",
+        isApplied: false,
+        url: "",
+        thumbstone: "",
       },
       {
         date: "Bu Yaz",
         title: "Mülakat Hazırlık Rehberi",
         body: "Tarih ve Zaman Bildirilecek",
+        isApplied: false,
+        url: "",
+        thumbstone: "",
       },
     ],
     testimonialsTitle: "Pilot Taslak: 6 Haftalık Grup Koçluğu",
@@ -521,6 +551,7 @@ export const TRANSLATIONS = {
     latestUpdate: "En Son Güncellemeleri Alın",
     sendApplication: "Başvuru Gönder",
     submitApplicationTitle: "Başvuru Formu",
+    registrationBtn: "Interview with Confidence Registration",
     placeholderName: "İsim",
     placeholderEmail: "E-posta",
     placeholderStage: "Mevcut Profesyonel Geçiş Aşaması",

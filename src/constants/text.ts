@@ -74,6 +74,8 @@ export const TRANSLATIONS = {
         "Certified Professional Coach (by ICF-Accredited Coach Academy) | Specialized in Personal & Professional Development | Education & Career Consultant for Multilingual Women | Partner in Your Journey",
       quote:
         "Your multilingual voice, cultural wisdom, and global journey are incredible assets. Coaching is about unlocking your full potential and turning your boldest dreams into reality through systems that work.",
+      heroImage:
+        "Research-grounded, strength-based coaching and mentorship for multilingual women navigating graduate school admissions, career elevation, and professional re-entry in the U.S.",
       bio1: "Building a fulfilling life and career in a new country starts with honoring the immense wealth you already bring. I know this firsthand because it is my story too. As a multilingual, multicultural educator who has studied and worked across Türkiye, Senegal, and the United States, my trajectory is deeply rooted in both international and forced migration—navigating systems across borders, cultures, and languages (Turkish, French, and English).",
       bio2: "With over 17 years of experience across higher education, refugee resettlement, and state-level initiatives, I bridge academic research with real-world experience. Grounded in a trauma-informed, well-being-focused approach, I ensure that pursuing your highest aspirations never comes at the cost of your mental health, safety, or identity.",
       buildTitle: "What We Build Together",
@@ -86,17 +88,17 @@ export const TRANSLATIONS = {
         {
           title: "Trauma-Informed Support",
           detail:
-            "Navigating professional re-entry in a way that protects your peace and well-being.",
+            "Navigating academic and professional transitions in a way that protects your peace, mental health, and emotional well-being.",
         },
         {
-          title: "Proven Systems & Practical Guidance",
+          title: "Evidence-Informed Frameworks:",
           detail:
-            "Clear frameworks built from 17+ years in higher education and refugee advocacy.",
+            "Delivering clear, practical systems built from 17+ years across higher education, state-level initiatives, and refugee advocacy.",
         },
         {
-          title: "Collaborative Partnership",
+          title: "Collaborative Action Planning:",
           detail:
-            "Breaking big dreams—like graduate school or career advancement—into manageable steps.",
+            "Translating your boldest aspirations—such as M.A./Ph.D. admissions or strategic career advancement, into clear, manageable milestones.",
         },
       ],
       appointmentBtn: "Make an Appointment",
@@ -130,16 +132,21 @@ export const TRANSLATIONS = {
           "Managed immigrant education programs, quality assurance, and grant funding frameworks within the New Jersey State Mandatory Immigrant Office and served as Education Coordinator at the International Rescue Committee (IRC).",
       },
     },
-    publicationsTitle: "Selected Publications & Resources",
+    publicationsTitle: "Selected Publications & Evidence Foundations",
+    publicationsSubTitle:
+      "Our NCWEN curriculum is directly powered by peer-reviewed, award-winning academic scholarship. Every cohort module, reflection tool, and growth framework is grounded in research that honors your identity and validates your lived experience.",
+    publications: "Publication List",
     publicationsLinkText: "More Detail",
     publicationsRich: [
       {
-        title: "Article of the Year (Journal of Educational Leadership)",
-        paper:
-          "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
+        title:
+          "Excavating the Layers of Trauma in Homelands and Hostlands: Supporting Political Refugees in U.S. Schools",
+        citation:
+          "🏆 Recipient of the UCEA Paula Silver Case Award (2022) | Journal of Cases in Educational Leadership",
         description:
-          "A deep dive into family narratives, hardships, and strategic support systems.",
-        linkUrl: "#",
+          "💡 What This Means for Your NCWEN Journey: Grounded in trauma-informed and strength-based frameworks, this award-winning research honors the complex lived experiences women carry across transitions. It informs how we cultivate emotionally safe, restorative cohort spaces where you can process your journey, set empowering boundaries, and lead with renewed agency.",
+        linkUrl:
+          "https://drive.google.com/file/d/1G78cwR0R8H8uzDtFMUHvswUKT6YWNGm_/view?usp=sharing",
       },
       {
         title: "Research on Educational Equity",
@@ -207,9 +214,9 @@ export const TRANSLATIONS = {
     ],
     happeningSoonTitle: "Happening Soon",
     reserveSpot: "Reserve a Spot",
-    affiliationsTitle: "Affiliations",
+    affiliationsTitle: "ACADEMIC & PROFESSIONAL FOUNDATIONS",
     affiliationsSubtitle:
-      "Institutions and organizations that have shaped this work",
+      "These logos represent the universities and institutions where our founder earned her degrees and conducted research and received some of her certifications from, as well as the key organizations where she served, all of which directly shaped the evidence-based, lived-experience frameworks powering NCWEN.",
     contactTitle: "Contact Us",
     contactSubtitle:
       "Subscribe to our newsletter or send us a message — we'd love to hear from you.",

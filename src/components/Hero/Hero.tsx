@@ -2,16 +2,53 @@ import "./Hero.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Button } from "../Button/Button";
 
-export const Hero = ({ lang }: { lang: Language }) => {
+export const Hero = ({
+  lang,
+  onNewsletter,
+  onWaitlist,
+  onContact,
+}: {
+  lang: Language;
+  onNewsletter: () => void;
+  onWaitlist: () => void;
+  onContact: () => void;
+}) => {
   const t = TRANSLATIONS[lang];
   const s = t.summary;
+  const n = t.network;
 
   return (
     <>
       <section className="hero"></section>
+      <section className="container">
+        <div className="network-actions">
+          <Button variant="gold" onClick={onNewsletter}>
+            {n.newsletterBtn}
+          </Button>
+          <Button variant="blue" onClick={onWaitlist}>
+            {n.waitlistBtn}
+          </Button>
+          <Button variant="gold" onClick={onContact}>
+            {t.contactTitle}
+          </Button>
+        </div>
+        <h3 className="hero-build-subtitle">{s.heroImage}</h3>
+      </section>
+
       <section className="container hero-content">
-        <h1 className="hero-title">{s.title}</h1>
-        <p className="hero-position">{s.position}</p>
+        <div className="hero-intro">
+          <img
+            className="hero-photo"
+            src="/images/Mehtap.jpeg"
+            alt={s.title}
+            width={150}
+            height={150}
+          />
+          <div className="hero-intro-text">
+            <h1 className="hero-title">{s.title}</h1>
+            <p className="hero-position">{s.position}</p>
+          </div>
+        </div>
 
         <blockquote className="hero-quote">{s.quote}</blockquote>
 

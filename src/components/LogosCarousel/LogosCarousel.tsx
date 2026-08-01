@@ -14,6 +14,10 @@ const LOGOS = [
   { src: "/images/upwardlyglobal.jpeg", name: "Upwardly Global" },
   { src: "/images/NJOR-NJ.png", name: "New Jersey Office of Refugees" },
   { src: "/images/badge2026Lp.png", name: "Leadership Coach" },
+  { src: "/images/coachAcademy.png", name: "Coach Academy" },
+  { src: "/images/ICFLogo.png", name: "International Coaching Federation" },
+  { src: "/images/anyAmericaNeedsYou.webp", name: "Any America Needs You" },
+  { src: "/images/upliftAcademy.png", name: "Uplift Academy" },
 ];
 
 export default function LogosCarousel({ lang }: { lang: Language }) {

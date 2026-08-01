@@ -1,0 +1,130 @@
+/* ---------- Hero ---------- */
+.hero {
+  background: url("/images/NewHeroImage.jpeg") center / contain no-repeat;
+  aspect-ratio: 1280 / 512;
+  padding: 0;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding-top: 36px;
+  padding-bottom: 8px;
+}
+.hero-title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.15;
+  color: var(--blue); /* fallback for browsers without background-clip: text */
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero-title {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+.hero-position {
+  margin: 0;
+  max-width: 780px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--blue-dark);
+}
+.hero-quote {
+  position: relative;
+  max-width: 760px;
+  margin: 8px 0 4px;
+  padding: 18px 28px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  background: var(--brand-gradient-soft);
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.55;
+  text-align: left;
+}
+.hero-bio {
+  max-width: 760px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero-bio p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.hero-build {
+  width: 100%;
+  max-width: 820px;
+  text-align: left;
+  margin-top: 8px;
+}
+.hero-build-title {
+  font-size: 20px;
+  color: var(--blue-dark);
+  margin: 0 0 16px;
+}
+.hero-builds {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.hero-builds li {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--turquoise);
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  box-shadow: var(--shadow-card);
+}
+.hero-builds li strong {
+  color: var(--ink);
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.hero-cta {
+  max-width: 100%;
+}
+a.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-content {
+    padding-top: 24px;
+  }
+  .hero-builds {
+    grid-template-columns: 1fr;
+  }
+  .hero-quote {
+    font-size: 16px;
+  }
+}

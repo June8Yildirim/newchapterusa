@@ -1,0 +1,52 @@
+/* ---------- How We Work Together ---------- */
+.hww-subheading {
+  font-size: 20px;
+  color: var(--blue-dark);
+  margin: 34px 0 12px;
+}
+.hww-intro {
+  margin: 0 0 16px;
+  color: var(--ink-soft);
+}
+.hww-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.hww-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+.hww-card--framework {
+  border-top: 3px solid var(--turquoise);
+}
+.hww-card h4 {
+  margin: 0 0 10px;
+  font-size: 17px;
+  color: var(--ink);
+}
+.hww-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.hww-quote {
+  margin: 30px 0 0;
+  padding: 20px 24px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  background: var(--brand-gradient-soft);
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--border);
+}
+
+@media (max-width: 860px) {
+  .hww-grid {
+    grid-template-columns: 1fr;
+  }
+}

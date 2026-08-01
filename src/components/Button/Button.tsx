@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from "react";
-import "../../App.css";
+import "./Button.css";
 
 type ButtonVariant = "gold" | "blue";
 

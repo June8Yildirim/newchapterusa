@@ -1,3 +1,4 @@
+import "./MeetingCoaching.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { PhotoPlaceholder } from "../../PhotoPlaceholder";
 

@@ -1,3 +1,4 @@
+import "./HowWeWork.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function HowWeWork({ lang }: { lang: Language }) {

@@ -1,3 +1,4 @@
+import "./Announcments.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function Announcments({ lang }: { lang: Language }) {

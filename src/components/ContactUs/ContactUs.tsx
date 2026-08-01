@@ -1,4 +1,5 @@
 import { useState, type ComponentProps } from "react";
+import "./ContactUs.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Button } from "../Button/Button";
 

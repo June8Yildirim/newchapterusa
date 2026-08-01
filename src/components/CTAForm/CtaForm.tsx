@@ -1,3 +1,4 @@
+import "./CtaForm.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Button } from "../Button/Button";
 

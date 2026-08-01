@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./HappenningSoon.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function HappenningSoon({ lang }: { lang: Language }) {

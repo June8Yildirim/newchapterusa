@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./LogosCarousel.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 const LOGOS = [

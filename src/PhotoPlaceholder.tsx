@@ -1,3 +1,5 @@
+import "./PhotoPlaceholder.css";
+
 export function PhotoPlaceholder() {
   return (
     <div className="photo-placeholder" aria-hidden="true">

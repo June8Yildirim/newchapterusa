@@ -1,0 +1,59 @@
+/* ---------- Publications ---------- */
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+.pub-card {
+  background: var(--brand-gradient-soft);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform;
+}
+.pub-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+.pub-image {
+  height: 56px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.35);
+  margin-bottom: 16px;
+}
+.pub-card h3 {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
+}
+.bar-lg {
+  width: 100%;
+}
+.bar-sm {
+  width: 45%;
+}
+
+@media (max-width: 860px) {
+  .pub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pub-card {
+    transition: none;
+  }
+  .pub-card:hover {
+    transform: none;
+  }
+}

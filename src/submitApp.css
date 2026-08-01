@@ -1,0 +1,44 @@
+/* ---------- Update / application form ---------- */
+.update-form {
+  max-width: 440px;
+  margin: 28px auto 0;
+  background: var(--brand-gradient);
+  border-radius: 10px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.update-form input[type="text"],
+.update-form input[type="email"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: #fff;
+  color: var(--ink);
+}
+.update-form input::-webkit-input-placeholder {
+  color: var(--muted);
+}
+.update-form input::placeholder {
+  color: var(--muted);
+}
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+.checkbox-row input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.update-form .btn-block {
+  margin-top: 4px;
+}

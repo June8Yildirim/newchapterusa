@@ -1,0 +1,32 @@
+/* ---------- Network / Sisterhood ---------- */
+.network-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.network-inner p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.network-cta-text {
+  font-weight: 600;
+  color: var(--ink) !important;
+}
+.network-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+@media (max-width: 860px) {
+  .network-actions {
+    flex-direction: column;
+  }
+}

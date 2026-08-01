@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../App.css";
+import "./Footer.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 export const Footer = () => {
   const [lang] = useState<Language>("en");

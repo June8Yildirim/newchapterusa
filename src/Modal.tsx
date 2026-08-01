@@ -1,4 +1,5 @@
 import { useEffect, type ReactNode, type CSSProperties } from "react";
+import "./Modal.css";
 
 interface ModalProps {
   open: boolean;

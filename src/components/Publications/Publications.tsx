@@ -1,3 +1,4 @@
+import "./Publications.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function Publications({

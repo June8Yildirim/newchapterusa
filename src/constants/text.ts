@@ -19,7 +19,7 @@ export const TRANSLATIONS = {
     },
     network: {
       title: "More Than Coaching: A Growing Sisterhood & Network",
-      p1: "Achieving your goals doesn't have to be a lonely journey. When you join NCWEN, you are helping plant the seeds for a supportive community of skilled immigrant, newcomer, refugee, and multilingual women.",
+      p1: "Achieving your goals doesn't have to be a lonely journey. When you join NCWEN, you are helping plant the seeds for a supportive community of skilled immigrant, newcomer, refugee, and multilingual women uplifting one another, sharing social capital, and creating lasting bonds.",
       p2: "Together, we are building a safe network where women uplift one another, share social capital, exchange guidance, and create lasting bonds rooted in safety, empathy, and collective success.",
       p3: "Join our community by subscribing to our free newsletter or joining our 6-week cohort waitlist.",
       newsletterBtn: "Subscribe to Free Newsletter",
@@ -141,53 +141,72 @@ export const TRANSLATIONS = {
       {
         title:
           "Excavating the Layers of Trauma in Homelands and Hostlands: Supporting Political Refugees in U.S. Schools",
-        citation:
-          "🏆 Recipient of the UCEA Paula Silver Case Award (2022) | Journal of Cases in Educational Leadership",
+        citation: "🏆 Recipient of the UCEA Paula Silver Case Award (2022)",
+        citationUrl: "https://ucea.org/award_paula.php",
+        citationSuffix: " | Journal of Cases in Educational Leadership",
         description:
           "💡 What This Means for Your NCWEN Journey: Grounded in trauma-informed and strength-based frameworks, this award-winning research honors the complex lived experiences women carry across transitions. It informs how we cultivate emotionally safe, restorative cohort spaces where you can process your journey, set empowering boundaries, and lead with renewed agency.",
+        linkText: "🔗 Free Access to the Article",
         linkUrl:
           "https://drive.google.com/file/d/1G78cwR0R8H8uzDtFMUHvswUKT6YWNGm_/view?usp=sharing",
       },
       {
-        title: "Research on Educational Equity",
-        paper: "Access to equity in accessing educational resources",
+        title:
+          "Accessing Educational Resources and Support: Newcomer Refugee Mothers’ Challenges and Resilience During the COVID-19 Pandemic",
+        citation:
+          "Journal of Ethnic and Cultural Studies (2025). Akay is an equal contributor to this work and designated as co-first author.",
+        citationUrl: "",
+        citationSuffix: "",
         description:
-          "Focused on empowering immigrant mothers to maximize resource allocation for their children.",
-        linkUrl: "#",
+          "💡 What This Means for Your NCWEN Journey: This study centers the profound agency, resourcefulness, and adaptive leadership of immigrant and newcomer mothers navigating systemic barriers. It reinforces our core NCWEN belief that women are not just survivors of change, but active architects of community resilience and family advocacy.",
+        linkText: "🔗 Free Access to the Article",
+        linkUrl: "https://doi.org/10.29333/ejecs/2242",
+      },
+      {
+        title:
+          "Understanding Multilingual/Multicultural Immigrant High Schoolers’ Multilayered Identities and Imagined Futures",
+        citation: "Doctoral Dissertation | Montclair State University (2023)",
+        citationUrl: "",
+        citationSuffix: "",
+        description:
+          "💡 What This Means for Your NCWEN Journey: Examining how individuals synthesize linguistic and cultural identity to map out ambitious career pathways, this foundational research directly powers our goal-setting and story-owning frameworks. It provides proven tools to help you leverage your multilingualism as a distinct leadership superpower while building your own “imagined future.”",
+        linkText: "🔗 Free Access to the Dissertation",
+        linkUrl: "https://digitalcommons.montclair.edu/etd/1281/",
       },
     ],
     pillarsTitle: "The 6 Pillars of Growth",
+    pillarsSubtitle:
+      "A comprehensive, identity-affirming framework built from 17+ years of research, higher education leadership, and advocacy.",
     pillars: [
       {
-        pillar: "1. Navigating US Workplace & Career Culture",
+        pillar: "1. Navigating U.S. Workplace & Career Culture",
         pillarDesc:
-          "Demystifying workplace dynamics, institutional norms, and professional communication so you can navigate US systems authentically while staying rooted in who you are.",
+          "Demystifying institutional norms so you can navigate U.S. systems authentically while staying rooted in who you are.",
       },
       {
-        pillar: "2. Strategic Communication & Mock Interviews",
+        pillar: "2. Strategic Communication & Story-Owning",
         pillarDesc:
-          "Articulating your professional story with confidence, mastering interviews, and communicating your unique value at any level of English proficiency.",
+          "Articulating your professional story with authority, mastering high-stakes interviews, and communicating your unique value.",
       },
       {
         pillar: "3. Academic Pathways & Credential Strategy",
         pillarDesc:
-          "Targeted, step-by-step guidance for M.A. and Ph.D. admissions, university applications, credential evaluation, and positioning your international education for top US programs.",
+          "Step-by-step guidance for M.A./Ph.D. admissions, credential evaluation, and positioning international education for top U.S. programs.",
       },
       {
         pillar: "4. Personal Roadmaps & Goal Alignment",
         pillarDesc:
-          "Uncovering your core strengths and mapping out a personalized, step-by-step roadmap to achieve your personal, academic, and career aspirations.",
+          "Uncovering core strengths and mapping out a step-by-step roadmap to achieve your boldest aspirations.",
       },
-
       {
         pillar: "5. Safe, Trauma-Informed & Collaborative Space",
         pillarDesc:
-          "A welcoming, non-judgmental coaching space anchored in psychological safety, empathy, and emotional well-being—tailored for newcomer, refugee, and multilingual women.",
+          "A non-judgmental coaching space anchored in psychological safety, empathy, and emotional well-being.",
       },
       {
-        pillar: "6. Mindset, Self-Worth & Confidence Elevation",
+        pillar: "6. Owning Your Worth & Leadership Presence",
         pillarDesc:
-          "Nurturing unshakeable self-worth, trusting your capacity to navigate new environments, and fully owning the value of your dreams and contributions.",
+          "Reclaiming your agency, trusting your capacity in new environments, and fully stepping into the value of your background and future contributions.",
       },
     ],
     watchSampleWebinar: "Check out the Tool",
@@ -229,8 +248,8 @@ export const TRANSLATIONS = {
     contactSendAnother: "Send another message",
     upcomingEvents: [
       {
-        date: "August 17",
-        title: "Designing Your U.S. Career Path Together",
+        date: "August 14",
+        title: "Interview with Confidence",
         body: "An interactive workshop on turning your international experience into successful interviews",
         isHappened: false,
         url: "https://docs.google.com/forms/d/e/1FAIpQLSfgJ2baszqI0Zo7BdIk9jaXR_vnzHJJdkg82txvkYSz-KBefA/viewform",
@@ -253,16 +272,29 @@ export const TRANSLATIONS = {
       //   thumbstone: "",
       // },
     ],
-    testimonialsTitle: "What It’s Like to Work With Us",
+    testimonialsTitle: "Real Transformations, Real Results",
     janeDoe: "Jane Doe",
     productManager: "Product Manager",
     latestUpdate: "Get To Know Latest Update",
     sendApplication: "Send Application",
     submitApplicationTitle: "Submit Application",
-    submitNewsletterTitle: "Subscribe to Our Newsletter",
+    submitNewsletterTitle: "Get Free Insights & Resources",
     newsletterIntro:
-      "Get coaching tips, event invites, and resources for multilingual women — straight to your inbox.",
+      "Receive actionable growth insights, workshop invites, and strategic resources built specifically for multilingual women elevating their careers and academic pathways. Delivered straight to your inbox.",
+    newsletterNameLabel: "Name",
+    newsletterEmailLabel: "Email Address",
+    newsletterEmailPlaceholder: "Enter your preferred email address...",
+    newsletterFocusLabel: "What is your primary focus right now? (Optional)",
+    newsletterFocusPlaceholder: "Select your focus area...",
+    newsletterFocusOptions: [
+      "🎓 Graduate School & Academic Pathways (M.A. / Ph.D.)",
+      "🚀 Career Elevation & Professional Growth",
+      "💬 Workplace Communication & Self-Advocacy",
+      "🌟 Navigating U.S. Professional & Cultural Systems",
+    ],
     newsletterSubmitBtn: "Subscribe",
+    newsletterPrivacyNote:
+      "We respect your privacy. Zero spam, unsubscribe anytime.",
     newsletterSuccessTitle: "You're subscribed!",
     newsletterSuccessBody:
       "Thank you for subscribing. Watch your inbox for updates, resources, and event invites.",
@@ -273,7 +305,7 @@ export const TRANSLATIONS = {
     placeholderBarrier: "Top Career Barrier",
     placeholderSupport: "Requested Support Type",
     registrationBtn: "Interview with Confidence Registration",
-    submitApplicationBtn: "Subscribe the Newsletter",
+    submitApplicationBtn: "Subscribe to Our Newsletter",
     appReceived: "Application received",
     thanksApplying:
       "Thanks for applying. We've received your details and we'll be in touch soon.",
@@ -390,6 +422,8 @@ export const TRANSLATIONS = {
         "Sertifikalı Profesyonel Koç (ICF Akreditasyonlu Coach Academy tarafından) | Kişisel ve Profesyonel Gelişim Uzmanı | Çok Dilli Kadınlar için Eğitim ve Kariyer Danışmanı | Yolculuğunuzda Ortağınız",
       quote:
         "Çok dilli sesiniz, kültürel bilgeliğiniz ve küresel yolculuğunuz inanılmaz değerlerdir. Koçluk, tüm potansiyelinizi açığa çıkarmak ve en cesur hayallerinizi işe yarayan sistemlerle gerçeğe dönüştürmekle ilgilidir.",
+      heroImage:
+        "ABD'de lisansüstü başvuruları, kariyer yükselişi ve mesleğe yeniden dönüş sürecinde yol alan çok dilli kadınlar için araştırmaya dayalı, güçlü yönlere odaklı koçluk ve mentorluk.",
       bio1: "Yeni bir ülkede tatmin edici bir hayat ve kariyer kurmak, halihazırda getirdiğiniz muazzam zenginliği onurlandırmakla başlar. Bunu ilk elden biliyorum, çünkü bu aynı zamanda benim de hikâyem. Türkiye, Senegal ve Amerika Birleşik Devletleri'nde eğitim almış ve çalışmış çok dilli, çok kültürlü bir eğitimci olarak yolculuğum, hem uluslararası hem de zorunlu göçe—sınırlar, kültürler ve diller (Türkçe, Fransızca ve İngilizce) arasında sistemlerde yol almaya—derinden dayanıyor.",
       bio2: "Yükseköğretim, mülteci yerleştirme ve eyalet düzeyindeki girişimlerde 17 yılı aşkın deneyimimle akademik araştırmayı gerçek dünya deneyimiyle birleştiriyorum. Travma-bilinçli, refah odaklı bir yaklaşıma dayanarak, en yüksek hedeflerinizin peşinden gitmenin asla ruh sağlığınız, güvenliğiniz veya kimliğiniz pahasına olmamasını sağlıyorum.",
       buildTitle: "Birlikte Neler İnşa Ediyoruz",
@@ -402,17 +436,17 @@ export const TRANSLATIONS = {
         {
           title: "Travma-Bilinçli Destek",
           detail:
-            "Mesleki yeniden başlangıcınızı huzurunuzu ve refahınızı koruyacak şekilde yönlendirmek.",
+            "Akademik ve mesleki geçişlerde; huzurunuzu, ruh sağlığınızı ve duygusal refahınızı koruyacak şekilde yol almak.",
         },
         {
-          title: "Kanıtlanmış Sistemler ve Pratik Rehberlik",
+          title: "Kanıta Dayalı Çerçeveler:",
           detail:
-            "Yükseköğretim ve mülteci savunuculuğunda 17+ yıldan doğan net çerçeveler.",
+            "Yükseköğretim, eyalet düzeyindeki girişimler ve mülteci savunuculuğunda 17+ yıldan doğan net, uygulanabilir sistemler sunmak.",
         },
         {
-          title: "İşbirlikçi Ortaklık",
+          title: "İşbirlikçi Eylem Planlaması:",
           detail:
-            "Lisansüstü eğitim veya kariyer ilerlemesi gibi büyük hayalleri yönetilebilir adımlara bölmek.",
+            "En cesur hedeflerinizi—Yüksek Lisans/Doktora başvuruları veya stratejik kariyer ilerlemesi gibi—net ve yönetilebilir kilometre taşlarına dönüştürmek.",
         },
       ],
       appointmentBtn: "Randevu Alın",
@@ -443,56 +477,80 @@ export const TRANSLATIONS = {
           "New Jersey Eyaleti Zorunlu Göçmen Ofisi bünyesinde göçmen eğitim programları, kalite güvencesi ve hibe finansman çerçevelerini yönetti ve Uluslararası Kurtarma Komitesi'nde (IRC) Eğitim Koordinatörü olarak görev yaptı.",
       },
     },
-    publicationsTitle: "Seçilmiş Yayınlar ve Kaynaklar",
+    publicationsTitle: "Seçilmiş Yayınlar ve Kanıt Temelleri",
+    publicationsSubTitle:
+      "NCWEN müfredatımız doğrudan hakemli, ödüllü akademik araştırmalarla güçlenir. Her kohort modülü, yansıtma aracı ve gelişim çerçevesi, kimliğinizi onurlandıran ve yaşanmışlığınızı doğrulayan araştırmalara dayanır.",
     publicationsLinkText: "Yayını Buradan Okuyun",
     publicationsRich: [
       {
-        title: "Yılın Makalesi (Eğitimsel Liderlik Dergisi)",
-        paper:
-          "Excavating trauma in homelands and hostlands: supporting refugees in the US schools",
+        title:
+          "Excavating the Layers of Trauma in Homelands and Hostlands: Supporting Political Refugees in U.S. Schools",
+        citation: "🏆 UCEA Paula Silver Vaka Ödülü Sahibi (2022)",
+        citationUrl: "https://ucea.org/award_paula.php",
+        citationSuffix: " | Journal of Cases in Educational Leadership",
         description:
-          "Aile anlatıları, zorluklar ve stratejik destek sistemlerine derin bir bakış.",
+          "💡 NCWEN Yolculuğunuz İçin Anlamı: Travma-bilinçli ve güçlü yönlere dayalı çerçevelere dayanan bu ödüllü araştırma, kadınların geçişler boyunca taşıdığı karmaşık yaşanmışlıkları onurlandırır. Yolculuğunuzu işleyebileceğiniz, güçlendirici sınırlar koyabileceğiniz ve yenilenmiş bir özgüvenle liderlik edebileceğiniz duygusal olarak güvenli, onarıcı kohort alanlarını nasıl oluşturduğumuzu şekillendirir.",
+        linkText: "🔗 Makaleye Ücretsiz Erişim",
+        linkUrl:
+          "https://drive.google.com/file/d/1G78cwR0R8H8uzDtFMUHvswUKT6YWNGm_/view?usp=sharing",
+      },
+      {
+        title:
+          "Accessing Educational Resources and Support: Newcomer Refugee Mothers’ Challenges and Resilience During the COVID-19 Pandemic",
+        citation:
+          "Journal of Ethnic and Cultural Studies (2025). Akay bu çalışmaya eşit katkıda bulunmuş ve ortak ilk yazar olarak belirlenmiştir.",
+        citationUrl: "",
+        citationSuffix: "",
+        description:
+          "💡 NCWEN Yolculuğunuz İçin Anlamı: Bu çalışma, sistemik engellerde yol alan göçmen ve yeni gelen annelerin derin öz-yönetimini, becerikliliğini ve uyarlanabilir liderliğini merkeze alır. Kadınların yalnızca değişimin hayatta kalanları değil, aynı zamanda toplumsal dayanıklılığın ve aile savunuculuğunun aktif mimarları olduğu yönündeki temel NCWEN inancımızı pekiştirir.",
+        linkText: "🔗 Makaleye Ücretsiz Erişim",
         linkUrl: "#",
       },
       {
-        title: "Eğitimde Eşitlik Araştırması",
-        paper: "Access to equity in accessing educational resources",
+        title:
+          "Understanding Multilingual/Multicultural Immigrant High Schoolers’ Multilayered Identities and Imagined Futures",
+        citation: "Doktora Tezi | Montclair State University (2023)",
+        citationUrl: "",
+        citationSuffix: "",
         description:
-          "Göçmen annelerin çocukları için kaynak tahsisini en üst düzeye çıkarmasını sağlamaya odaklanmıştır.",
+          "💡 NCWEN Yolculuğunuz İçin Anlamı: Bireylerin iddialı kariyer yolları çizmek için dilsel ve kültürel kimliği nasıl sentezlediğini inceleyen bu temel araştırma, hedef belirleme ve kendi hikâyene sahip çıkma çerçevelerimizi doğrudan güçlendirir. Çok dilliliğinizi ayırt edici bir liderlik süper gücü olarak kullanmanıza ve kendi “hayal edilen geleceğinizi” inşa etmenize yardımcı olacak kanıtlanmış araçlar sunar.",
+        linkText: "🔗 Teze Ücretsiz Erişim",
         linkUrl: "#",
       },
     ],
     pillarsTitle: "Büyümenin 6 Temel İlkesi",
+    pillarsSubtitle:
+      "17+ yıllık araştırma, yükseköğretim liderliği ve savunuculuktan doğan; kimliğinizi onurlandıran kapsamlı bir çerçeve.",
     pillars: [
       {
         pillar: "1. ABD İş Yeri ve Kariyer Kültüründe Yol Alma",
         pillarDesc:
-          "İş yeri dinamiklerini, kurumsal normları ve profesyonel iletişimi anlaşılır kılarak, kim olduğunuzdan ödün vermeden ABD sistemlerinde özgüvenle ilerlemenizi sağlamak.",
+          "Kurumsal normları anlaşılır kılarak, kim olduğunuzdan ödün vermeden ABD sistemlerinde özgün bir şekilde ilerlemenizi sağlamak.",
       },
       {
-        pillar: "2. Stratejik İletişim ve Mülakat Pratikleri",
+        pillar: "2. Stratejik İletişim ve Hikâyene Sahip Çıkma",
         pillarDesc:
-          "İngilizce seviyeniz ne olursa olsun, profesyonel hikayenizi güvenle ifade etmeniz, mülakatlarda ustalaşmanız ve özgün değerinizi aktarabilmeniz.",
+          "Profesyonel hikâyenizi otoriteyle ifade etmeniz, yüksek önem taşıyan mülakatlarda ustalaşmanız ve özgün değerinizi aktarabilmeniz.",
       },
       {
         pillar: "3. Akademik Yollar ve Denklik Stratejisi",
         pillarDesc:
-          "Yüksek lisans ve doktora kabulleri, üniversite başvuruları, diploma denklikleri ve uluslararası eğitiminizi ABD'nin önde gelen programlarına göre konumlandırmak için adım adım rehberlik.",
+          "Yüksek lisans/doktora kabulleri, diploma denklikleri ve uluslararası eğitiminizi ABD'nin önde gelen programlarına göre konumlandırmak için adım adım rehberlik.",
       },
       {
         pillar: "4. Kişisel Yol Haritaları ve Hedef Uyumlaması",
         pillarDesc:
-          "Temel güçlü yönlerinizi keşfederek kişisel, akademik ve kariyer hedeflerinize ulaşmanız için size özel, adım adım bir yol haritası oluşturmak.",
+          "Temel güçlü yönlerinizi keşfederek en cesur hedeflerinize ulaşmanız için adım adım bir yol haritası oluşturmak.",
       },
       {
         pillar: "5. Güvenli, Travma Odaklı ve İş Birlikçi Alan",
         pillarDesc:
-          "Yeni gelen, mülteci ve çok dilli kadınlar için özel olarak tasarlanmış; psikolojik güvenlik, empati ve duygusal iyi oluş üzerine kurulu, yargısız ve kapsayıcı bir koçluk alanı.",
+          "Psikolojik güvenlik, empati ve duygusal iyi oluş üzerine kurulu, yargısız bir koçluk alanı.",
       },
       {
-        pillar: "6. Zihniyet, Öz Değer ve Özgüven Gelişimi",
+        pillar: "6. Değerinize ve Liderlik Duruşunuza Sahip Çıkmak",
         pillarDesc:
-          "Sarsılmaz bir öz değer inşa etmek, yeni ortamlara uyum sağlama kapasitenize güvenmek ve hayallerinizin ile katkılarınızın değerini tam anlamıyla sahiplenmek.",
+          "Öz iradenizi yeniden kazanmak, yeni ortamlardaki kapasitenize güvenmek ve geçmişinizin ile gelecekteki katkılarınızın değerine tam anlamıyla adım atmak.",
       },
     ],
     // pillars: [
@@ -586,8 +644,21 @@ export const TRANSLATIONS = {
     submitApplicationTitle: "Başvuru Formu",
     submitNewsletterTitle: "Bültenimize Abone Olun",
     newsletterIntro:
-      "Çok dilli kadınlar için koçluk ipuçları, etkinlik davetleri ve kaynakları doğrudan gelen kutunuza alın.",
+      "Kariyerlerini ve akademik yollarını yükselten çok dilli kadınlar için özel olarak hazırlanmış; uygulanabilir gelişim içgörüleri, atölye davetleri ve stratejik kaynaklar. Doğrudan gelen kutunuza.",
+    newsletterNameLabel: "İsim",
+    newsletterEmailLabel: "E-posta Adresi",
+    newsletterEmailPlaceholder: "Tercih ettiğiniz e-posta adresini girin...",
+    newsletterFocusLabel: "Şu anda öncelikli odağınız nedir? (İsteğe bağlı)",
+    newsletterFocusPlaceholder: "Odak alanınızı seçin...",
+    newsletterFocusOptions: [
+      "🎓 Lisansüstü Eğitim ve Akademik Yollar (Yüksek Lisans / Doktora)",
+      "🚀 Kariyer Yükselişi ve Profesyonel Gelişim",
+      "💬 İş Yerinde İletişim ve Öz Savunuculuk",
+      "🌟 ABD Profesyonel ve Kültürel Sistemlerinde Yol Alma",
+    ],
     newsletterSubmitBtn: "Abone Ol",
+    newsletterPrivacyNote:
+      "Gizliliğinize saygı duyuyoruz. Spam yok, istediğiniz zaman abonelikten çıkabilirsiniz.",
     newsletterSuccessTitle: "Abone oldunuz!",
     newsletterSuccessBody:
       "Abone olduğunuz için teşekkürler. Güncellemeler, kaynaklar ve etkinlik davetleri için gelen kutunuzu takip edin.",

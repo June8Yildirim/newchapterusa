@@ -13,7 +13,8 @@
   gap: 14px;
 }
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--border);
@@ -22,12 +23,23 @@
   color: var(--ink);
   font-family: inherit;
   font-size: 15px;
+  font-weight: 400;
 }
 .contact-form textarea {
   resize: vertical;
 }
+/* labelled field: bold label text stacked above its control */
+.field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
 .contact-form input:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form select:focus {
   outline: none;
   border-color: var(--turquoise);
   box-shadow: 0 0 0 3px rgba(22, 140, 118, 0.15);
@@ -36,6 +48,13 @@
   margin: 0;
   color: #c0392b;
   font-size: 14px;
+}
+.newsletter-privacy {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
 }
 .contact-success {
   max-width: 480px;

@@ -58,7 +58,12 @@ function App() {
       />
 
       {/* Hero */}
-      <Hero lang={lang} />
+      <Hero
+        lang={lang}
+        onNewsletter={() => setConfirmSubmitNewsletterOpen(true)}
+        onWaitlist={() => setConfirmSubmitAppicationOpen(true)}
+        onContact={() => setOpenContact(true)}
+      />
 
       {/* <div id="coach" className="nav-anchor"> */}
       {/*   <MeetingCoaching lang={lang} /> */}
@@ -66,11 +71,7 @@ function App() {
       <LogosCarousel lang={lang} />
 
       <div id="publications" className="nav-anchor">
-        <Publications
-          lang={lang}
-          openComingSoonModal={openComingSoonModal}
-          setOpenComingSoonModal={setOpenComingSoonModal}
-        />
+        <Publications lang={lang} />
       </div>
       <div id="pillars" className="nav-anchor">
         <SixPillars

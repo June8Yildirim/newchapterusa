@@ -2,6 +2,7 @@ import { useState, type ComponentProps } from "react";
 import "./ContactUs.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Button } from "../Button/Button";
+import { isFilled, isValidEmail } from "../../utils/validation";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as
@@ -10,18 +11,21 @@ const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as
 
 export default function ContactUs({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Name + a valid email are required before the button activates.
+  const canSubmit = isFilled(name) && isValidEmail(email);
+
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (e) => {
     e.preventDefault();
-    if (submitting) return;
+    if (submitting || !canSubmit) return;
 
     const form = e.currentTarget;
     const data = new FormData(form);
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
     const message = String(data.get("message") ?? "");
 
     if (!WEB3FORMS_ACCESS_KEY) {
@@ -58,6 +62,8 @@ export default function ContactUs({ lang }: { lang: Language }) {
 
       if (res.ok && result.success) {
         form.reset();
+        setName("");
+        setEmail("");
         setSubmitted(true);
       } else {
         setError(t.sendError);
@@ -89,12 +95,16 @@ export default function ContactUs({ lang }: { lang: Language }) {
             type="text"
             name="name"
             placeholder={t.placeholderName}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
             type="email"
             name="email"
             placeholder={t.placeholderEmail}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <textarea
@@ -107,7 +117,12 @@ export default function ContactUs({ lang }: { lang: Language }) {
               {error}
             </p>
           )}
-          <Button variant="gold" block type="submit" disabled={submitting}>
+          <Button
+            variant="gold"
+            block
+            type="submit"
+            disabled={submitting || !canSubmit}
+          >
             {submitting ? t.sending : t.contactSubmitBtn}
           </Button>
         </form>

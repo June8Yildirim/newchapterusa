@@ -8,8 +8,9 @@
 
 :root {
   /* Brand colors */
-  --gold: #c6982e; /* gray orange */
+  --gold: #c6982e; /* gray orange — button fill on light backgrounds */
   --gold-dark: #ac8326;
+  --gold-light: #ffd35c; /* readable gold for text on dark / gradient surfaces */
   --blue: #00357a; /* sea blue */
   --blue-dark: #002a63;
   --turquoise: #168c76;

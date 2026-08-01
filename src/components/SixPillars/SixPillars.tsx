@@ -14,7 +14,10 @@ export default function SixPillars({
     <section className="section pillars">
       {/* 6 Pillars */}
       <div className="container">
-        <h2>{t.pillarsTitle}</h2>
+        <div className="section-header">
+          <h2>{t.pillarsTitle}</h2>
+          <p>{t.pillarsSubtitle}</p>
+        </div>
         <div className="pillar-grid">
           {t.pillars.map((p) => (
             <article key={p.pillar} className="pillar-card">

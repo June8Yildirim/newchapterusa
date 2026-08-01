@@ -2,6 +2,7 @@ import { useState, type ComponentProps } from "react";
 import "./submitApp.css";
 import { TRANSLATIONS, type Language } from "./constants/text";
 import { Button } from "./components/Button/Button";
+import { isFilled, isValidEmail } from "./utils/validation";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as
@@ -17,18 +18,21 @@ export function SubmitApplication({
   setOpenConfirm: (tst: boolean) => void;
 }) {
   const t = TRANSLATIONS[lang];
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Name + a valid email are required before the button activates.
+  const canSubmit = isFilled(name) && isValidEmail(email);
+
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (e) => {
     e.preventDefault();
-    if (submitting) return;
+    if (submitting || !canSubmit) return;
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
     const stage = String(data.get("stage") ?? "");
     const barrier = String(data.get("barrier") ?? "");
     const support = String(data.get("support") ?? "");
@@ -71,6 +75,8 @@ export function SubmitApplication({
 
       if (res.ok && result.success) {
         form.reset();
+        setName("");
+        setEmail("");
         setOpenConfirm(true);
       } else {
         setError(t.sendError);
@@ -90,12 +96,16 @@ export function SubmitApplication({
             type="text"
             name="name"
             placeholder={t.placeholderName}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
             type="email"
             name="email"
             placeholder={t.placeholderEmail}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input type="text" name="stage" placeholder={t.placeholderStage} />
@@ -118,8 +128,13 @@ export function SubmitApplication({
               {error}
             </p>
           )}
-          <Button variant="gold" block type="submit" disabled={submitting}>
-            {submitting ? t.sending : t.submitApplicationBtn}
+          <Button
+            variant="gold"
+            block
+            type="submit"
+            disabled={submitting || !canSubmit}
+          >
+            {submitting ? t.sending : t.sendApplication}
           </Button>
         </form>
       </div>

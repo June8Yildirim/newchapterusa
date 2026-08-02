@@ -17,6 +17,7 @@ import Network from "./components/Network/Network";
 import HowWeWork from "./components/HowWeWork/HowWeWork";
 import NextSteps from "./components/NextSteps/NextSteps";
 import LogosCarousel from "./components/LogosCarousel/LogosCarousel";
+import StatsStrip from "./components/StatsStrip/StatsStrip";
 import { ComingSoonModal } from "./components/modals/ComingSoonModal";
 import { TestimonialModal } from "./components/modals/TestimonialModal";
 import { ContactModal } from "./components/modals/ContactModal";
@@ -67,6 +68,8 @@ function App() {
         onWaitlist={() => setConfirmSubmitAppicationOpen(true)}
         onContact={() => setOpenContact(true)}
       />
+
+      <StatsStrip lang={lang} />
 
       {/* <div id="coach" className="nav-anchor"> */}
       {/*   <MeetingCoaching lang={lang} /> */}

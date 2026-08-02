@@ -61,7 +61,7 @@ export function useSiteAnimations(scope: RefObject<HTMLElement | null>) {
         [
           ".pub-grid",
           ".announcement-list",
-          ".happening-grid",
+          ".happening-track",
           ".pillar-grid",
           ".testimonial-grid",
         ].forEach((sel) => {

@@ -42,6 +42,10 @@
   --shadow-card-hover: 0 20px 38px -16px rgba(6, 34, 54, 0.4);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }

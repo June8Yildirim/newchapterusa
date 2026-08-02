@@ -5,7 +5,7 @@ export default function Publications({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
 
   return (
-    <section className="section publications">
+    <section id="research" className="section publications nav-anchor">
       {/* Publications */}
       <div className="container">
         <div className="section-header">

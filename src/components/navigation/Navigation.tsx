@@ -46,23 +46,47 @@ export default function Navigation({
 
   // Scroll-spy: highlight the link for the section currently in view.
   useEffect(() => {
-    const sections = NAV_LINKS.map((l) => document.getElementById(l.id)).filter(
-      (el): el is HTMLElement => el !== null,
-    );
-    if (sections.length === 0) return;
+    let ticking = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target.id);
-      },
-      { rootMargin: "-45% 0px -45% 0px", threshold: [0, 0.25, 0.5, 1] },
-    );
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const headerOffset = 140;
+          let currentActive = "";
 
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+          const isAtBottom =
+            window.innerHeight + window.scrollY >=
+            document.documentElement.scrollHeight - 60;
+
+          if (isAtBottom) {
+            currentActive = NAV_LINKS[NAV_LINKS.length - 1].id;
+          } else {
+            for (const link of NAV_LINKS) {
+              const el = document.getElementById(link.id);
+              if (el) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= headerOffset && rect.bottom > 0) {
+                  currentActive = link.id;
+                }
+              }
+            }
+            if (!currentActive && window.scrollY < 300) {
+              currentActive = NAV_LINKS[0].id;
+            }
+          }
+
+          if (currentActive) {
+            setActive(currentActive);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

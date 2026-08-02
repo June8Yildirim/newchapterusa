@@ -19,7 +19,7 @@ export const Hero = ({
 
   return (
     <>
-      <section id="meetcoach" className="hero"></section>
+      <section id="meetcoach" className="hero nav-anchor"></section>
 
       <section className="section">
         <section className="container">

@@ -51,7 +51,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
   };
 
   return (
-    <section className="section happening-section">
+    <section id="events" className="section happening-section nav-anchor">
       {/* Happening Soon */}
       <div className="container">
         <div className="section-header">

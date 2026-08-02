@@ -11,7 +11,7 @@ export default function SixPillars({
   const t = TRANSLATIONS[lang];
 
   return (
-    <section className="section pillars">
+    <section id="pillars" className="section pillars nav-anchor">
       {/* 6 Pillars */}
       <div className="container">
         <div className="section-header">

@@ -56,7 +56,9 @@ export function AdminModal({
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-          <label style={{ fontSize: "13px", fontWeight: 600, color: "var(--ink)" }}>
+          <label
+            style={{ fontSize: "13px", fontWeight: 600, color: "var(--ink)" }}
+          >
             Email
           </label>
           <input
@@ -76,7 +78,9 @@ export function AdminModal({
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-          <label style={{ fontSize: "13px", fontWeight: 600, color: "var(--ink)" }}>
+          <label
+            style={{ fontSize: "13px", fontWeight: 600, color: "var(--ink)" }}
+          >
             Password
           </label>
           <input

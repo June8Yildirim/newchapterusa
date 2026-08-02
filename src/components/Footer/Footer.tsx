@@ -4,11 +4,25 @@ import { Button } from "../Button/Button";
 export const Footer = ({
   lang,
   onContact,
+  onAdmin,
 }: {
   lang: Language;
   onContact: () => void;
+  onAdmin?: () => void;
 }) => {
   const t = TRANSLATIONS[lang];
+  const isSignedIn =
+    typeof window !== "undefined" &&
+    localStorage.getItem("ncwen_admin_authenticated") === "true";
+
+  const handleAdminClick = () => {
+    if (isSignedIn) {
+      window.location.href = "/admin";
+    } else if (onAdmin) {
+      onAdmin();
+    }
+  };
+
   return (
     <footer className="site-footer">
       <div className="footer-inner">
@@ -58,14 +72,23 @@ export const Footer = ({
       <div className="footer-legal">
         <p className="footer-dev">
           {t.developedBy}
-          {import.meta.env.DEV && (
-            <>
-              {" · "}
-              <a className="footer-admin-link" href="/admin">
-                ✏️ Edit Content
-              </a>
-            </>
-          )}
+          {" · "}
+          <button
+            type="button"
+            className="footer-admin-link"
+            onClick={handleAdminClick}
+            style={{
+              background: "none",
+              border: "none",
+              color: "inherit",
+              font: "inherit",
+              textDecoration: "underline",
+              cursor: "pointer",
+              padding: 0,
+            }}
+          >
+            {isSignedIn ? "✏️ Edit Content" : "Admin"}
+          </button>
         </p>
       </div>
     </footer>

@@ -7,7 +7,7 @@ const root = createRoot(document.getElementById("root")!);
 
 // Dev-only content editor at /admin. In production the branch is dead code
 // (import.meta.env.DEV is statically false) so the editor is never bundled.
-if (import.meta.env.DEV && window.location.pathname.startsWith("/admin")) {
+if (window.location.pathname.startsWith("/admin")) {
   import("./admin/AdminEditor").then(({ AdminEditor }) => {
     root.render(
       <StrictMode>

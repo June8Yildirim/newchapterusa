@@ -25,6 +25,7 @@ import { AppReceivedModal } from "./components/modals/AppReceivedModal";
 import { DiscoveryModal } from "./components/modals/DiscoveryModal";
 import { DiscoverySuccessModal } from "./components/modals/DiscoverySuccessModal";
 import { NewsletterModal } from "./components/modals/NewsletterModal";
+import { AdminModal } from "./components/modals/AdminModal";
 
 function App() {
   const [openTestimonal, setOpenTestimonal] = useState<
@@ -40,6 +41,7 @@ function App() {
   const [openDiscovery, setOpenDiscovery] = useState(false);
   const [openDiscoveryConfirm, setOpenDiscoveryConfirm] = useState(false);
   const [openContact, setOpenContact] = useState(false);
+  const [openAdmin, setOpenAdmin] = useState(false);
 
   const container = useRef<HTMLDivElement>(null);
   useSiteAnimations(container);
@@ -101,7 +103,17 @@ function App() {
       </section>
 
       {/* Footer */}
-      <Footer lang={lang} onContact={() => setOpenContact(true)} />
+      <Footer
+        lang={lang}
+        onContact={() => setOpenContact(true)}
+        onAdmin={() => setOpenAdmin(true)}
+      />
+
+      <AdminModal
+        open={openAdmin}
+        onClose={() => setOpenAdmin(false)}
+        lang={lang}
+      />
 
       <ComingSoonModal
         open={openComingSoonModal}

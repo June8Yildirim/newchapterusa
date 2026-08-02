@@ -8,7 +8,9 @@ export default function HowWeWork({ lang }: { lang: Language }) {
   return (
     <section className="section pillars">
       <div className="container">
-        <h2>{h.title}</h2>
+        <div className="section-header">
+          <h2>{h.title}</h2>
+        </div>
 
         <h3 className="hww-subheading">{h.serviceHeading}</h3>
         <div className="hww-grid">

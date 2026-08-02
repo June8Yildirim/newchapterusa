@@ -71,33 +71,21 @@ function App() {
       {/* </div> */}
       <LogosCarousel lang={lang} />
 
-      <div id="publications" className="nav-anchor">
-        <Publications lang={lang} />
-      </div>
-      <div id="pillars" className="nav-anchor">
-        <SixPillars
-          lang={lang}
-          openComingSoonModal={openComingSoonModal}
-          setOpenComingSoonModal={setOpenComingSoonModal}
-        />
-      </div>
-      <div id="community" className="nav-anchor">
-        <Network
-          lang={lang}
-          onNewsletter={() => setConfirmSubmitNewsletterOpen(true)}
-          onWaitlist={() => setConfirmSubmitAppicationOpen(true)}
-        />
-      </div>
-      <div id="services" className="nav-anchor">
-        <HowWeWork lang={lang} />
-      </div>
-      <div id="next-steps" className="nav-anchor">
-        <NextSteps lang={lang} onDiscovery={() => setOpenDiscovery(true)} />
-      </div>
+      <Publications lang={lang} />
+      <SixPillars
+        lang={lang}
+        openComingSoonModal={openComingSoonModal}
+        setOpenComingSoonModal={setOpenComingSoonModal}
+      />
+      <Network
+        lang={lang}
+        onNewsletter={() => setConfirmSubmitNewsletterOpen(true)}
+        onWaitlist={() => setConfirmSubmitAppicationOpen(true)}
+      />
+      <HowWeWork lang={lang} />
+      <NextSteps lang={lang} onDiscovery={() => setOpenDiscovery(true)} />
       {/* <Announcments lang={lang} /> */}
-      <div id="events" className="nav-anchor">
-        <HappenningSoon lang={lang} />
-      </div>
+      <HappenningSoon lang={lang} />
 
       <TestimonialsCarousel lang={lang} setOpenTestimonal={setOpenTestimonal} />
 

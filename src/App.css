@@ -121,11 +121,28 @@ h3 {
   justify-self: center;
 }
 
-/* Reusable section header (title + optional subtitle) */
+/* ---------------------------------------------------------------
+   Unified section header — every section uses the same structure:
+     <div class="section-header">
+       <span class="eyebrow">…</span>     (optional kicker)
+       <h2>Title</h2>
+       <p class="subtitle">…</p>          (optional accent line)
+       <p class="description">…</p>       (optional body / intro)
+     </div>
+   --------------------------------------------------------------- */
 .section-header {
   max-width: 720px;
   margin: 0 auto 28px;
   text-align: center;
+}
+.section-header .eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--turquoise);
 }
 .section-header h2 {
   margin: 0;
@@ -133,6 +150,7 @@ h3 {
   line-height: 1.2;
   color: var(--turquoise);
   font-weight: 700;
+  font-variant-caps: all-petite-caps;
 }
 .section-header h2::after {
   content: "";
@@ -143,8 +161,15 @@ h3 {
   border-radius: 2px;
   background: var(--brand-gradient);
 }
-.section-header p {
+.section-header .subtitle {
   margin: 14px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue-dark);
+}
+.section-header .description,
+.section-header p {
+  margin: 12px 0 0;
   font-size: 15px;
   line-height: 1.6;
   color: var(--muted);

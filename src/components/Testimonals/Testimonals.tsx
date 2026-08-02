@@ -48,7 +48,9 @@ export default function TestimonialsCarousel({
     <section className="section testimonials">
       {/* Testimonials */}
       <div className="container">
-        <h2>{t.testimonialsTitle}</h2>
+        <div className="section-header">
+          <h2>{t.testimonialsTitle}</h2>
+        </div>
         <div
           className="testimonial-carousel"
           onMouseEnter={() => setPaused(true)}

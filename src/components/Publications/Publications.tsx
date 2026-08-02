@@ -8,8 +8,10 @@ export default function Publications({ lang }: { lang: Language }) {
     <section className="section publications">
       {/* Publications */}
       <div className="container">
-        <h2>{t.publicationsTitle}</h2>
-        <p className="pub-subtitle">{t.publicationsSubTitle}</p>
+        <div className="section-header">
+          <h2>{t.publicationsTitle}</h2>
+          <p className="description">{t.publicationsSubTitle}</p>
+        </div>
         <div className="pub-grid">
           {t.publicationsRich.map((pub) => (
             <article key={pub.title} className="pub-card">

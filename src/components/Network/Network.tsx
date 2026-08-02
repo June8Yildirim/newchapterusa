@@ -17,7 +17,9 @@ export default function Network({
   return (
     <section className="section network">
       <div className="container network-inner">
-        <h2>{n.title}</h2>
+        <div className="section-header">
+          <h2>{n.title}</h2>
+        </div>
         <p>{n.p1}</p>
         <p>{n.p2}</p>
         <p className="network-cta-text">{n.p3}</p>

@@ -15,10 +15,12 @@ export default function NextSteps({
   return (
     <section className="section next-steps">
       <div className="container next-steps-inner">
-        <h2 className="next-steps-eyebrow">{s.eyebrow}</h2>
-        <h3>{s.title}</h3>
-        <p className="next-steps-subtitle">{s.subtitle}</p>
-        <p className="next-steps-detail">{s.detail}</p>
+        <div className="section-header">
+          <h2 className="title">{s.title}</h2>
+          <h3 className="eyebrow">{s.eyebrow}</h3>
+          <p className="subtitle">{s.subtitle}</p>
+          <p className="description">{s.detail}</p>
+        </div>
         <Button variant="gold" onClick={onDiscovery}>
           {s.ctaBtn}
         </Button>

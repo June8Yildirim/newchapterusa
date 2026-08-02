@@ -22,17 +22,14 @@ export function AdminModal({
     e.preventDefault();
     setError("");
 
-    if (password.length !== 12) {
-      setError("Password must be exactly 12 characters long.");
-      return;
-    }
+    const enteredEmail = email.trim().toLowerCase();
+    const enteredPass = password.trim();
+    const expectedEmail = ADMIN_EMAIL.trim().toLowerCase();
+    const expectedPass = ADMIN_PASSWORD_12.trim();
 
-    if (
-      email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase() &&
-      password === ADMIN_PASSWORD_12
-    ) {
+    if (enteredEmail === expectedEmail && enteredPass === expectedPass) {
       localStorage.setItem("ncwen_admin_authenticated", "true");
-      localStorage.setItem("ncwen_admin_email", email.trim());
+      localStorage.setItem("ncwen_admin_email", enteredEmail);
       setIsSuccess(true);
       setTimeout(() => {
         onClose();
@@ -87,8 +84,6 @@ export function AdminModal({
             placeholder="12-character password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            minLength={12}
-            maxLength={12}
             required
             style={{
               padding: "10px 12px",

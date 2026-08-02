@@ -104,8 +104,14 @@ h3 {
 
 /* ---------- Sections (shared layout primitive) ---------- */
 .section {
-  padding: 48px 0;
-  border-top: 1px solid var(--border);
+  width: calc(100% - 32px);
+  max-width: 1120px;
+  margin: 28px auto;
+  padding: 44px 28px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
 }
 .section > .container > h2 {
   font-size: 26px;
@@ -142,4 +148,12 @@ h3 {
   font-size: 15px;
   line-height: 1.6;
   color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 30px 16px;
+    margin: 18px auto;
+    border-radius: 14px;
+  }
 }

@@ -15,7 +15,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
           <p>{t.announcementsSubTitle}</p>
         </div>
         <div className="happening-grid">
-          {t.upcomingEvents.map((event) => (
+          {t.upcomingEvents.map((event, i) => (
             <article key={event.title} className="happening-card">
               {event.date && (
                 <div className="happening-date vertical-text">{event.date}</div>
@@ -39,6 +39,9 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
                   </button>
                 )}
                 <div className="happening-text">
+                  {i === 0 && (
+                    <span className="happening-badge">{t.nextUpLabel}</span>
+                  )}
                   <h3>{event.title}</h3>
                   <p>{event.body}</p>
                   {event.url && (

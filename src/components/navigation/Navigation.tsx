@@ -3,9 +3,10 @@ import "./Navigation.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Button } from "../Button/Button";
 
+// `id` → the section's anchor id in App.tsx; `key` → a key in t.nav (the label).
 const NAV_LINKS = [
-  { id: "coach", key: "coach" },
-  { id: "publications", key: "publications" },
+  { id: "meetcoach", key: "meetcoach" },
+  { id: "research", key: "research" },
   { id: "pillars", key: "pillars" },
   { id: "events", key: "events" },
 ] as const;

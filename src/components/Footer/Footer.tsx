@@ -49,14 +49,24 @@ export const Footer = ({
             </svg>
             <span>{t.footerConnect}</span>
           </a>
-          <span className="footer-copyright">{t.footerCopyright}</span>
-          <span
-            className="footer-copyright"
-            style={{ marginTop: "4px", fontSize: "0.75rem", opacity: 0.6 }}
-          >
-            {t.developedBy}
-          </span>
+          <span className="footer-cert">🏅 {t.footerCert}</span>
+          <p className="footer-entity">{t.footerEntity}</p>
+          <p className="footer-copyright">{t.footerCopyright}</p>
         </div>
+      </div>
+
+      <div className="footer-legal">
+        <p className="footer-dev">
+          {t.developedBy}
+          {import.meta.env.DEV && (
+            <>
+              {" · "}
+              <a className="footer-admin-link" href="/admin">
+                ✏️ Edit Content
+              </a>
+            </>
+          )}
+        </p>
       </div>
     </footer>
   );

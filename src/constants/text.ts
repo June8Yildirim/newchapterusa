@@ -12,9 +12,10 @@ export const TRANSLATIONS = {
     explorePillars: "Explore the 6 Pillars",
     nav: {
       coach: "Coach",
-      pillars: "Pillars",
-      publications: "Publications",
+      pillars: "6 Pillars",
+      research: "Research",
       events: "Events",
+      meetcoach: "Meet Coach",
       apply: "Apply Now",
     },
     network: {
@@ -59,7 +60,7 @@ export const TRANSLATIONS = {
         "While ICF-Informed Coaching empowers you to unlock your own strategies through reflective self-discovery, Coaching & Mentorship combines that reflective space with direct advisory guidance, expert feedback, and practical skill-building.",
     },
     nextSteps: {
-      eyebrow: "Next Steps",
+      eyebrow: "Let's Figure It Out Together",
       title: "Not Sure Which Coaching Approach You Need?",
       subtitle: "Book Your Complimentary 15-Minute Discovery Call",
       detail:
@@ -232,6 +233,7 @@ export const TRANSLATIONS = {
       },
     ],
     happeningSoonTitle: "Happening Soon",
+    nextUpLabel: "🗓️ Next Up",
     reserveSpot: "Reserve a Spot",
     affiliationsTitle: "ACADEMIC & PROFESSIONAL FOUNDATIONS",
     affiliationsSubtitle:
@@ -249,8 +251,8 @@ export const TRANSLATIONS = {
     upcomingEvents: [
       {
         date: "August 14",
-        title: "Interview with Confidence",
-        body: "An interactive workshop on turning your international experience into successful interviews",
+        title: "Interview with Confidence: Own your Story",
+        body: "An interactive workshop on turning your international experience into successful interviews. (A special session for graduate school applicatins in English)",
         isHappened: false,
         url: "https://docs.google.com/forms/d/e/1FAIpQLSfgJ2baszqI0Zo7BdIk9jaXR_vnzHJJdkg82txvkYSz-KBefA/viewform",
         thumbstone: "/images/webinar-interview-confidence-1.jpg",
@@ -337,10 +339,19 @@ export const TRANSLATIONS = {
     discoverySuccessBody:
       "Thank you for requesting a discovery call. We will get in touch with you shortly to confirm the scheduled time.",
     footerDesc:
-      "Empowering immigrant professionals to successfully transition and thrive in the US workforce.",
+      "Empowering immigrant professionals to navigate academic pathways and thrive in the U.S. workforce",
     footerConnect: "Connect on LinkedIn",
-    footerCopyright: "© 2026 NCWEN. All rights reserved.",
+    footerCert:
+      "Certified New Jersey Woman-Owned Small Business Enterprise (SBE/WBE)",
+    footerEntity: "An initiative of New Chapter Coaching & Consulting, LLC.",
+    footerCopyright:
+      "© 2026 New Chapter Women Empowerment Network (NCWEN). All rights reserved.",
     developedBy: "Developed by Cüneyt Yıldırım",
+    preFooter: {
+      title: "For School Districts & Educators",
+      body: "Looking for district-level MLL consulting, institutional workshops, or educator toolkits? Discover our founding practice at New Chapter USA.",
+      btn: "Explore New Chapter USA",
+    },
     comingSoonTitle: "COMING SOON",
     comingSoonSubtitle: "I am currently working on my new website",
     comingSoonDesc:
@@ -406,7 +417,7 @@ export const TRANSLATIONS = {
         "ICF Temelli Koçluk, düşünsel öz keşif yoluyla kendi stratejilerinizi açığa çıkarmanızı sağlarken, Koçluk ve Mentorluk bu düşünsel alanı doğrudan danışmanlık rehberliği, uzman geri bildirimi ve pratik beceri geliştirmeyle birleştirir.",
     },
     nextSteps: {
-      eyebrow: "Sonraki Adımlar",
+      eyebrow: "Birlikte Çözelim",
       title:
         "Hangi Koçluk Yaklaşımına İhtiyacınız Olduğundan Emin Değil misiniz?",
       subtitle: "Ücretsiz 15 Dakikalık Keşif Görüşmenizi Ayırtın",
@@ -595,6 +606,7 @@ export const TRANSLATIONS = {
       },
     ],
     happeningSoonTitle: "Yakında Başlayacaklar",
+    nextUpLabel: "🗓️ Sıradaki",
     reserveSpot: "Yer Ayırtın",
     affiliationsTitle: "İş Birlikleri ve Kurumlar",
     affiliationsSubtitle: "Bu çalışmayı şekillendiren kurum ve kuruluşlar",
@@ -703,8 +715,16 @@ export const TRANSLATIONS = {
     footerDesc:
       "Göçmen profesyonellerin ABD iş gücüne başarılı bir şekilde geçiş yapmalarını ve gelişmelerini destekliyoruz.",
     footerConnect: "LinkedIn'de Bağlantı Kurun",
-    footerCopyright: "© 2026 NCWEN. Tüm hakları saklıdır.",
+    footerCert: "Sertifikalı New Jersey Kadın Sahipli Küçük İşletme (SBE/WBE)",
+    footerEntity: "New Chapter Coaching & Consulting, LLC girişimidir.",
+    footerCopyright:
+      "© 2026 New Chapter Kadın Güçlendirme Ağı (NCWEN). Tüm hakları saklıdır.",
     developedBy: "Cüneyt Yıldırım tarafından geliştirilmiştir",
+    preFooter: {
+      title: "Okul Bölgeleri ve Eğitimciler İçin",
+      body: "Bölge düzeyinde MLL danışmanlığı, kurumsal atölyeler veya eğitimci araç setleri mi arıyorsunuz? Kurucu uygulamamızı New Chapter USA'da keşfedin.",
+      btn: "New Chapter USA'yı Keşfedin",
+    },
     comingSoonTitle: "YAKINDA",
     comingSoonSubtitle: "Yeni web sitem üzerinde çalışıyorum",
     comingSoonDesc:

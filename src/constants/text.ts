@@ -466,17 +466,22 @@ export const TRANSLATIONS = {
       heroImage:
         "ABD'de lisansüstü başvuruları, kariyer yükselişi ve mesleğe yeniden dönüş sürecinde yol alan çok dilli kadınlar için araştırmaya dayalı, güçlü yönlere odaklı koçluk ve mentorluk.",
       stats: [
-        { value: "200+", label: "Koçluk ve Mentorluk Verilen Kişi" },
+        { value: "200+", subvalue: "Kişiye", label: "Koçluk & Mentorluk" },
         {
-          value: "Ex MSU + IRC",
-          label: "Eski Öğretim Üyesi ve Eğitim Koordinatörü",
+          value: "EX MSU, IRC + NJOR",
+          label:
+            "Eski Öğretim Üyesi/Araştırmacı & Eğitim Koordinatörü/Program Yöneticisi",
         },
         {
-          value: "17+ yıl",
-          label: "Eğitim / STK Liderliği, Koçluk ve Danışmanlık",
+          value: "17+ Yıl",
+          subvalue: "ÇDÖ Eğitim/STK liderliği deneyimi",
+          label: "Öğretim, Eğitmenlik, Koçluk & Danışmanlık",
         },
-        { value: "15+", label: "Akademik Yayın" },
-        { value: "Ödüller & Burslar", label: "Hibeler ve Ödüller (toplam)" },
+        {
+          value: "15+",
+          subvalue: "Akademik Tanınırlık",
+          label: "Yayın, Ödül, Burs & Hibe",
+        },
       ],
       bio1: "Yeni bir ülkede tatmin edici bir hayat ve kariyer kurmak, halihazırda getirdiğiniz muazzam zenginliği onurlandırmakla başlar. Bunu ilk elden biliyorum, çünkü bu aynı zamanda benim de hikâyem. Türkiye, Senegal ve Amerika Birleşik Devletleri'nde eğitim almış ve çalışmış çok dilli, çok kültürlü bir eğitimci olarak yolculuğum, hem uluslararası hem de zorunlu göçe—sınırlar, kültürler ve diller (Türkçe, Fransızca ve İngilizce) arasında sistemlerde yol almaya—derinden dayanıyor.",
       bio2: "Yükseköğretim, mülteci yerleştirme ve eyalet düzeyindeki girişimlerde 17 yılı aşkın deneyimimle akademik araştırmayı gerçek dünya deneyimiyle birleştiriyorum. Travma-bilinçli, refah odaklı bir yaklaşıma dayanarak, en yüksek hedeflerinizin peşinden gitmenin asla ruh sağlığınız, güvenliğiniz veya kimliğiniz pahasına olmamasını sağlıyorum.",

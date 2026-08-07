@@ -214,14 +214,29 @@ export function AdminEditor() {
     setSaving(true);
     setStatus(null);
     try {
-      const res = await fetch("/__admin/save-content", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      // Dev writes src/constants/text.ts via the Vite plugin; production persists
+      // to Netlify Blobs via the serverless function (see netlify/functions/content.mts).
+      const isDev = import.meta.env.DEV;
+      const res = await fetch(
+        isDev ? "/__admin/save-content" : "/.netlify/functions/content",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-admin-password":
+              sessionStorage.getItem("ncwen_admin_password") ?? "",
+          },
+          body: JSON.stringify(data),
+        },
+      );
       const result = await res.json();
       if (result.success) {
-        setStatus({ ok: true, msg: "Saved to src/constants/text.ts" });
+        setStatus({
+          ok: true,
+          msg: isDev
+            ? "Saved to src/constants/text.ts"
+            : "Saved. Reload the live site to see changes.",
+        });
       } else {
         setStatus({ ok: false, msg: result.error || "Save failed" });
       }

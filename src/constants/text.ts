@@ -1,5 +1,28 @@
 export type Language = "en" | "tr";
 
+/**
+ * Merge content saved via the /admin editor (Netlify Blobs, in production) over
+ * the bundled defaults below. Called once at boot in src/main.tsx before render,
+ * so every component that reads TRANSLATIONS[lang] picks up the saved copy.
+ * Each language's keys are replaced wholesale, since the editor always saves the
+ * complete object.
+ */
+export function applyStoredContent(stored: unknown): void {
+  if (!stored || typeof stored !== "object") return;
+  const source = stored as Record<string, Record<string, unknown>>;
+  const target = TRANSLATIONS as unknown as Record<
+    string,
+    Record<string, unknown>
+  >;
+  for (const lang of Object.keys(source)) {
+    const incoming = source[lang];
+    if (!incoming || typeof incoming !== "object") continue;
+    const dest = (target[lang] ??= {});
+    for (const key of Object.keys(dest)) delete dest[key];
+    Object.assign(dest, incoming);
+  }
+}
+
 export const TRANSLATIONS = {
   en: {
     brand: "NCWEN",
@@ -340,7 +363,7 @@ export const TRANSLATIONS = {
     placeholderBarrier: "Top Career Barrier",
     placeholderSupport: "Requested Support Type",
     registrationBtn: "Interview with Confidence Registration",
-    submitApplicationBtn: "Subscribe to Our Newsletter",
+    submitApplicationBtn: "Get Free Insights &  Resources",
     appReceived: "Application received",
     thanksApplying:
       "Thanks for applying. We've received your details and we'll be in touch soon.",

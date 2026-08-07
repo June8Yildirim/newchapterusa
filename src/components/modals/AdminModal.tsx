@@ -30,6 +30,8 @@ export function AdminModal({
     if (enteredEmail === expectedEmail && enteredPass === expectedPass) {
       localStorage.setItem("ncwen_admin_authenticated", "true");
       localStorage.setItem("ncwen_admin_email", enteredEmail);
+      // Kept for this tab only; the content-save function verifies it server-side.
+      sessionStorage.setItem("ncwen_admin_password", enteredPass);
       setIsSuccess(true);
       setTimeout(() => {
         onClose();

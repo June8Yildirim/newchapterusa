@@ -28,7 +28,7 @@ export default async (req: Request): Promise<Response> => {
   }
 
   if (req.method === "POST") {
-    const expected = process.env.ADMIN_PASSWORD;
+    const expected = process.env.VITE_ADMIN_PASSWORD;
     if (!expected) {
       return Response.json(
         {

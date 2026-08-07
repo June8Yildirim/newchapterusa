@@ -28,7 +28,17 @@ export default async (req: Request): Promise<Response> => {
   }
 
   if (req.method === "POST") {
-    const expected = process.env.ADMIN_PASSWORD || "Ncwen2026!Ad";
+    const expected = process.env.ADMIN_PASSWORD;
+    if (!expected) {
+      return Response.json(
+        {
+          success: false,
+          error:
+            "Server not configured: set the ADMIN_PASSWORD environment variable in Netlify (must match VITE_ADMIN_PASSWORD), then redeploy.",
+        },
+        { status: 500 },
+      );
+    }
     const provided = req.headers.get("x-admin-password") ?? "";
     if (provided !== expected) {
       return Response.json(

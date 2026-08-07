@@ -223,8 +223,13 @@ export function AdminEditor() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            // Use the build-time password (guaranteed to match the value the
+            // site was built with), falling back to whatever the sign-in flow
+            // stored for this session.
             "x-admin-password":
-              sessionStorage.getItem("ncwen_admin_password") ?? "",
+              (import.meta.env.VITE_ADMIN_PASSWORD as string | undefined) ??
+              sessionStorage.getItem("ncwen_admin_password") ??
+              "",
           },
           body: JSON.stringify(data),
         },

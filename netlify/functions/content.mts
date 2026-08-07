@@ -40,7 +40,7 @@ export default async (req: Request): Promise<Response> => {
       );
     }
     const provided = req.headers.get("x-admin-password") ?? "";
-    if (provided !== expected) {
+    if (provided.trim() !== expected.trim()) {
       return Response.json(
         { success: false, error: "Unauthorized" },
         { status: 401 },

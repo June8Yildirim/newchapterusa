@@ -6,14 +6,13 @@
   margin-top: 24px;
 }
 .pillar-card {
-  background: var(--brand-gradient);
+  background: var(--page-bg);
   border-radius: 8px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 14px;
   min-height: 190px;
-  box-shadow: var(--shadow-card);
+  box-shadow: 10px 10px 5px 0px var(--muted);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -22,6 +21,29 @@
 .pillar-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-card-hover);
+}
+.pillar-card-icon {
+  position: "relative";
+  width: 100px;
+  height: 100px;
+  justify-self: center;
+  align-self: center;
+  margin-right: 20px;
+  padding: 10px;
+}
+.pillar-card-number {
+  position: relative;
+  z-index: 10;
+  box-shadow: 10px 10px 5px 0px var(--muted);
+  background: var(--shadow-card);
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 .pillar-card h3 {
   color: #fff;
@@ -34,6 +56,11 @@
   flex: 1;
 }
 
+.pillar-card-number p {
+  color: var(--blue-dark);
+  font-size: 30px;
+  font-weight: 700;
+}
 @media (max-width: 860px) {
   .pillar-grid {
     grid-template-columns: 1fr;

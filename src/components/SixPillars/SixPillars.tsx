@@ -19,10 +19,23 @@ export default function SixPillars({
           <p>{t.pillars.pillarsSubtitle}</p>
         </div>
         <div className="pillar-grid">
-          {t.pillars.pillars.map((p) => (
+          {t.pillars.pillars.map((p, index) => (
             <article key={p.pillar} className="pillar-card">
-              <h3>{p.pillar}</h3>
-              <p>{p.pillarDesc}</p>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div className="pillar-card-number">
+                  <p>{index + 1}</p>
+                </div>
+                <span className="pillar-card-icon">icon</span>
+              </div>
+              <div>
+                <h3>{p.pillar}</h3>
+                <p>{p.pillarDesc}</p>
+              </div>
             </article>
           ))}
         </div>

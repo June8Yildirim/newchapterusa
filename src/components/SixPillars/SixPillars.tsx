@@ -1,5 +1,23 @@
 import "./SixPillars.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
+import {
+  Compass,
+  MessagesSquare,
+  GraduationCap,
+  Map,
+  HeartHandshake,
+  Crown,
+} from "lucide-react";
+
+/** One icon per pillar, in order. */
+const PILLAR_ICONS = [
+  Compass,
+  MessagesSquare,
+  GraduationCap,
+  Map,
+  HeartHandshake,
+  Crown,
+];
 
 export default function SixPillars({
   lang,
@@ -19,25 +37,26 @@ export default function SixPillars({
           <p>{t.pillars.pillarsSubtitle}</p>
         </div>
         <div className="pillar-grid">
-          {t.pillars.pillars.map((p, index) => (
-            <article key={p.pillar} className="pillar-card">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div className="pillar-card-number">
-                  <p>{index + 1}</p>
+          {t.pillars.pillars.map((p, index) => {
+            const Icon = PILLAR_ICONS[index % PILLAR_ICONS.length];
+            return (
+              <article key={p.pillar} className="pillar-card">
+                <div className="pillar-card-panel">
+                  <div className="pillar-card-icon">
+                    <Icon size={44} strokeWidth={2} aria-hidden="true" />
+                  </div>
+                  <div className="pillar-card-content">
+                    <h3>{p.pillar}</h3>
+                    <p>{p.pillarDesc}</p>
+                  </div>
                 </div>
-                <span className="pillar-card-icon">icon</span>
-              </div>
-              <div>
-                <h3>{p.pillar}</h3>
-                <p>{p.pillarDesc}</p>
-              </div>
-            </article>
-          ))}
+                <div className="pillar-card-number">
+                  <p>{String(index + 1).padStart(2, "0")}</p>
+                  <span className="pillar-card-kicker">Pillar</span>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -39,7 +39,7 @@ export function SubmitApplication({
     const consent = data.get("consent") ? "Yes" : "No";
 
     if (!WEB3FORMS_ACCESS_KEY) {
-      setError(t.sendError);
+      setError(t.application.sendError);
       // Surface a clear hint for developers if the key is missing.
       console.error(
         "Missing VITE_WEB3FORMS_ACCESS_KEY — set it in your .env.local file.",
@@ -59,15 +59,15 @@ export function SubmitApplication({
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `${t.mailSubject}${name ? ` — ${name}` : ""}`,
+          subject: `${t.application.mailSubject}${name ? ` — ${name}` : ""}`,
           from_name: name || "New Chapter applicant",
           replyto: email,
-          [t.mailLabelName]: name,
-          [t.mailLabelEmail]: email,
-          [t.mailLabelStage]: stage,
-          [t.mailLabelBarrier]: barrier,
-          [t.mailLabelSupport]: support,
-          [t.mailLabelConsent]: consent,
+          [t.application.mailLabelName]: name,
+          [t.application.mailLabelEmail]: email,
+          [t.application.mailLabelStage]: stage,
+          [t.application.mailLabelBarrier]: barrier,
+          [t.application.mailLabelSupport]: support,
+          [t.application.mailLabelConsent]: consent,
         }),
       });
 
@@ -79,10 +79,10 @@ export function SubmitApplication({
         setEmail("");
         setOpenConfirm(true);
       } else {
-        setError(t.sendError);
+        setError(t.application.sendError);
       }
     } catch {
-      setError(t.sendError);
+      setError(t.application.sendError);
     } finally {
       setSubmitting(false);
     }
@@ -95,7 +95,7 @@ export function SubmitApplication({
           <input
             type="text"
             name="name"
-            placeholder={t.placeholderName}
+            placeholder={t.application.placeholderName}
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -103,21 +103,21 @@ export function SubmitApplication({
           <input
             type="email"
             name="email"
-            placeholder={t.placeholderEmail}
+            placeholder={t.application.placeholderEmail}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <input type="text" name="stage" placeholder={t.placeholderStage} />
+          <input type="text" name="stage" placeholder={t.application.placeholderStage} />
           <input
             type="text"
             name="barrier"
-            placeholder={t.placeholderBarrier}
+            placeholder={t.application.placeholderBarrier}
           />
           <input
             type="text"
             name="support"
-            placeholder={t.placeholderSupport}
+            placeholder={t.application.placeholderSupport}
           />
           {/* <label className="checkbox-row"> */}
           {/*   <input type="checkbox" name="consent" /> */}
@@ -134,7 +134,7 @@ export function SubmitApplication({
             type="submit"
             disabled={submitting || !canSubmit}
           >
-            {submitting ? t.sending : t.sendApplication}
+            {submitting ? t.application.sending : t.application.sendApplication}
           </Button>
         </form>
       </div>

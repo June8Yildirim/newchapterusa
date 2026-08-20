@@ -13,10 +13,10 @@ export function DiscoverySuccessModal({
 }) {
   const t = TRANSLATIONS[lang];
   return (
-    <Modal open={open} onClose={onClose} title={t.discoverySuccessTitle}>
-      <p>{t.discoverySuccessBody}</p>
+    <Modal open={open} onClose={onClose} title={t.discovery.discoverySuccessTitle}>
+      <p>{t.discovery.discoverySuccessBody}</p>
       <Button variant="gold" block onClick={onClose}>
-        {t.close}
+        {t.application.close}
       </Button>
     </Modal>
   );

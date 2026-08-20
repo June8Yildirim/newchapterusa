@@ -4,14 +4,14 @@ import { PhotoPlaceholder } from "../../PhotoPlaceholder";
 
 export default function MeetingCoaching({ lang }: { lang: Language }) {
   const t = TRANSLATIONS[lang];
-  const creds = t.credentialsRich;
+  const creds = t.hero.credentialsRich;
 
   return (
     <section className="section coach">
       {/* Meet Your Coach */}
       <div className="container coach-inner">
         <div className="coach-text">
-          <h2>{t.meetCoach}</h2>
+          <h2>{t.hero.meetCoach}</h2>
           <p
             className="coach-subtitle"
             style={{
@@ -21,7 +21,7 @@ export default function MeetingCoaching({ lang }: { lang: Language }) {
               marginBlock: "8px 20px",
             }}
           >
-            {t.coachSubtitle}
+            {t.hero.coachSubtitle}
           </p>
           <ul
             className="credentials"

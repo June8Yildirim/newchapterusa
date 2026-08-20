@@ -5,6 +5,7 @@ import { useSiteAnimations } from "./useSiteAnimations";
 import { testimonals } from "./constants/testimonals";
 import TestimonialsCarousel from "./components/Testimonals/Testimonals";
 import HappenningSoon from "./components/happenningsoon/HappenningSoon";
+import PastEvents from "./components/PastEvents/PastEvents";
 import SixPillars from "./components/SixPillars/SixPillars";
 import Publications from "./components/Publications/Publications";
 import Navigation from "./components/navigation/Navigation";
@@ -91,6 +92,7 @@ function App() {
       <NextSteps lang={lang} onDiscovery={() => setOpenDiscovery(true)} />
       {/* <Announcments lang={lang} /> */}
       <HappenningSoon lang={lang} />
+      <PastEvents lang={lang} />
 
       <TestimonialsCarousel lang={lang} setOpenTestimonal={setOpenTestimonal} />
 

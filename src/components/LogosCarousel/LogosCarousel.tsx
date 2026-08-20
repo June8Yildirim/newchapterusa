@@ -44,8 +44,8 @@ export default function LogosCarousel({ lang }: { lang: Language }) {
     <section className="section logos">
       <div className="container">
         <div className="section-header">
-          <h2>{t.affiliationsTitle}</h2>
-          <p className="description">{t.affiliationsSubtitle}</p>
+          <h2>{t.research.affiliationsTitle}</h2>
+          <p className="description">{t.research.affiliationsSubtitle}</p>
         </div>
 
         <div

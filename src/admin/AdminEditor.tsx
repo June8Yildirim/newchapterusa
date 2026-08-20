@@ -3,12 +3,7 @@ import { TRANSLATIONS } from "../constants/text";
 import "./admin.css";
 
 type Path = (string | number)[];
-type Json =
-  | string
-  | number
-  | boolean
-  | Json[]
-  | { [key: string]: Json };
+type Json = string | number | boolean | Json[] | { [key: string]: Json };
 
 /** Turn a camelCase / snake_case key into a readable Title Case label. */
 function humanize(key: string): string {
@@ -80,23 +75,26 @@ interface SectionDef {
   desc: string;
 }
 
+// Each top-level key of a language object is now a section (see
+// src/constants/text.ts). A section's `keys` therefore lists the section
+// object(s) whose subtree it shows.
 const SECTIONS: SectionDef[] = [
   {
     id: "hero",
     label: "👤 1. Hero / Meet Coach",
-    keys: ["summary"],
+    keys: ["hero"],
     desc: "Hero photo, position title, quote, bio text, and primary call-to-actions",
   },
   {
     id: "research",
     label: "📚 2. Research & Publications",
-    keys: ["publicationsTitle", "publicationsSubTitle", "publicationsRich"],
-    desc: "Research section heading, intro text, and academic publication cards",
+    keys: ["research"],
+    desc: "Research heading, intro text, academic publication cards, and affiliations",
   },
   {
     id: "pillars",
     label: "🏛️ 3. 6 Pillars of Growth & Leadership",
-    keys: ["pillarsTitle", "pillarsSubtitle", "pillars", "explorePillars"],
+    keys: ["pillars"],
     desc: "6 Pillars section title, subtitle, and individual pillar cards",
   },
   {
@@ -114,53 +112,54 @@ const SECTIONS: SectionDef[] = [
   {
     id: "discovery",
     label: "🚀 6. Next Steps & Discovery",
-    keys: [
-      "nextStepsTitle",
-      "discoveryTitle",
-      "discoveryDesc",
-      "discoveryBtn",
-      "submitApplicationBtn",
-      "applyCohort",
-    ],
-    desc: "Discovery call callouts, application forms, and next steps buttons",
+    keys: ["discovery"],
+    desc: "Discovery call callouts, next-steps copy, and the discovery modal",
   },
   {
     id: "events",
     label: "📅 7. Happening Soon & Events",
-    keys: [
-      "happeningSoonTitle",
-      "announcementsSubTitle",
-      "upcomingEvents",
-      "nextUpLabel",
-      "reserveSpot",
-    ],
+    keys: ["events"],
     desc: "Upcoming events carousel, event dates, descriptions, and registration links",
   },
   {
-    id: "testimonials",
-    label: "💬 8. What Our Community Says (Testimonials)",
-    keys: ["testimonials"],
-    desc: "Testimonial quotes and feedback from community members",
+    id: "pastEvents",
+    label: "🗂️ 8. Past Events (Occurred)",
+    keys: ["pastEvents"],
+    desc: "Headings for the archive of events that already happened. To move an event here, set its 'isHappened' flag to true under Happening Soon & Events.",
   },
   {
-    id: "nav_footer",
-    label: "🌐 9. Navigation & Footer",
-    keys: [
-      "brand",
-      "nav",
-      "contactTitle",
-      "footerDesc",
-      "footerCert",
-      "footerEntity",
-      "footerCopyright",
-      "footerConnect",
-      "developedBy",
-    ],
-    desc: "Header brand logo, navigation menu items, and footer credentials",
+    id: "testimonials",
+    label: "💬 9. What Our Community Says (Testimonials)",
+    keys: ["testimonials"],
+    desc: "Testimonials section heading and labels",
+  },
+  {
+    id: "application",
+    label: "📝 10. Application & Form Labels",
+    keys: ["application"],
+    desc: "Application modal, form placeholders, email labels, and status messages",
+  },
+  {
+    id: "newsletter",
+    label: "✉️ 11. Newsletter Signup",
+    keys: ["newsletter"],
+    desc: "Newsletter modal copy, field labels, and success messages",
+  },
+  {
+    id: "navFooter",
+    label: "🌐 12. Navigation & Footer",
+    keys: ["navFooter"],
+    desc: "Header brand logo, navigation menu, contact copy, and footer credentials",
+  },
+  {
+    id: "comingSoon",
+    label: "🚧 13. Coming Soon / Notify",
+    keys: ["comingSoon"],
+    desc: "Under-construction page copy and the notify-me modal",
   },
   {
     id: "all",
-    label: "📦 10. All Content Fields",
+    label: "📦 14. All Content Fields",
     keys: [],
     desc: "View and edit every raw translation key in the system",
   },
@@ -214,33 +213,28 @@ export function AdminEditor() {
     setSaving(true);
     setStatus(null);
     try {
-      // Dev writes src/constants/text.ts via the Vite plugin; production persists
-      // to Netlify Blobs via the serverless function (see netlify/functions/content.mts).
-      const isDev = import.meta.env.DEV;
-      const res = await fetch(
-        isDev ? "/__admin/save-content" : "/.netlify/functions/content",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            // Use the build-time password (guaranteed to match the value the
-            // site was built with), falling back to whatever the sign-in flow
-            // stored for this session.
-            "x-admin-password":
-              (import.meta.env.VITE_ADMIN_PASSWORD as string | undefined) ??
-              sessionStorage.getItem("ncwen_admin_password") ??
-              "",
-          },
-          body: JSON.stringify(data),
+      // Both dev and production persist to MongoDB via the content endpoint. In
+      // dev the Vite content-api plugin serves it from the same database (see
+      // vite.config.ts); in production it's netlify/functions/content.mts.
+      const res = await fetch("/.netlify/functions/content", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Use the build-time password (guaranteed to match the value the
+          // site was built with), falling back to whatever the sign-in flow
+          // stored for this session.
+          "x-admin-password":
+            (import.meta.env.VITE_ADMIN_PASSWORD as string | undefined) ??
+            sessionStorage.getItem("ncwen_admin_password") ??
+            "",
         },
-      );
+        body: JSON.stringify(data),
+      });
       const result = await res.json();
       if (result.success) {
         setStatus({
           ok: true,
-          msg: isDev
-            ? "Saved to src/constants/text.ts"
-            : "Saved. Reload the live site to see changes.",
+          msg: "Saved to the database. Reload the site to see changes.",
         });
       } else {
         setStatus({ ok: false, msg: result.error || "Save failed" });
@@ -312,7 +306,7 @@ export function AdminEditor() {
             onClick={save}
             disabled={saving}
           >
-            {saving ? "Saving…" : "💾 Save to text.ts"}
+            {saving ? "Saving…" : "💾 Save content"}
           </button>
         </div>
       </header>
@@ -440,7 +434,9 @@ function Node({
         {value.map((item, i) => (
           <div className="admin-array-item" key={i}>
             <div className="admin-array-head">
-              <span className="admin-index">{titleOf(item) ?? `#${i + 1}`}</span>
+              <span className="admin-index">
+                {titleOf(item) ?? `#${i + 1}`}
+              </span>
               <button
                 type="button"
                 className="admin-remove"

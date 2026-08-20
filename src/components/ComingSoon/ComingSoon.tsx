@@ -40,15 +40,15 @@ export default function ComingSoon({
       </div>
 
       <div className="coming-soon-container">
-        <h1 className="coming-soon-title">{t.comingSoonTitle}</h1>
-        <p className="coming-soon-subtitle">{t.comingSoonSubtitle}</p>
-        <p className="coming-soon-desc">{t.comingSoonDesc}</p>
+        <h1 className="coming-soon-title">{t.comingSoon.comingSoonTitle}</h1>
+        <p className="coming-soon-subtitle">{t.comingSoon.comingSoonSubtitle}</p>
+        <p className="coming-soon-desc">{t.comingSoon.comingSoonDesc}</p>
         <button
           className="notify-btn"
           onClick={() => setOpenNotify(true)}
           type="button"
         >
-          {t.comingSoonBtn}
+          {t.comingSoon.comingSoonBtn}
         </button>
       </div>
 
@@ -56,7 +56,7 @@ export default function ComingSoon({
       <Modal
         open={openNotify}
         onClose={() => setOpenNotify(false)}
-        title={t.notifyModalTitle}
+        title={t.comingSoon.notifyModalTitle}
         style={{ maxWidth: "600px" }}
       >
         <div style={{ margin: "-16px" }}>
@@ -74,7 +74,7 @@ export default function ComingSoon({
       <Modal
         open={confirmOpen}
         onClose={() => setConfirmOpen(false)}
-        title={t.submitNewsletterTitle}
+        title={t.newsletter.submitNewsletterTitle}
       >
         <SubmitApplication
           lang={lang}
@@ -87,11 +87,11 @@ export default function ComingSoon({
       <Modal
         open={openConfirm}
         onClose={() => setOpenConfirm(false)}
-        title={t.appReceived}
+        title={t.application.appReceived}
       >
-        <p>{t.thanksApplying}</p>
+        <p>{t.application.thanksApplying}</p>
         <Button variant="gold" block onClick={() => setOpenConfirm(false)}>
-          {t.close}
+          {t.application.close}
         </Button>
       </Modal>
     </div>

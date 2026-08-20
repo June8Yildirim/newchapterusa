@@ -9,11 +9,11 @@ export default function Publications({ lang }: { lang: Language }) {
       {/* Publications */}
       <div className="container">
         <div className="section-header">
-          <h2>{t.publicationsTitle}</h2>
-          <p className="description">{t.publicationsSubTitle}</p>
+          <h2>{t.research.publicationsTitle}</h2>
+          <p className="description">{t.research.publicationsSubTitle}</p>
         </div>
         <div className="pub-grid">
-          {t.publicationsRich.map((pub) => (
+          {t.research.publicationsRich.map((pub) => (
             <article key={pub.title} className="pub-card">
               <h3 className="pub-title">{pub.title}</h3>
               <p className="pub-citation">

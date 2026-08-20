@@ -29,7 +29,7 @@ export default function ContactUs({ lang }: { lang: Language }) {
     const message = String(data.get("message") ?? "");
 
     if (!WEB3FORMS_ACCESS_KEY) {
-      setError(t.sendError);
+      setError(t.application.sendError);
       // Surface a clear hint for developers if the key is missing.
       console.error(
         "Missing VITE_WEB3FORMS_ACCESS_KEY — set it in your .env.local file.",
@@ -49,11 +49,11 @@ export default function ContactUs({ lang }: { lang: Language }) {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `${t.contactMailSubject}${name ? ` — ${name}` : ""}`,
+          subject: `${t.navFooter.contactMailSubject}${name ? ` — ${name}` : ""}`,
           from_name: name || "New Chapter contact",
           replyto: email,
-          [t.mailLabelName]: name,
-          [t.mailLabelEmail]: email,
+          [t.application.mailLabelName]: name,
+          [t.application.mailLabelEmail]: email,
           Message: message,
         }),
       });
@@ -66,10 +66,10 @@ export default function ContactUs({ lang }: { lang: Language }) {
         setEmail("");
         setSubmitted(true);
       } else {
-        setError(t.sendError);
+        setError(t.application.sendError);
       }
     } catch {
-      setError(t.sendError);
+      setError(t.application.sendError);
     } finally {
       setSubmitting(false);
     }
@@ -82,19 +82,19 @@ export default function ContactUs({ lang }: { lang: Language }) {
           <div className="contact-success-icon" aria-hidden="true">
             ✓
           </div>
-          <h3>{t.contactSuccessTitle}</h3>
-          <p>{t.contactSuccessBody}</p>
+          <h3>{t.navFooter.contactSuccessTitle}</h3>
+          <p>{t.navFooter.contactSuccessBody}</p>
           <Button variant="gold" onClick={() => setSubmitted(false)}>
-            {t.contactSendAnother}
+            {t.navFooter.contactSendAnother}
           </Button>
         </div>
       ) : (
         <form className="contact-form" onSubmit={handleSubmit}>
-          <p className="contact-intro">{t.contactSubtitle}</p>
+          <p className="contact-intro">{t.navFooter.contactSubtitle}</p>
           <input
             type="text"
             name="name"
-            placeholder={t.placeholderName}
+            placeholder={t.application.placeholderName}
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -102,7 +102,7 @@ export default function ContactUs({ lang }: { lang: Language }) {
           <input
             type="email"
             name="email"
-            placeholder={t.placeholderEmail}
+            placeholder={t.application.placeholderEmail}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -110,7 +110,7 @@ export default function ContactUs({ lang }: { lang: Language }) {
           <textarea
             name="message"
             rows={4}
-            placeholder={t.contactMessagePlaceholder}
+            placeholder={t.navFooter.contactMessagePlaceholder}
           />
           {error && (
             <p role="alert" className="contact-error">
@@ -123,7 +123,7 @@ export default function ContactUs({ lang }: { lang: Language }) {
             type="submit"
             disabled={submitting || !canSubmit}
           >
-            {submitting ? t.sending : t.contactSubmitBtn}
+            {submitting ? t.application.sending : t.navFooter.contactSubmitBtn}
           </Button>
         </form>
       )}

@@ -11,7 +11,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
     typeof window !== "undefined" && window.innerWidth <= 768 ? 1 : 2
   );
 
-  const events = t.upcomingEvents || [];
+  const events = (t.events.upcomingEvents || []).filter((e) => !e.isHappened);
   const total = events.length;
   const maxIndex = Math.max(0, total - visibleCount);
   const currentIndex = Math.min(index, maxIndex);
@@ -55,8 +55,8 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
       {/* Happening Soon */}
       <div className="container">
         <div className="section-header">
-          <h2>{t.happeningSoonTitle}</h2>
-          <p>{t.announcementsSubTitle}</p>
+          <h2>{t.events.happeningSoonTitle}</h2>
+          <p>{t.events.announcementsSubTitle}</p>
         </div>
 
         <div
@@ -110,7 +110,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
                     )}
                     <div className="happening-text">
                       {i === 0 && (
-                        <span className="happening-badge">{t.nextUpLabel}</span>
+                        <span className="happening-badge">{t.events.nextUpLabel}</span>
                       )}
                       <h3>{event.title}</h3>
                       <p>{event.body}</p>
@@ -121,7 +121,7 @@ export default function HappenningSoon({ lang }: { lang: Language }) {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {t.reserveSpot}
+                          {t.events.reserveSpot}
                         </a>
                       )}
                     </div>

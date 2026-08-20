@@ -3,7 +3,7 @@ import "./Navigation.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 import { Button } from "../Button/Button";
 
-// `id` → the section's anchor id in App.tsx; `key` → a key in t.nav (the label).
+// `id` → the section's anchor id in App.tsx; `key` → a key in t.navFooter.nav (the label).
 const NAV_LINKS = [
   { id: "meetcoach", key: "meetcoach" },
   { id: "research", key: "research" },
@@ -99,7 +99,7 @@ export default function Navigation({
           src="/images/NCWENLogo.png"
           alt="NCWEN logo"
         />
-        <span className="brand">{t.brand}</span>
+        <span className="brand">{t.navFooter.brand}</span>
       </button>
 
       <button
@@ -123,7 +123,7 @@ export default function Navigation({
                 className={`nav-link ${active === link.id ? "is-active" : ""}`}
                 onClick={() => goTo(link.id)}
               >
-                {t.nav[link.key]}
+                {t.navFooter.nav[link.key]}
               </button>
             </li>
           ))}
@@ -135,14 +135,14 @@ export default function Navigation({
                 onContact();
               }}
             >
-              {t.contactTitle}
+              {t.navFooter.contactTitle}
             </Button>
           </li>
         </ul>
 
         <div className="nav-actions">
           {/* <Button variant="gold" onClick={() => goTo("cta")}> */}
-          {/*   {t.nav.apply} */}
+          {/*   {t.navFooter.nav.apply} */}
           {/* </Button> */}
           <div className="lang-switch" role="group" aria-label="Language">
             <button

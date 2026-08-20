@@ -14,8 +14,8 @@ export const CtaForm = ({
     <section className="container">
       {/* CTA form */}
       <div className="cta-banner">
-        <h2>{t.discoveryTitle}</h2>
-        <p>{t.discoveryDesc}</p>
+        <h2>{t.discovery.discoveryTitle}</h2>
+        <p>{t.discovery.discoveryDesc}</p>
         <div className="cta-buttons">
           <Button
             variant="gold"
@@ -28,10 +28,10 @@ export const CtaForm = ({
               );
             }}
           >
-            {t.discoveryBtn}
+            {t.discovery.discoveryBtn}
           </Button>
           <Button variant="blue" onClick={() => setConfirmOpen(true)}>
-            {t.submitApplicationBtn}
+            {t.application.submitApplicationBtn}
           </Button>
         </div>
       </div>

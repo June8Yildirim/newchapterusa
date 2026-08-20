@@ -8,10 +8,10 @@ export default function Announcments({ lang }: { lang: Language }) {
     <section className="section announcements">
       {/* Announcements */}
       <div className="container">
-        <h2>{t.announcementsTitle}</h2>
-        <p className="muted small">{t.announcementsSubTitle}</p>
+        <h2>{t.events.announcementsTitle}</h2>
+        <p className="muted small">{t.events.announcementsSubTitle}</p>
         <div className="announcement-list">
-          {t.announcements.map((item) => (
+          {t.events.announcements.map((item) => (
             <article key={item.title} className="announcement-card">
               <span className="announcement-tag">{item.tag}</span>
               <div>

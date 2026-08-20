@@ -43,7 +43,7 @@ export function DiscoveryModal({
   };
 
   return (
-    <Modal open={open} onClose={onClose} title={t.discoveryModalTitle}>
+    <Modal open={open} onClose={onClose} title={t.discovery.discoveryModalTitle}>
       <form
         onSubmit={handleSubmit}
         className="update-form"
@@ -52,7 +52,7 @@ export function DiscoveryModal({
         <input
           type="text"
           name="name"
-          placeholder={t.placeholderName}
+          placeholder={t.application.placeholderName}
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -60,7 +60,7 @@ export function DiscoveryModal({
         <input
           type="email"
           name="email"
-          placeholder={t.placeholderEmail}
+          placeholder={t.application.placeholderEmail}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -68,14 +68,14 @@ export function DiscoveryModal({
         <input
           type="text"
           name="datetime"
-          placeholder={t.discoveryPlaceholderDate}
+          placeholder={t.discovery.discoveryPlaceholderDate}
           value={datetime}
           onChange={(e) => setDatetime(e.target.value)}
           required
         />
         <textarea
           name="notes"
-          placeholder={t.discoveryPlaceholderMessage}
+          placeholder={t.discovery.discoveryPlaceholderMessage}
           rows={4}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
@@ -92,7 +92,7 @@ export function DiscoveryModal({
           }}
         />
         <Button variant="gold" block type="submit" disabled={!canSubmit}>
-          {t.discoverySubmitBtn}
+          {t.discovery.discoverySubmitBtn}
         </Button>
       </form>
     </Modal>

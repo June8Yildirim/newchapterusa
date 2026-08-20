@@ -10,7 +10,7 @@ export default function NextSteps({
   onDiscovery: () => void;
 }) {
   const t = TRANSLATIONS[lang];
-  const s = t.nextSteps;
+  const s = t.discovery.nextSteps;
 
   return (
     <section className="section next-steps">

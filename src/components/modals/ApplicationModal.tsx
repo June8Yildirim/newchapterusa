@@ -17,7 +17,7 @@ export function ApplicationModal({
 }) {
   const t = TRANSLATIONS[lang];
   return (
-    <Modal open={open} onClose={onClose} title={t.submitApplicationTitle}>
+    <Modal open={open} onClose={onClose} title={t.application.submitApplicationTitle}>
       <SubmitApplication
         lang={lang}
         openConfirm={openConfirm}

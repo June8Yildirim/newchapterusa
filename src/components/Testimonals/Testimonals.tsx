@@ -49,7 +49,7 @@ export default function TestimonialsCarousel({
       {/* Testimonials */}
       <div className="container">
         <div className="section-header">
-          <h2>{t.testimonialsTitle}</h2>
+          <h2>{t.testimonials.testimonialsTitle}</h2>
         </div>
         <div
           className="testimonial-carousel"

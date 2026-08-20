@@ -6,12 +6,11 @@ import { applyStoredContent } from "./constants/text";
 
 const root = createRoot(document.getElementById("root")!);
 
-// In production, layer any content saved via the /admin editor (Netlify Blobs)
-// over the bundled defaults before the first render. In dev we skip this and use
-// src/constants/text.ts directly, which the Vite content-writer plugin rewrites
-// on disk when you save (see vite.config.ts).
+// Layer any content saved via the /admin editor (MongoDB Atlas) over the bundled
+// defaults before the first render. This runs in both dev and production: in dev
+// the Vite content-api plugin serves /.netlify/functions/content from the same
+// database (see vite.config.ts), so both environments behave identically.
 async function loadStoredContent() {
-  if (import.meta.env.DEV) return;
   try {
     const res = await fetch("/.netlify/functions/content", {
       headers: { Accept: "application/json" },

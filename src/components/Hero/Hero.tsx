@@ -14,7 +14,7 @@ export const Hero = ({
   onContact: () => void;
 }) => {
   const t = TRANSLATIONS[lang];
-  const s = t.summary;
+  const s = t.hero.summary;
   const n = t.network;
 
   return (
@@ -31,7 +31,7 @@ export const Hero = ({
               {n.waitlistBtn}
             </Button>
             <Button variant="gold" onClick={onContact}>
-              {t.contactTitle}
+              {t.navFooter.contactTitle}
             </Button>
           </div>
           <h3 className="hero-build-subtitle">{s.heroImage}</h3>

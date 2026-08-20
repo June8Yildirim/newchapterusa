@@ -1,28 +1,49 @@
-import { getStore } from "@netlify/blobs";
+import { getDb } from "../lib/mongodb.mts";
 
 /**
- * Production content store for the /admin editor.
+ * Production content store for the /admin editor, backed by MongoDB Atlas.
  *
  *   GET  /.netlify/functions/content  -> returns the saved TRANSLATIONS JSON,
  *                                        or `null` if nothing has been saved yet.
- *   POST /.netlify/functions/content  -> persists the full TRANSLATIONS object to
- *                                        Netlify Blobs. Requires the admin password
- *                                        in the `x-admin-password` header.
+ *   POST /.netlify/functions/content  -> persists the full TRANSLATIONS object.
+ *                                        Requires the admin password in the
+ *                                        `x-admin-password` header.
  *
  * The live site reads this on boot (see src/main.tsx) and layers it over the
- * bundled defaults in src/constants/text.ts. Netlify Blobs is configured
- * automatically on deployed sites — no extra env vars are needed for storage.
+ * bundled defaults in src/constants/text.ts. Storage lives in the `content`
+ * collection under _id "translations"; set MONGODB_URI (and optionally
+ * MONGODB_DB) in the Netlify environment. Seed initial data with
+ * `node --env-file=.env.local scripts/seed-content.mjs`.
  */
 
-const STORE = "site-content";
-const KEY = "translations";
+const COLLECTION = "content";
+const DOC_ID = "translations";
+
+interface ContentDoc {
+  _id: string;
+  data: unknown;
+  updatedAt: Date;
+}
 
 export default async (req: Request): Promise<Response> => {
-  const store = getStore(STORE);
+  let collection;
+  try {
+    const db = await getDb();
+    collection = db.collection<ContentDoc>(COLLECTION);
+  } catch (err) {
+    return Response.json(
+      {
+        success: false,
+        error:
+          err instanceof Error ? err.message : "Database connection failed",
+      },
+      { status: 500 },
+    );
+  }
 
   if (req.method === "GET") {
-    const data = await store.get(KEY, { type: "json" });
-    return Response.json(data ?? null, {
+    const doc = await collection.findOne({ _id: DOC_ID });
+    return Response.json(doc?.data ?? null, {
       headers: { "Cache-Control": "no-store" },
     });
   }
@@ -64,7 +85,11 @@ export default async (req: Request): Promise<Response> => {
       );
     }
 
-    await store.setJSON(KEY, payload);
+    await collection.updateOne(
+      { _id: DOC_ID },
+      { $set: { data: payload, updatedAt: new Date() } },
+      { upsert: true },
+    );
     return Response.json({ success: true });
   }
 

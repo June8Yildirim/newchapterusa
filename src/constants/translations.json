@@ -1,29 +1,4 @@
-export type Language = "en" | "tr";
-
-/**
- * Merge content saved via the /admin editor (MongoDB Atlas, in production) over
- * the bundled defaults below. Called once at boot in src/main.tsx before render,
- * so every component that reads TRANSLATIONS[lang] picks up the saved copy.
- * Each language's keys are replaced wholesale, since the editor always saves the
- * complete object.
- */
-export function applyStoredContent(stored: unknown): void {
-  if (!stored || typeof stored !== "object") return;
-  const source = stored as Record<string, Record<string, unknown>>;
-  const target = TRANSLATIONS as unknown as Record<
-    string,
-    Record<string, unknown>
-  >;
-  for (const lang of Object.keys(source)) {
-    const incoming = source[lang];
-    if (!incoming || typeof incoming !== "object") continue;
-    const dest = (target[lang] ??= {});
-    for (const key of Object.keys(dest)) delete dest[key];
-    Object.assign(dest, incoming);
-  }
-}
-
-export const TRANSLATIONS = {
+{
   "en": {
     "hero": {
       "meetCoach": "Meet Your Coach",
@@ -763,4 +738,4 @@ export const TRANSLATIONS = {
       "notifySuccessBody": "Teşekkürler! Yeni sitemiz yayına girdiğinde sizi bilgilendireceğiz."
     }
   }
-};
+}

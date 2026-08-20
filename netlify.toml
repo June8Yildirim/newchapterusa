@@ -5,6 +5,9 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  # Ship the mongodb driver from node_modules instead of inlining it — avoids
+  # esbuild failing on the driver's optional native dependencies.
+  external_node_modules = ["mongodb"]
 
 [[redirects]]
   from = "/*"

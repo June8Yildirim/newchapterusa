@@ -16,7 +16,7 @@ export function ContactModal({
     <Modal
       open={open}
       onClose={onClose}
-      title={t.contactTitle}
+      title={t.navFooter.contactTitle}
       style={{ maxWidth: "560px" }}
     >
       <ContactUs lang={lang} />

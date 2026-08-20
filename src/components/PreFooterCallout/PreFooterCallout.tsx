@@ -2,7 +2,7 @@ import "./PreFooterCallout.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export default function PreFooterCallout({ lang }: { lang: Language }) {
-  const c = TRANSLATIONS[lang].preFooter;
+  const c = TRANSLATIONS[lang].navFooter.preFooter;
 
   return (
     <section className="prefooter">

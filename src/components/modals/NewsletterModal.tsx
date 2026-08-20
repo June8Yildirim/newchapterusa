@@ -39,7 +39,7 @@ export function NewsletterModal({
     const focus = String(data.get("focus") ?? "");
 
     if (!WEB3FORMS_ACCESS_KEY) {
-      setError(t.sendError);
+      setError(t.application.sendError);
       // Surface a clear hint for developers if the key is missing.
       console.error(
         "Missing VITE_WEB3FORMS_ACCESS_KEY — set it in your .env.local file.",
@@ -59,12 +59,12 @@ export function NewsletterModal({
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `${t.newsletterMailSubject}${name ? ` — ${name}` : ""}`,
+          subject: `${t.newsletter.newsletterMailSubject}${name ? ` — ${name}` : ""}`,
           from_name: name || "New Chapter subscriber",
           replyto: email,
-          [t.mailLabelName]: name,
-          [t.mailLabelEmail]: email,
-          [t.newsletterFocusLabel]: focus,
+          [t.application.mailLabelName]: name,
+          [t.application.mailLabelEmail]: email,
+          [t.newsletter.newsletterFocusLabel]: focus,
         }),
       });
 
@@ -76,10 +76,10 @@ export function NewsletterModal({
         setEmail("");
         setSubmitted(true);
       } else {
-        setError(t.sendError);
+        setError(t.application.sendError);
       }
     } catch {
-      setError(t.sendError);
+      setError(t.application.sendError);
     } finally {
       setSubmitting(false);
     }
@@ -97,7 +97,7 @@ export function NewsletterModal({
     <Modal
       open={open}
       onClose={handleClose}
-      title={t.submitNewsletterTitle}
+      title={t.newsletter.submitNewsletterTitle}
       style={{ maxWidth: "480px" }}
     >
       {submitted ? (
@@ -105,22 +105,22 @@ export function NewsletterModal({
           <div className="contact-success-icon" aria-hidden="true">
             ✓
           </div>
-          <h3>{t.newsletterSuccessTitle}</h3>
-          <p>{t.newsletterSuccessBody}</p>
+          <h3>{t.newsletter.newsletterSuccessTitle}</h3>
+          <p>{t.newsletter.newsletterSuccessBody}</p>
           <Button variant="gold" onClick={handleClose}>
-            {t.close}
+            {t.application.close}
           </Button>
         </div>
       ) : (
         <form className="contact-form" onSubmit={handleSubmit}>
-          <p className="contact-intro">{t.newsletterIntro}</p>
+          <p className="contact-intro">{t.newsletter.newsletterIntro}</p>
 
           <label className="field-label">
-            {t.newsletterNameLabel}
+            {t.newsletter.newsletterNameLabel}
             <input
               type="text"
               name="name"
-              placeholder={t.placeholderName}
+              placeholder={t.application.placeholderName}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -128,11 +128,11 @@ export function NewsletterModal({
           </label>
 
           <label className="field-label">
-            {t.newsletterEmailLabel}
+            {t.newsletter.newsletterEmailLabel}
             <input
               type="email"
               name="email"
-              placeholder={t.newsletterEmailPlaceholder}
+              placeholder={t.newsletter.newsletterEmailPlaceholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -140,12 +140,12 @@ export function NewsletterModal({
           </label>
 
           <label className="field-label">
-            {t.newsletterFocusLabel}
+            {t.newsletter.newsletterFocusLabel}
             <select name="focus" defaultValue="">
               <option value="" disabled>
-                {t.newsletterFocusPlaceholder}
+                {t.newsletter.newsletterFocusPlaceholder}
               </option>
-              {t.newsletterFocusOptions.map((opt) => (
+              {t.newsletter.newsletterFocusOptions.map((opt) => (
                 <option key={opt} value={opt}>
                   {opt}
                 </option>
@@ -164,9 +164,9 @@ export function NewsletterModal({
             type="submit"
             disabled={submitting || !canSubmit}
           >
-            {submitting ? t.sending : t.newsletterSubmitBtn}
+            {submitting ? t.application.sending : t.newsletter.newsletterSubmitBtn}
           </Button>
-          <p className="newsletter-privacy">🔒 {t.newsletterPrivacyNote}</p>
+          <p className="newsletter-privacy">🔒 {t.newsletter.newsletterPrivacyNote}</p>
         </form>
       )}
     </Modal>

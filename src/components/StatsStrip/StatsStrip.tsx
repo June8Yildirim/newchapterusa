@@ -2,7 +2,7 @@ import "./StatsStrip.css";
 import { TRANSLATIONS, type Language } from "../../constants/text";
 
 export const StatsStrip = ({ lang }: { lang: Language }) => {
-  const stats = TRANSLATIONS[lang].summary.stats;
+  const stats = TRANSLATIONS[lang].hero.summary.stats;
 
   return (
     <section className="section stats-strip-section">
